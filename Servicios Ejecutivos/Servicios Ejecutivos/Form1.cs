@@ -16,5 +16,16 @@ namespace Servicios_Ejecutivos
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           if( MySqlCon.checkUser(Int32.Parse(txtUser.Text), Int32.Parse(txtPass.Text)))
+            {
+                MessageBox.Show("Bienvenido");
+            }else
+            {
+                MessageBox.Show("Credenciales Incorrectas");
+            }
+        }
     }
 }
