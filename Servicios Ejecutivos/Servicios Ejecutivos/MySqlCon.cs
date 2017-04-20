@@ -13,7 +13,7 @@ namespace Servicios_Ejecutivos
     {
         private static MySqlConnection connect()
         {
-            MySqlConnection conectar = new MySqlConnection("server=138.197.43.98; database=PruebaDB; Uid=juan; pwd=juan00;");
+            MySqlConnection conectar = new MySqlConnection("server=138.197.43.98; database=TaxiEjecutivo; Uid=juan; pwd=juan00;");
 
             conectar.Open();
             return conectar;
