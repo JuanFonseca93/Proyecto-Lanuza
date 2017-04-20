@@ -19,13 +19,21 @@ namespace Servicios_Ejecutivos
 
         private void button1_Click(object sender, EventArgs e)
         {
-           if( MySqlCon.checkUser(Int32.Parse(txtUser.Text), Int32.Parse(txtPass.Text)))
+           if( MySqlCon.checkUser(txtUser.Text, txtPass.Text))
             {
                 MessageBox.Show("Bienvenido");
+                Menu_Principal open = new Menu_Principal();
+                open.Visible = true;
+                this.Visible = false;
             }else
             {
                 MessageBox.Show("Credenciales Incorrectas");
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

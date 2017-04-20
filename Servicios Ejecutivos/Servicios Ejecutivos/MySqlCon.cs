@@ -19,10 +19,10 @@ namespace Servicios_Ejecutivos
             return conectar;
         }
 
-        public static bool checkUser(int User, int Pass)
+        public static bool checkUser(String User, String Pass)
         {
             try {
-                String Querry = "SELECT * FROM Users where User = " + User + " and Pass = " + Pass;
+                String Querry = "SELECT * FROM Usuarios where Alias ='" + User + "' and Pass ='" + Pass+"'";
                 MySqlCommand cmd = new MySqlCommand(Querry, connect());
                 MySqlDataReader R = cmd.ExecuteReader();
                 if(R.Read())
