@@ -27,14 +27,7 @@ namespace Servicios_Ejecutivos
                 MySqlDataReader R = cmd.ExecuteReader();
                 if(R.Read())
                 {
-                    if (R.GetInt32(0) == User && R.GetInt32(1) == Pass)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return true;
                 }else
                 {
                     return false;
