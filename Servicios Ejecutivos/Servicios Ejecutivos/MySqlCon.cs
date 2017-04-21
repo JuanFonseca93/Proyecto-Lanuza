@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Servicios_Ejecutivos
 {
@@ -39,6 +40,46 @@ namespace Servicios_Ejecutivos
             }
             
         }
-        
+
+        public static bool NewClient(String nombre, String Direccion, String Telefono, String Estado, String Municipio, String User, String Pass, int nivel)
+        {
+            try
+            {
+                String Querry = "INSERT INTO Usuarios VALUES(null, '" + User + "','" + Pass + "','" + nombre+"','"+Direccion+"','"+Telefono+"','"+Estado+"','"+Municipio+"',"+nivel+")";
+                MySqlCommand cmd = new MySqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+
+        }
+
+        public static DataTable getUser()
+        {
+            try
+            {
+                String Querry = "SELECT * FROM Usuarios";
+                DataTable dt = new DataTable();
+                MySqlDataAdapter data = new MySqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
+
     }
 }
