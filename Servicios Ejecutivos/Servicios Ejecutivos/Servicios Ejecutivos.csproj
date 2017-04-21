@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cobro de Frecuencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobro de Frecuencia.Designer.cs">
+      <DependentUpon>Cobro de Frecuencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="CtrolUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cobro de Frecuencia.resx">
+      <DependentUpon>Cobro de Frecuencia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CtrolUser.resx">
       <DependentUpon>CtrolUser.cs</DependentUpon>
     </EmbeddedResource>
