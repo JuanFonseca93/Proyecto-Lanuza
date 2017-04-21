@@ -42,6 +42,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dtgUsers = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.txtMunicipio = new System.Windows.Forms.TextBox();
+            this.btnAct = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +66,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(295, 469);
+            this.button4.Location = new System.Drawing.Point(211, 507);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 36;
@@ -71,7 +76,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(178, 469);
+            this.button2.Location = new System.Drawing.Point(130, 507);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 35;
@@ -81,7 +86,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(72, 469);
+            this.button1.Location = new System.Drawing.Point(49, 507);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 34;
@@ -158,17 +163,64 @@
             // dtgUsers
             // 
             this.dtgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgUsers.Location = new System.Drawing.Point(411, 101);
+            this.dtgUsers.Location = new System.Drawing.Point(405, 84);
             this.dtgUsers.Name = "dtgUsers";
             this.dtgUsers.Size = new System.Drawing.Size(848, 367);
             this.dtgUsers.TabIndex = 23;
             this.dtgUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsers_CellContentClick);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(106, 408);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Estado";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(265, 409);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "Municipio";
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(72, 448);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(117, 20);
+            this.txtEstado.TabIndex = 43;
+            // 
+            // txtMunicipio
+            // 
+            this.txtMunicipio.Location = new System.Drawing.Point(231, 448);
+            this.txtMunicipio.Name = "txtMunicipio";
+            this.txtMunicipio.Size = new System.Drawing.Size(121, 20);
+            this.txtMunicipio.TabIndex = 44;
+            // 
+            // btnAct
+            // 
+            this.btnAct.Location = new System.Drawing.Point(292, 507);
+            this.btnAct.Name = "btnAct";
+            this.btnAct.Size = new System.Drawing.Size(95, 23);
+            this.btnAct.TabIndex = 45;
+            this.btnAct.Text = "Acitvo/Inactivo";
+            this.btnAct.UseVisualStyleBackColor = true;
+            this.btnAct.Click += new System.EventHandler(this.btnAct_Click);
+            // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1287, 519);
+            this.ClientSize = new System.Drawing.Size(1287, 556);
+            this.Controls.Add(this.btnAct);
+            this.Controls.Add(this.txtMunicipio);
+            this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtPuesto);
             this.Controls.Add(this.txtEmpresa);
             this.Controls.Add(this.button4);
@@ -207,5 +259,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DataGridView dtgUsers;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.TextBox txtMunicipio;
+        private System.Windows.Forms.Button btnAct;
     }
 }
