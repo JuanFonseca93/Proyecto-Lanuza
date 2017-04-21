@@ -63,7 +63,28 @@ namespace Servicios_Ejecutivos
             }
 
         }
-
+        public static bool upclient(int id, String nombre, String Direccion, String Telefono, String Estado, String Municipio, String User, String Pass, int nivel)
+        {
+            try
+            {
+                String Querry = "UPDATE Usuarios SET Nombre_Usurio ='"+nombre+"', Direccion_Usuario='"+Direccion+"', Telefono='"+Telefono+"', Estado='"+ Estado+"', Municipio='"+Municipio+"', Alias='"+User+"', Pass='"+Pass+"' WHERE Id_Usuario="+id;
+                MySqlCommand cmd = new MySqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+        }
         public static DataTable getUser()
         {
             try

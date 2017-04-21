@@ -27,9 +27,9 @@ namespace Servicios_Ejecutivos
             open.Show();
         }
 
-        private void Menu_Principal_Load(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }
