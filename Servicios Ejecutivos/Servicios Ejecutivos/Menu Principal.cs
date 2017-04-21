@@ -26,5 +26,10 @@ namespace Servicios_Ejecutivos
             open.MdiParent = this;
             open.Show();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

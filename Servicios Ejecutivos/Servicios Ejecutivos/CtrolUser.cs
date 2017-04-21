@@ -43,6 +43,19 @@ namespace Servicios_Ejecutivos
                 {
                     MessageBox.Show("Seleccione un Rango y llene los campos antes de continuar");
                 }
+            }else
+            {
+                if (cbxNivel.SelectedIndex > 0 || !txtNombre.Text.Equals("") || !txtDireccion.Text.Equals("") || !txtTelefono.Text.Equals("") || !txtMunicipio.Text.Equals("") || !txtEstado.Text.Equals("") || !txtUser.Text.Equals("") || !txtPass.Text.Equals(""))
+                {
+                    if (MySqlCon.upclient(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()) ,txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtMunicipio.Text, txtMunicipio.Text, txtUser.Text, txtPass.Text, cbxNivel.SelectedIndex))
+                    {
+                        MessageBox.Show("Usuario Guardado");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un Rango y llene los campos antes de continuar");
+                }
             }
         }
 
@@ -77,6 +90,19 @@ namespace Servicios_Ejecutivos
             txtPass.Text = dtgUsers.CurrentRow.Cells[2].Value.ToString();
             cbxNivel.SelectedIndex = Int32.Parse(dtgUsers.CurrentRow.Cells[8].Value.ToString());
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtDireccion.Enabled = true;
+            txtNombre.Enabled = true;
+            txtTelefono.Enabled = true;
+            txtUser.Enabled = true;
+            txtPass.Enabled = true;
+            txtEstado.Enabled = true;
+            txtMunicipio.Enabled = true;
+            cbxNivel.Enabled = true;
+            x = 1;
         }
     }
 }
