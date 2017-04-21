@@ -37,15 +37,15 @@
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtMunicipio = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbxNivel = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).BeginInit();
@@ -126,22 +126,6 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Municipio";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(90, 309);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Usuario";
-            // 
-            // txtUser
-            // 
-            this.txtUser.Location = new System.Drawing.Point(52, 342);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(121, 20);
-            this.txtUser.TabIndex = 12;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(47, 449);
@@ -172,6 +156,36 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(52, 271);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(121, 20);
+            this.txtEstado.TabIndex = 19;
+            // 
+            // txtMunicipio
+            // 
+            this.txtMunicipio.Location = new System.Drawing.Point(203, 271);
+            this.txtMunicipio.Name = "txtMunicipio";
+            this.txtMunicipio.Size = new System.Drawing.Size(121, 20);
+            this.txtMunicipio.TabIndex = 20;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(90, 309);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Usuario";
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(52, 342);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(121, 20);
+            this.txtUser.TabIndex = 12;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -187,20 +201,6 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(121, 20);
             this.txtPass.TabIndex = 18;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(52, 271);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(121, 20);
-            this.txtEstado.TabIndex = 19;
-            // 
-            // txtMunicipio
-            // 
-            this.txtMunicipio.Location = new System.Drawing.Point(203, 271);
-            this.txtMunicipio.Name = "txtMunicipio";
-            this.txtMunicipio.Size = new System.Drawing.Size(121, 20);
-            this.txtMunicipio.TabIndex = 20;
             // 
             // label8
             // 
@@ -251,7 +251,7 @@
             this.Controls.Add(this.dtgUsers);
             this.Name = "CtrolUser";
             this.Text = "Control de Usuarios";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.CtrolUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -269,15 +269,15 @@
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.TextBox txtMunicipio;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbxNivel;
     }

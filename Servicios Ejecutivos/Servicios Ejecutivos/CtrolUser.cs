@@ -38,6 +38,15 @@ namespace Servicios_Ejecutivos
                     if (MySqlCon.NewClient(txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtMunicipio.Text, txtMunicipio.Text, txtUser.Text, txtPass.Text, cbxNivel.SelectedIndex))
                     {
                         MessageBox.Show("Usuario Guardado");
+                        dtgUsers.DataSource = MySqlCon.getUser();
+                        txtDireccion.Enabled = false;
+                        txtNombre.Enabled = false;
+                        txtTelefono.Enabled = false;
+                        txtUser.Enabled = false;
+                        txtPass.Enabled = false;
+                        txtEstado.Enabled = false;
+                        txtMunicipio.Enabled = false;
+                        cbxNivel.Enabled = false;
                     }
                 }else
                 {
@@ -50,6 +59,15 @@ namespace Servicios_Ejecutivos
                     if (MySqlCon.upclient(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()) ,txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtMunicipio.Text, txtMunicipio.Text, txtUser.Text, txtPass.Text, cbxNivel.SelectedIndex))
                     {
                         MessageBox.Show("Usuario Guardado");
+                        dtgUsers.DataSource = MySqlCon.getUser();
+                        txtDireccion.Enabled = false;
+                        txtNombre.Enabled = false;
+                        txtTelefono.Enabled = false;
+                        txtUser.Enabled = false;
+                        txtPass.Enabled = false;
+                        txtEstado.Enabled = false;
+                        txtMunicipio.Enabled = false;
+                        cbxNivel.Enabled = false;
                     }
                 }
                 else
@@ -103,6 +121,11 @@ namespace Servicios_Ejecutivos
             txtMunicipio.Enabled = true;
             cbxNivel.Enabled = true;
             x = 1;
+        }
+
+        private void CtrolUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -31,5 +31,45 @@ namespace Servicios_Ejecutivos
         {
             Application.Exit();
         }
+
+        private void toolStripLabel3_Click(object sender, EventArgs e)
+        {
+            Empleados open = new Empleados();
+            open.MdiParent = this;
+            open.Show();
+        }
+
+        private void toolStripLabel4_Click(object sender, EventArgs e)
+        {
+            Cobro_de_Frecuencia open = new Cobro_de_Frecuencia();
+            open.MdiParent = this;
+            open.Show();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            Empleados open = new Empleados();
+            open.MdiParent = this;
+            open.Show();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            Cobro_de_Frecuencia open = new Cobro_de_Frecuencia();
+            open.MdiParent = this;
+            open.Show();
+        }
+
+        private void toolStripLabel2_Click(object sender, EventArgs e)
+        {
+            CtrolUser open = new CtrolUser();
+            open.MdiParent = this;
+            open.Show();
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

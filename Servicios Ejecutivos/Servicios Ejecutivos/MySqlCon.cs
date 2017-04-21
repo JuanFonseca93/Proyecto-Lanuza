@@ -101,6 +101,66 @@ namespace Servicios_Ejecutivos
                 return null;
             }
         }
+        public static bool NewEmp(String nombre, String Direccion, String Telefono, String Empresa, String Puesto)
+        {
+            try
+            {
+                String Querry = "INSERT INTO Empleados VALUES(null,'" + nombre + "','" + Direccion + "','" + Telefono + "','"+Empresa+"','"+Puesto+"')";
+                MySqlCommand cmd = new MySqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
 
+        }
+        public static bool upEmp(int id, String nombre, String Direccion, String Telefono, String Empresa, String Puesto)
+        {
+            try
+            {
+                String Querry = "UPDATE Empleados SET Nombre_E ='" + nombre + "', Direccion_E='" + Direccion + "', Telefono_E='" + Telefono + "', Empresa='" + Empresa + "', Puesto='" + Puesto + "' WHERE Id_Empleado=" + id;
+                MySqlCommand cmd = new MySqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+        }
+        public static DataTable getEmp()
+        {
+            try
+            {
+                String Querry = "SELECT * FROM Empleados";
+                DataTable dt = new DataTable();
+                MySqlDataAdapter data = new MySqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
     }
 }
