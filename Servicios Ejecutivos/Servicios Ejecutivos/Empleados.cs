@@ -113,7 +113,7 @@ namespace Servicios_Ejecutivos
             x = 1;
         }
 
-        private void dtgUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgUsers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtNombre.Text = dtgUsers.CurrentRow.Cells[1].Value.ToString();
             txtDireccion.Text = dtgUsers.CurrentRow.Cells[2].Value.ToString();

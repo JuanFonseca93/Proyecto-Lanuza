@@ -97,7 +97,7 @@ namespace Servicios_Ejecutivos
             cbxNivel.SelectedIndex = 0;
         }
 
-        private void dtgUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgUsers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtNombre.Text = dtgUsers.CurrentRow.Cells[3].Value.ToString();
             txtDireccion.Text = dtgUsers.CurrentRow.Cells[4].Value.ToString();
