@@ -26,5 +26,10 @@ namespace Servicios_Ejecutivos
             open.MdiParent = this;
             open.Show();
         }
+
+        private void Menu_Principal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
