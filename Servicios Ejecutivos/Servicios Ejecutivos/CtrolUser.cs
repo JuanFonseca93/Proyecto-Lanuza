@@ -104,5 +104,10 @@ namespace Servicios_Ejecutivos
             cbxNivel.Enabled = true;
             x = 1;
         }
+
+        private void CtrolUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
