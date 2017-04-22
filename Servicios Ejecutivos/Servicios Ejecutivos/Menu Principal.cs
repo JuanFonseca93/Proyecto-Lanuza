@@ -71,5 +71,19 @@ namespace Servicios_Ejecutivos
         {
             Application.Exit();
         }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            ctrVehiculos open = new ctrVehiculos();
+            open.MdiParent = this;
+            open.Show();
+        }
+
+        private void toolStripLabel5_Click(object sender, EventArgs e)
+        {
+            ctrVehiculos open = new ctrVehiculos();
+            open.MdiParent = this;
+            open.Show();
+        }
     }
 }

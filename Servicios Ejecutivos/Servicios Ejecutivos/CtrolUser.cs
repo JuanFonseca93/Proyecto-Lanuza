@@ -27,6 +27,7 @@ namespace Servicios_Ejecutivos
             txtEstado.Enabled = false;
             txtMunicipio.Enabled = false;
             cbxNivel.Enabled = false;
+            btnGuardar.Enabled = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -47,6 +48,7 @@ namespace Servicios_Ejecutivos
                         txtEstado.Enabled = false;
                         txtMunicipio.Enabled = false;
                         cbxNivel.Enabled = false;
+                        btnGuardar.Enabled = false;
                     }
                 }else
                 {
@@ -68,6 +70,7 @@ namespace Servicios_Ejecutivos
                         txtEstado.Enabled = false;
                         txtMunicipio.Enabled = false;
                         cbxNivel.Enabled = false;
+                        btnGuardar.Enabled = false;
                     }
                 }
                 else
@@ -87,6 +90,7 @@ namespace Servicios_Ejecutivos
             txtEstado.Enabled = true;
             txtMunicipio.Enabled = true;
             cbxNivel.Enabled = true;
+            btnGuardar.Enabled = true;
             txtNombre.Text = "";
             txtNombre.Text = "";
             txtTelefono.Text = "";
@@ -120,6 +124,7 @@ namespace Servicios_Ejecutivos
             txtEstado.Enabled = true;
             txtMunicipio.Enabled = true;
             cbxNivel.Enabled = true;
+            btnGuardar.Enabled = true;
             x = 1;
         }
 
@@ -127,5 +132,6 @@ namespace Servicios_Ejecutivos
         {
 
         }
+        
     }
 }

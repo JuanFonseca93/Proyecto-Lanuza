@@ -25,6 +25,7 @@ namespace Servicios_Ejecutivos
             txtEstado.Enabled = false;
             txtMunicipio.Enabled = false;
             btnAct.Enabled = false;
+            btnGuardar.Enabled = false;
         }
 
         private void Empleados_Load(object sender, EventArgs e)
@@ -50,6 +51,7 @@ namespace Servicios_Ejecutivos
                         txtEstado.Enabled = false;
                         txtMunicipio.Enabled = false;
                         btnAct.Enabled = false;
+                        btnGuardar.Enabled = false;
                     }
                 }
                 else
@@ -73,6 +75,7 @@ namespace Servicios_Ejecutivos
                         txtEstado.Enabled = false;
                         txtMunicipio.Enabled = false;
                         btnAct.Enabled = false;
+                        btnGuardar.Enabled = false;
                     }
                 }
                 else
@@ -91,6 +94,7 @@ namespace Servicios_Ejecutivos
             txtPuesto.Enabled = true;
             txtEstado.Enabled = true;
             txtMunicipio.Enabled = true;
+            btnGuardar.Enabled = true;
             txtNombre.Text = "";
             txtDireccion.Text = "";
             txtTelefono.Text = "";
@@ -110,6 +114,7 @@ namespace Servicios_Ejecutivos
             txtEstado.Enabled = true;
             txtMunicipio.Enabled = true;
             btnAct.Enabled = true;
+            btnGuardar.Enabled = true;
             x = 1;
         }
 
@@ -142,6 +147,7 @@ namespace Servicios_Ejecutivos
                     txtEstado.Enabled = false;
                     txtMunicipio.Enabled = false;
                     btnAct.Enabled = false;
+                    btnGuardar.Enabled = false;
                 }
             }else
             {
@@ -157,6 +163,7 @@ namespace Servicios_Ejecutivos
                     txtEstado.Enabled = false;
                     txtMunicipio.Enabled = false;
                     btnAct.Enabled = false;
+                    btnGuardar.Enabled = false;
                 }
             }
         }

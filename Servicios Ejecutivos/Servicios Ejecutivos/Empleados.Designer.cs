@@ -30,7 +30,7 @@
         {
             this.txtPuesto = new System.Windows.Forms.TextBox();
             this.txtEmpresa = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,15 +64,15 @@
             this.txtEmpresa.Size = new System.Drawing.Size(228, 20);
             this.txtEmpresa.TabIndex = 39;
             // 
-            // button4
+            // btnGuardar
             // 
-            this.button4.Location = new System.Drawing.Point(211, 507);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 36;
-            this.button4.Text = "Guardar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnGuardar.Location = new System.Drawing.Point(211, 507);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 36;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -167,7 +167,7 @@
             this.dtgUsers.Name = "dtgUsers";
             this.dtgUsers.Size = new System.Drawing.Size(848, 367);
             this.dtgUsers.TabIndex = 23;
-            this.dtgUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsers_CellContentClick);
+            this.dtgUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsers_CellClick);
             // 
             // label6
             // 
@@ -223,7 +223,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtPuesto);
             this.Controls.Add(this.txtEmpresa);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -247,7 +247,7 @@
         #endregion
         private System.Windows.Forms.TextBox txtPuesto;
         private System.Windows.Forms.TextBox txtEmpresa;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
