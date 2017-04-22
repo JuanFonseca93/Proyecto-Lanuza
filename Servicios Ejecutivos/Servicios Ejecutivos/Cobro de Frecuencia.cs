@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Servicios_Ejecutivos
 {
@@ -106,5 +107,14 @@ namespace Servicios_Ejecutivos
                 txtDetales.Text = ("Martes ");
             }
         }
+
+        private void dtCobro_ValueChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+
+      
+  
     }
     }

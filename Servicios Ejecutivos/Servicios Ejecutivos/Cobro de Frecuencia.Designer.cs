@@ -68,11 +68,13 @@
             this.txtDetales = new System.Windows.Forms.TextBox();
             this.gbDetalle = new System.Windows.Forms.GroupBox();
             this.dtCobro = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.gbDias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.gbDetalle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -93,7 +95,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(146, 418);
+            this.textBox2.Location = new System.Drawing.Point(145, 349);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(158, 22);
             this.textBox2.TabIndex = 2;
@@ -128,7 +130,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(336, 569);
+            this.label3.Location = new System.Drawing.Point(678, 290);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 17);
             this.label3.TabIndex = 6;
@@ -137,7 +139,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 423);
+            this.label4.Location = new System.Drawing.Point(30, 354);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 17);
             this.label4.TabIndex = 7;
@@ -167,8 +169,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.dtCobro);
             this.groupBox1.Controls.Add(this.gbDetalle);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -184,7 +188,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(495, 479);
+            this.groupBox1.Size = new System.Drawing.Size(927, 397);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cobro de Frecuencia";
@@ -192,7 +196,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(398, 412);
+            this.button2.Location = new System.Drawing.Point(397, 343);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(80, 39);
             this.button2.TabIndex = 14;
@@ -332,10 +336,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(535, 25);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 436);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(410, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(482, 257);
             this.dataGridView1.TabIndex = 11;
             // 
             // groupBox3
@@ -350,9 +354,9 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Location = new System.Drawing.Point(535, 366);
+            this.groupBox3.Location = new System.Drawing.Point(535, 436);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(410, 298);
+            this.groupBox3.Size = new System.Drawing.Size(404, 252);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Agregar Vales";
@@ -369,7 +373,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(314, 230);
+            this.button4.Location = new System.Drawing.Point(314, 186);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 48);
             this.button4.TabIndex = 1;
@@ -474,7 +478,7 @@
             // gbDetalle
             // 
             this.gbDetalle.Controls.Add(this.txtDetales);
-            this.gbDetalle.Location = new System.Drawing.Point(19, 319);
+            this.gbDetalle.Location = new System.Drawing.Point(12, 172);
             this.gbDetalle.Name = "gbDetalle";
             this.gbDetalle.Size = new System.Drawing.Size(470, 135);
             this.gbDetalle.TabIndex = 18;
@@ -487,17 +491,25 @@
             this.dtCobro.Name = "dtCobro";
             this.dtCobro.Size = new System.Drawing.Size(120, 22);
             this.dtCobro.TabIndex = 19;
+            this.dtCobro.ValueChanged += new System.EventHandler(this.dtCobro_ValueChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(634, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(226, 230);
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // Cobro_de_Frecuencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(957, 676);
+            this.ClientSize = new System.Drawing.Size(957, 708);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label3);
             this.Name = "Cobro_de_Frecuencia";
             this.Text = "Cobro_de_Frecuencia";
             this.Load += new System.EventHandler(this.Cobro_de_Frecuencia_Load);
@@ -510,8 +522,8 @@
             this.groupBox3.PerformLayout();
             this.gbDetalle.ResumeLayout(false);
             this.gbDetalle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -557,5 +569,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox gbDetalle;
         private System.Windows.Forms.DateTimePicker dtCobro;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
