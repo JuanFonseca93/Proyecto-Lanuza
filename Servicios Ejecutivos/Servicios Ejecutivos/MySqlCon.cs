@@ -101,11 +101,11 @@ namespace Servicios_Ejecutivos
                 return null;
             }
         }
-        public static bool NewEmp(String nombre, String Direccion, String Telefono, String Empresa, String Puesto)
+        public static bool NewEmp(String nombre, String Direccion, String Telefono, String Empresa, String Puesto, String estado, String Municipio)
         {
             try
             {
-                String Querry = "INSERT INTO Empleados VALUES(null,'" + nombre + "','" + Direccion + "','" + Telefono + "','"+Empresa+"','"+Puesto+"')";
+                String Querry = "INSERT INTO Empleados VALUES(null,'" + nombre + "','" + Direccion + "','"+estado+"','"+Municipio+"','" + Telefono + "','"+Empresa+"','"+Puesto+"', true)";
                 MySqlCommand cmd = new MySqlCommand(Querry, connect());
                 int R = cmd.ExecuteNonQuery();
                 if (R != 0)
@@ -124,11 +124,11 @@ namespace Servicios_Ejecutivos
             }
 
         }
-        public static bool upEmp(int id, String nombre, String Direccion, String Telefono, String Empresa, String Puesto)
+        public static bool upEmp(int id, String nombre, String Direccion, String Telefono, String Empresa, String Puesto, String estado, String municipio)
         {
             try
             {
-                String Querry = "UPDATE Empleados SET Nombre_E ='" + nombre + "', Direccion_E='" + Direccion + "', Telefono_E='" + Telefono + "', Empresa='" + Empresa + "', Puesto='" + Puesto + "' WHERE Id_Empleado=" + id;
+                String Querry = "UPDATE Empleados SET Nombre_E ='" + nombre + "', Direccion_E='" + Direccion + "', Telefono_E='" + Telefono + "', Empresa='" + Empresa + "', Puesto='" + Puesto + "', Estado_E='"+estado+ "', Municipio_E='"+municipio+"' WHERE Id_Empleado=" + id;
                 MySqlCommand cmd = new MySqlCommand(Querry, connect());
                 int R = cmd.ExecuteNonQuery();
                 if (R != 0)
@@ -161,6 +161,114 @@ namespace Servicios_Ejecutivos
                 MessageBox.Show(ex.ToString());
                 return null;
             }
+        }
+        public static bool upAcEmp(int id, bool status)
+        {
+            try
+            {
+                String Querry = "UPDATE Empleados SET Estatus_E="+status+" WHERE Id_Empleado=" + id;
+                MySqlCommand cmd = new MySqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+        }
+
+        public static DataTable getveh()
+        {
+            try
+            {
+                String Querry = "SELECT * FROM Vehiculos";
+                DataTable dt = new DataTable();
+                MySqlDataAdapter data = new MySqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
+        public static bool NewVeh(String tipo, String Concesion, String Concesionario, String Linea, String Direccion, String Telefono, String Municipio, String Estado, String Marca, String Modelo, String Ano)
+        {
+            try
+            {
+                String Querry = "INSERT INTO Vehiculos VALUES(null,'" + tipo + "','" + Concesion + "','" + Concesionario + "','" + Linea+ "','" + Direccion + "','" + Telefono + "','" + Marca + "','" + Modelo + "','" + Ano + "',null,'" + Estado + "','" + Municipio + "', true)";
+                MySqlCommand cmd = new MySqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+
+        }
+        public static bool upAcVeh(int id, bool status)
+        {
+            try
+            {
+                String Querry = "UPDATE Vehiculos SET Estatus_V=" + status + " WHERE Id_Vehiculo=" + id;
+                MySqlCommand cmd = new MySqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+        }
+
+        public static bool UpVeh(String tipo, String Concesion, String Concesionario, String Linea, String Direccion, String Telefono, String Municipio, String Estado, String Marca, String Modelo, String Ano, int id)
+        {
+            try
+            {
+                String Querry = "UPDATE Vehiculos SET Tipo_V='" + tipo + "', Concesion='" + Concesion + "', Concesionario='" + Concesionario + "', Linea='" + Linea + "', Direccion_V='" + Direccion + "', Telefono_V='" + Telefono + "', Marca='" + Marca + "', Modelo='" + Modelo + "',Anno='" + Ano + "', Estado_V='" + Estado + "', Municipio_V='" + Municipio + "' WHERE Id_Vehiculo="+id;
+                MySqlCommand cmd = new MySqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+
         }
     }
 }

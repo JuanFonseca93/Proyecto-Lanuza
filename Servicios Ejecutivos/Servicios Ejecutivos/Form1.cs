@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,11 @@ namespace Servicios_Ejecutivos
         public Form1()
         {
             InitializeComponent();
+            if (!Directory.Exists("c:\\Taxi_Ejecutivo"))
+            {
+                Directory.CreateDirectory("c:\\Taxi_Ejecutivo");
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
