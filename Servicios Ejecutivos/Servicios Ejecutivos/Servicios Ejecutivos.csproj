@@ -127,6 +127,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Recepcion de vales.resx">
       <DependentUpon>Recepcion de vales.cs</DependentUpon>
@@ -146,6 +147,30 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sesion2 %28Custom%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BOTON_INICIARSESION %28Custom%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BOTON_INICIARSESION %28Custom%29 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SERVICIO-DE-TRANSPORTE-EJECUTIVO-Y-CORPORATIVO_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo-lineas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taxi Ejecutivo Logo Final-01 %28Custom%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

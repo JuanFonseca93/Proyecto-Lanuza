@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
+
 
 namespace Servicios_Ejecutivos
 {
@@ -40,6 +42,36 @@ namespace Servicios_Ejecutivos
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (MySqlCon.checkUser(txtUser.Text, txtPass.Text))
+            {
+                MessageBox.Show("Bienvenido");
+                Menu_Principal open = new Menu_Principal();
+                open.Visible = true;
+                this.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Credenciales Incorrectas");
+            }
+        }
+
+        private void button2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (MySqlCon.checkUser(txtUser.Text, txtPass.Text))
+            {
+                MessageBox.Show("Bienvenido");
+                Menu_Principal open = new Menu_Principal();
+                open.Visible = true;
+                this.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Credenciales Incorrectas");
+            }
         }
     }
 }

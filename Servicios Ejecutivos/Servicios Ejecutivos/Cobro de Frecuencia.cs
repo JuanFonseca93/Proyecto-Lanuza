@@ -17,6 +17,7 @@ namespace Servicios_Ejecutivos
         {
             InitializeComponent();
         }
+        
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -30,6 +31,8 @@ namespace Servicios_Ejecutivos
 
         private void Cobro_de_Frecuencia_Load(object sender, EventArgs e)
         {
+             object index = DateTime.Now;
+
             gbDias.Visible = false;
             gbDetalle.Visible = false;
 
