@@ -41,7 +41,7 @@ namespace Servicios_Ejecutivos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -72,6 +72,37 @@ namespace Servicios_Ejecutivos
             {
                 MessageBox.Show("Credenciales Incorrectas");
             }
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtUser_Click(object sender, EventArgs e)
+        {
+            txtUser.Clear();
+        }
+
+        private void txtPass_Click(object sender, EventArgs e)
+        {
+            txtPass.Clear();
+        }
+
+        private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtPass.ForeColor = Color.Black;
+            txtPass.UseSystemPasswordChar = true;
+        }
+
+        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtUser.ForeColor = Color.Black;
         }
     }
 }

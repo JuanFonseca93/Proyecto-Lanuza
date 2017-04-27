@@ -113,6 +113,16 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lucchetto__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("lucchetto (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SERVICIO_DE_TRANSPORTE_EJECUTIVO_Y_CORPORATIVO_7 {
             get {
                 object obj = ResourceManager.GetObject("SERVICIO-DE-TRANSPORTE-EJECUTIVO-Y-CORPORATIVO_7", resourceCulture);
@@ -136,6 +146,16 @@ namespace Servicios_Ejecutivos.Properties {
         internal static System.Drawing.Bitmap Taxi_Ejecutivo_Logo_Final_01__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("Taxi Ejecutivo Logo Final-01 (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_male_icon_34332__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("user-male-icon_34332 (Custom)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

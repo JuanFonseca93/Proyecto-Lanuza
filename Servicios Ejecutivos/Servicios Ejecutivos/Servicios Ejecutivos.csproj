@@ -172,6 +172,12 @@
   <ItemGroup>
     <None Include="Resources\Taxi Ejecutivo Logo Final-01 %28Custom%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-male-icon_34332 %28Custom%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lucchetto %28Custom%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
