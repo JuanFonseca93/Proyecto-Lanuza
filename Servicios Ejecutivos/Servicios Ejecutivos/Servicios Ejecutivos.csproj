@@ -90,6 +90,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Operadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operadores.Designer.cs">
+      <DependentUpon>Operadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recepcion de vales.cs">
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu Principal.resx">
       <DependentUpon>Menu Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operadores.resx">
+      <DependentUpon>Operadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -177,6 +186,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lucchetto %28Custom%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16652-200.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

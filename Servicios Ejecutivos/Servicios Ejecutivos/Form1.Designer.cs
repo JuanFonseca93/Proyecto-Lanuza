@@ -42,11 +42,12 @@
             // 
             // txtUser
             // 
+            this.txtUser.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtUser.Location = new System.Drawing.Point(98, 225);
             this.txtUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(242, 22);
+            this.txtUser.Size = new System.Drawing.Size(242, 27);
             this.txtUser.TabIndex = 2;
             this.txtUser.Text = "USUARIO";
             this.txtUser.Click += new System.EventHandler(this.txtUser_Click);
@@ -55,11 +56,12 @@
             // 
             // txtPass
             // 
+            this.txtPass.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtPass.Location = new System.Drawing.Point(98, 304);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(242, 22);
+            this.txtPass.Size = new System.Drawing.Size(242, 27);
             this.txtPass.TabIndex = 3;
             this.txtPass.Text = "CONTRASEÑA";
             this.txtPass.Click += new System.EventHandler(this.txtPass_Click);

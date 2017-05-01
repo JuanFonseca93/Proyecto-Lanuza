@@ -85,5 +85,24 @@ namespace Servicios_Ejecutivos
             open.MdiParent = this;
             open.Show();
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            Operadores op = new Operadores();
+            op.MdiParent = this;
+            op.Show();
+        }
+
+        private void toolStripLabel6_Click(object sender, EventArgs e)
+        {
+            Operadores op = new Operadores();
+            op.MdiParent = this;
+            op.Show();
+        }
     }
 }
