@@ -27,16 +27,7 @@ namespace Servicios_Ejecutivos
 
         private void button1_Click(object sender, EventArgs e)
         {
-           if( MySqlCon.checkUser(txtUser.Text, txtPass.Text))
-            {
-                MessageBox.Show("Bienvenido");
-                Menu_Principal open = new Menu_Principal();
-                open.Visible = true;
-                this.Visible = false;
-            }else
-            {
-                MessageBox.Show("Credenciales Incorrectas");
-            }
+            iniciar_sesion();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -46,32 +37,12 @@ namespace Servicios_Ejecutivos
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (MySqlCon.checkUser(txtUser.Text, txtPass.Text))
-            {
-                MessageBox.Show("Bienvenido");
-                Menu_Principal open = new Menu_Principal();
-                open.Visible = true;
-                this.Visible = false;
-            }
-            else
-            {
-                MessageBox.Show("Credenciales Incorrectas");
-            }
+            iniciar_sesion();
         }
 
         private void button2_KeyDown(object sender, KeyEventArgs e)
         {
-            if (MySqlCon.checkUser(txtUser.Text, txtPass.Text))
-            {
-                MessageBox.Show("Bienvenido");
-                Menu_Principal open = new Menu_Principal();
-                open.Visible = true;
-                this.Visible = false;
-            }
-            else
-            {
-                MessageBox.Show("Credenciales Incorrectas");
-            }
+            iniciar_sesion();
         }
 
         private void txtUser_TextChanged(object sender, EventArgs e)
@@ -104,5 +75,36 @@ namespace Servicios_Ejecutivos
         {
             txtUser.ForeColor = Color.Black;
         }
+
+        public void iniciar_sesion()
+        {
+            if (MySqlCon.checkUser(txtUser.Text, txtPass.Text))
+            {
+                MessageBox.Show("Bienvenido");
+                Menu_Principal open = new Menu_Principal();
+                open.Visible = true;
+                this.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Credenciales Incorrectas");
+            }
+
+
+        }
+
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                iniciar_sesion();
+            }
+            else{
+
+
+            }
+        }
+
+
     }
 }
