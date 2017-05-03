@@ -348,6 +348,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Operadores";
             this.Text = "Operadores";
+            this.Load += new System.EventHandler(this.Operadores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

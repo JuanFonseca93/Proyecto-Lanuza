@@ -54,6 +54,10 @@ namespace Servicios_Ejecutivos
             }
             
         }
-        
+
+        private void Operadores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
