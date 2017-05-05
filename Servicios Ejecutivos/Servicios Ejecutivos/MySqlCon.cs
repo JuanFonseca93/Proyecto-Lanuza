@@ -372,5 +372,22 @@ namespace Servicios_Ejecutivos
                 return false;
             }
         }
-    }
+
+        public static DataTable CobFrec(String Unidad)
+        {
+            try
+            {
+                String Querry = "SELECT Id_Operador,Nombre_U, Saldo, Foto_O FROM Operadores WHERE Unidad ='" + Unidad+"'";
+                DataTable dt = new DataTable();
+                MySqlDataAdapter data = new MySqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+                
+            }
+        }
 }
