@@ -93,16 +93,21 @@ namespace Servicios_Ejecutivos
 
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
-            Operadores op = new Operadores();
+            btnFoto op = new btnFoto();
             op.MdiParent = this;
             op.Show();
         }
 
         private void toolStripLabel6_Click(object sender, EventArgs e)
         {
-            Operadores op = new Operadores();
+            btnFoto op = new btnFoto();
             op.MdiParent = this;
             op.Show();
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

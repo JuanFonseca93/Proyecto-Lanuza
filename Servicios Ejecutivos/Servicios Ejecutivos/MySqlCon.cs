@@ -270,5 +270,124 @@ namespace Servicios_Ejecutivos
             }
 
         }
-    }
+        public static bool NewOper(String Unidad, String Nombre, String Direccion, String Telefono, String fecha, String Estado, String Municipio, String foto, String Estatus, String vehiculo)
+        {
+            try
+            {
+                String Querry = "INSERT INTO Operadores VALUES(null,'" + Unidad + "','" + Nombre + "','" + Direccion + "','" + Telefono + "','" + fecha + "',0 ,'" + Estado + "','" + Municipio + "','" + foto + "','" + Estatus + "'," + vehiculo + ")";
+                MySqlCommand cmd = new MySqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+
+        }
+
+        public static DataTable getOp()
+        {
+            try
+            {
+                String Querry = "SELECT * FROM Operadores";
+                DataTable dt = new DataTable();
+                MySqlDataAdapter data = new MySqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
+
+        public static bool UpOper(String Unidad, String Nombre, String Direccion, String Telefono, String fecha, String Estado, String Municipio, String foto, String Estatus, String vehiculo, int id)
+        {
+            try
+            {
+                String Querry = "UPDATE Operadores SET Unidad='" + Unidad + "', Nombre_U='" + Nombre + "', 	Direccion_U='" + Direccion + "', Telefono_U='" + Telefono + "', Fecha_A='" + fecha  + "', Estado_O='" + Estado + "', Municipio_O='" + Municipio + "', Foto_O='" + foto + "',  Id_Vehiculo='" + vehiculo + "' WHERE Id_Operador=" + id;
+                MySqlCommand cmd = new MySqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+
+        }
+        public static DataTable getIDveh()
+        {
+            try
+            {
+                String Querry = "SELECT Id_Vehiculo FROM Vehiculos";
+                DataTable dt = new DataTable();
+                MySqlDataAdapter data = new MySqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
+        public static bool upAcOper(int id, bool status)
+        {
+            try
+            {
+                String Querry = "UPDATE Operadores SET Estatus_O=" + status + " WHERE Id_Operador=" + id;
+                MySqlCommand cmd = new MySqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+        }
+
+        public static DataTable CobFrec(String Unidad)
+        {
+            try
+            {
+                String Querry = "SELECT Id_Operador,Nombre_U, Saldo, Foto_O FROM Operadores WHERE Unidad ='" + Unidad+"'";
+                DataTable dt = new DataTable();
+                MySqlDataAdapter data = new MySqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+                
+            }
+        }
 }
