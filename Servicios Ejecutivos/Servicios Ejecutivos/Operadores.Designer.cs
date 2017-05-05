@@ -384,8 +384,8 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "btnFoto";
             this.Text = "Operadores";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOperadores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
