@@ -73,6 +73,16 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_male_user_48 {
+            get {
+                object obj = ResourceManager.GetObject("add_male_user_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BOTON_INICIARSESION__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("BOTON_INICIARSESION (Custom)", resourceCulture);
@@ -86,6 +96,36 @@ namespace Servicios_Ejecutivos.Properties {
         internal static System.Drawing.Bitmap BOTON_INICIARSESION__Custom___2_ {
             get {
                 object obj = ResourceManager.GetObject("BOTON_INICIARSESION (Custom) (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancel_1174809_960_720 {
+            get {
+                object obj = ResourceManager.GetObject("cancel-1174809_960_720", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancel_1174809_960_720__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("cancel-1174809_960_720 (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_male_user_48 {
+            get {
+                object obj = ResourceManager.GetObject("edit_male_user_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +166,26 @@ namespace Servicios_Ejecutivos.Properties {
         internal static System.Drawing.Bitmap lucchetto__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("lucchetto (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_converted {
+            get {
+                object obj = ResourceManager.GetObject("Save_converted", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_Icon_icon_icons_com_69139__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Save_Icon_icon-icons.com_69139 (Custom)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
