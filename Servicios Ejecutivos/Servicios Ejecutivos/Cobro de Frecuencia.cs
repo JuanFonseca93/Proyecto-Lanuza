@@ -310,5 +310,10 @@ namespace Servicios_Ejecutivos
         {
             lista();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
