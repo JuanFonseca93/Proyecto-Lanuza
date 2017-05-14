@@ -24,8 +24,6 @@ namespace Servicios_Ejecutivos
             txtTelefono.Enabled = false;
             txtUser.Enabled = false;
             txtPass.Enabled = false;
-            txtEstado.Enabled = false;
-            txtMunicipio.Enabled = false;
             cbxNivel.Enabled = false;
             btnGuardar.Enabled = false;
         }
@@ -34,9 +32,9 @@ namespace Servicios_Ejecutivos
         {
             if (x==0)
             {
-                if (cbxNivel.SelectedIndex > 0 || !txtNombre.Text.Equals("") || !txtDireccion.Text.Equals("") || !txtTelefono.Text.Equals("") || !txtMunicipio.Text.Equals("") || !txtEstado.Text.Equals("") || !txtUser.Text.Equals("") || !txtPass.Text.Equals(""))
+                if (cbxNivel.SelectedIndex > 0 || !txtNombre.Text.Equals("") || !txtDireccion.Text.Equals("") || !txtTelefono.Text.Equals("") || !txtUser.Text.Equals("") || !txtPass.Text.Equals(""))
                 {
-                    if (MySqlCon.NewClient(txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtMunicipio.Text, txtMunicipio.Text, txtUser.Text, txtPass.Text, cbxNivel.SelectedIndex))
+                    if (MySqlCon.NewClient(txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtUser.Text, txtPass.Text, cbxNivel.SelectedIndex))
                     {
                         MessageBox.Show("Usuario Guardado");
                         dtgUsers.DataSource = MySqlCon.getUser();
@@ -45,8 +43,6 @@ namespace Servicios_Ejecutivos
                         txtTelefono.Enabled = false;
                         txtUser.Enabled = false;
                         txtPass.Enabled = false;
-                        txtEstado.Enabled = false;
-                        txtMunicipio.Enabled = false;
                         cbxNivel.Enabled = false;
                         btnGuardar.Enabled = false;
                     }
@@ -56,9 +52,9 @@ namespace Servicios_Ejecutivos
                 }
             }else
             {
-                if (cbxNivel.SelectedIndex > 0 || !txtNombre.Text.Equals("") || !txtDireccion.Text.Equals("") || !txtTelefono.Text.Equals("") || !txtMunicipio.Text.Equals("") || !txtEstado.Text.Equals("") || !txtUser.Text.Equals("") || !txtPass.Text.Equals(""))
+                if (cbxNivel.SelectedIndex > 0 || !txtNombre.Text.Equals("") || !txtDireccion.Text.Equals("") || !txtTelefono.Text.Equals("")  || !txtUser.Text.Equals("") || !txtPass.Text.Equals(""))
                 {
-                    if (MySqlCon.upclient(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()) ,txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtMunicipio.Text, txtMunicipio.Text, txtUser.Text, txtPass.Text, cbxNivel.SelectedIndex))
+                    if (MySqlCon.upclient(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()) ,txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtUser.Text, txtPass.Text, cbxNivel.SelectedIndex))
                     {
                         MessageBox.Show("Usuario Guardado");
                         dtgUsers.DataSource = MySqlCon.getUser();
@@ -67,8 +63,6 @@ namespace Servicios_Ejecutivos
                         txtTelefono.Enabled = false;
                         txtUser.Enabled = false;
                         txtPass.Enabled = false;
-                        txtEstado.Enabled = false;
-                        txtMunicipio.Enabled = false;
                         cbxNivel.Enabled = false;
                         btnGuardar.Enabled = false;
                     }
@@ -87,15 +81,11 @@ namespace Servicios_Ejecutivos
             txtTelefono.Enabled = true;
             txtUser.Enabled = true;
             txtPass.Enabled = true;
-            txtEstado.Enabled = true;
-            txtMunicipio.Enabled = true;
             cbxNivel.Enabled = true;
             btnGuardar.Enabled = true;
             txtNombre.Text = "";
             txtNombre.Text = "";
             txtTelefono.Text = "";
-            txtEstado.Text = "";
-            txtMunicipio.Text = "";
             txtUser.Text = "";
             txtPass.Text = "";
             cbxNivel.SelectedIndex = 0;
@@ -106,11 +96,9 @@ namespace Servicios_Ejecutivos
             txtNombre.Text = dtgUsers.CurrentRow.Cells[3].Value.ToString();
             txtDireccion.Text = dtgUsers.CurrentRow.Cells[4].Value.ToString();
             txtTelefono.Text = dtgUsers.CurrentRow.Cells[5].Value.ToString();
-            txtEstado.Text = dtgUsers.CurrentRow.Cells[6].Value.ToString();
-            txtMunicipio.Text = dtgUsers.CurrentRow.Cells[7].Value.ToString();
             txtUser.Text = dtgUsers.CurrentRow.Cells[1].Value.ToString();
             txtPass.Text = dtgUsers.CurrentRow.Cells[2].Value.ToString();
-            cbxNivel.SelectedIndex = Int32.Parse(dtgUsers.CurrentRow.Cells[8].Value.ToString());
+            cbxNivel.SelectedIndex = Int32.Parse(dtgUsers.CurrentRow.Cells[6].Value.ToString());
 
         }
 
@@ -121,8 +109,6 @@ namespace Servicios_Ejecutivos
             txtTelefono.Enabled = true;
             txtUser.Enabled = true;
             txtPass.Enabled = true;
-            txtEstado.Enabled = true;
-            txtMunicipio.Enabled = true;
             cbxNivel.Enabled = true;
             btnGuardar.Enabled = true;
             x = 1;

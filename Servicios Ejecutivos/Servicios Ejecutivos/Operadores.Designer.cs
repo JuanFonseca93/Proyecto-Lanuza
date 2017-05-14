@@ -31,14 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
-            this.txtMunicipo = new System.Windows.Forms.TextBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dgvOperadores = new System.Windows.Forms.DataGridView();
@@ -91,27 +87,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Telefono";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(340, 129);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Estado";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 168);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Municipio";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -145,22 +120,6 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(134, 20);
             this.txtTelefono.TabIndex = 8;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(414, 125);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(122, 20);
-            this.txtEstado.TabIndex = 9;
-            // 
-            // txtMunicipo
-            // 
-            this.txtMunicipo.Location = new System.Drawing.Point(80, 164);
-            this.txtMunicipo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMunicipo.Name = "txtMunicipo";
-            this.txtMunicipo.Size = new System.Drawing.Size(122, 20);
-            this.txtMunicipo.TabIndex = 10;
             // 
             // txtBuscar
             // 
@@ -220,7 +179,7 @@
             // cbxVehiculo
             // 
             this.cbxVehiculo.FormattingEnabled = true;
-            this.cbxVehiculo.Location = new System.Drawing.Point(441, 162);
+            this.cbxVehiculo.Location = new System.Drawing.Point(414, 125);
             this.cbxVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.cbxVehiculo.Name = "cbxVehiculo";
             this.cbxVehiculo.Size = new System.Drawing.Size(96, 21);
@@ -272,7 +231,7 @@
             // Unidad
             // 
             this.Unidad.AutoSize = true;
-            this.Unidad.Location = new System.Drawing.Point(218, 168);
+            this.Unidad.Location = new System.Drawing.Point(11, 170);
             this.Unidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Unidad.Name = "Unidad";
             this.Unidad.Size = new System.Drawing.Size(41, 13);
@@ -282,7 +241,7 @@
             // 
             // txtUnidad
             // 
-            this.txtUnidad.Location = new System.Drawing.Point(262, 166);
+            this.txtUnidad.Location = new System.Drawing.Point(80, 167);
             this.txtUnidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtUnidad.Name = "txtUnidad";
             this.txtUnidad.Size = new System.Drawing.Size(96, 20);
@@ -291,7 +250,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(369, 168);
+            this.label7.Location = new System.Drawing.Point(341, 132);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 13);
@@ -370,14 +329,10 @@
             this.Controls.Add(this.dgvOperadores);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.txtMunicipo);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -396,14 +351,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.TextBox txtMunicipo;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DataGridView dgvOperadores;

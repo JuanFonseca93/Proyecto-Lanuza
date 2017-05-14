@@ -27,8 +27,6 @@ namespace Servicios_Ejecutivos
             txtano.Enabled = false;
             txtDireccion.Enabled = false;
             txtTelefono.Enabled = false;
-            txtEstado.Enabled = false;
-            txtMunicipio.Enabled = false;
             btnAc.Enabled = false;
             btnPDF.Enabled = false;
             btnGuardar.Enabled = false;
@@ -46,8 +44,6 @@ namespace Servicios_Ejecutivos
             txtano.Enabled = true;
             txtDireccion.Enabled = true;
             txtTelefono.Enabled = true;
-            txtEstado.Enabled = true;
-            txtMunicipio.Enabled = true;
             btnGuardar.Enabled = true;
             txtTipo.Text = "";
             txtConcesion.Text = "";
@@ -58,8 +54,6 @@ namespace Servicios_Ejecutivos
             txtano.Text = "";
             txtDireccion.Text = "";
             txtTelefono.Text = "";
-            txtEstado.Text = "";
-            txtMunicipio.Text = "";
         }
 
         private void dgvVeh_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -73,15 +67,14 @@ namespace Servicios_Ejecutivos
             txtMarca.Text = dgvVeh.CurrentRow.Cells[7].Value.ToString();
             txtModelo.Text = dgvVeh.CurrentRow.Cells[8].Value.ToString();
             txtano.Text = dgvVeh.CurrentRow.Cells[9].Value.ToString();
-            txtEstado.Text = dgvVeh.CurrentRow.Cells[11].Value.ToString();
-            txtMunicipio.Text = dgvVeh.CurrentRow.Cells[12].Value.ToString();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             if (x == 0)
             {
-                if (MySqlCon.NewVeh(txtTipo.Text,txtConcesion.Text,txtConcesinario.Text,txtLinea.Text,txtDireccion.Text,txtTelefono.Text,txtMunicipio.Text,txtEstado.Text,txtMarca.Text,txtModelo.Text,txtano.Text))
+                if (MySqlCon.NewVeh(txtTipo.Text,txtConcesion.Text,txtConcesinario.Text,txtLinea.Text,txtDireccion.Text,txtTelefono.Text,txtMarca.Text,txtModelo.Text,txtano.Text))
                 {
                     MessageBox.Show("Vehiculo Guardado");
                     txtTipo.Enabled = false;
@@ -93,8 +86,6 @@ namespace Servicios_Ejecutivos
                     txtano.Enabled = false;
                     txtDireccion.Enabled = false;
                     txtTelefono.Enabled = false;
-                    txtEstado.Enabled = false;
-                    txtMunicipio.Enabled = false;
                     btnAc.Enabled = false;
                     btnPDF.Enabled = false;
                     btnGuardar.Enabled = false;
@@ -102,7 +93,7 @@ namespace Servicios_Ejecutivos
                 }
             }else
             {
-                if (MySqlCon.UpVeh(txtTipo.Text, txtConcesion.Text, txtConcesinario.Text, txtLinea.Text, txtDireccion.Text, txtTelefono.Text, txtMunicipio.Text, txtEstado.Text, txtMarca.Text, txtModelo.Text, txtano.Text, Int32.Parse(dgvVeh.CurrentRow.Cells[0].Value.ToString())))
+                if (MySqlCon.UpVeh(txtTipo.Text, txtConcesion.Text, txtConcesinario.Text, txtLinea.Text, txtDireccion.Text, txtTelefono.Text, txtMarca.Text, txtModelo.Text, txtano.Text, Int32.Parse(dgvVeh.CurrentRow.Cells[0].Value.ToString())))
                 {
                     MessageBox.Show("Vehiculo Guardado");
                     txtTipo.Enabled = false;
@@ -114,8 +105,6 @@ namespace Servicios_Ejecutivos
                     txtano.Enabled = false;
                     txtDireccion.Enabled = false;
                     txtTelefono.Enabled = false;
-                    txtEstado.Enabled = false;
-                    txtMunicipio.Enabled = false;
                     btnAc.Enabled = false;
                     btnPDF.Enabled = false;
                     btnGuardar.Enabled = false;
@@ -126,7 +115,7 @@ namespace Servicios_Ejecutivos
 
         private void btnAc_Click(object sender, EventArgs e)
         {
-            if (Int32.Parse(dgvVeh.CurrentRow.Cells[13].Value.ToString())==1)
+            if (Int32.Parse(dgvVeh.CurrentRow.Cells[11].Value.ToString())==1)
             {
                 if (MySqlCon.upAcVeh(Int32.Parse(dgvVeh.CurrentRow.Cells[0].Value.ToString()), false))
                 {
@@ -155,8 +144,6 @@ namespace Servicios_Ejecutivos
             txtano.Enabled = true;
             txtDireccion.Enabled = true;
             txtTelefono.Enabled = true;
-            txtEstado.Enabled = true;
-            txtMunicipio.Enabled = true;
             btnAc.Enabled = true;
             btnPDF.Enabled = true;
             btnGuardar.Enabled = true;

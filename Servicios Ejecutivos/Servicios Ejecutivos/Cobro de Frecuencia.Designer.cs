@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUnidad = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbConcepto = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.pbxFoto = new System.Windows.Forms.PictureBox();
             this.dtCobro = new System.Windows.Forms.DateTimePicker();
             this.gbDetalle = new System.Windows.Forms.GroupBox();
-            this.txtDetales = new System.Windows.Forms.TextBox();
+            this.txtDetalles = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtSaldo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.gbDias = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.chbDomingo = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbxSemana = new System.Windows.Forms.CheckBox();
             this.chbLunes = new System.Windows.Forms.CheckBox();
             this.chbMartes = new System.Windows.Forms.CheckBox();
             this.chbMiercoles = new System.Windows.Forms.CheckBox();
@@ -71,7 +71,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.gbDetalle.SuspendLayout();
             this.gbDias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -81,7 +81,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(148, 29);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 28);
             this.button1.TabIndex = 0;
@@ -89,18 +89,18 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtUnidad
             // 
-            this.textBox1.Location = new System.Drawing.Point(76, 34);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(62, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtUnidad.Location = new System.Drawing.Point(76, 34);
+            this.txtUnidad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUnidad.Name = "txtUnidad";
+            this.txtUnidad.Size = new System.Drawing.Size(62, 20);
+            this.txtUnidad.TabIndex = 1;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(109, 284);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(120, 20);
             this.textBox2.TabIndex = 2;
@@ -114,15 +114,6 @@
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Unidad";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(76, 64);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(228, 21);
-            this.comboBox1.TabIndex = 4;
             // 
             // label2
             // 
@@ -173,7 +164,7 @@
             "Castigo",
             "Otro pago"});
             this.cbConcepto.Location = new System.Drawing.Point(76, 98);
-            this.cbConcepto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbConcepto.Margin = new System.Windows.Forms.Padding(2);
             this.cbConcepto.Name = "cbConcepto";
             this.cbConcepto.Size = new System.Drawing.Size(157, 21);
             this.cbConcepto.TabIndex = 9;
@@ -181,12 +172,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Controls.Add(this.pbxFoto);
             this.groupBox1.Controls.Add(this.dtCobro);
             this.groupBox1.Controls.Add(this.gbDetalle);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtSaldo);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.gbDias);
             this.groupBox1.Controls.Add(this.label1);
@@ -195,81 +187,86 @@
             this.groupBox1.Controls.Add(this.cbConcepto);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtUnidad);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(695, 323);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cobro de Frecuencia";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // pictureBox1
+            // txtNombre
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(476, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 187);
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
+            this.txtNombre.Location = new System.Drawing.Point(76, 67);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(213, 20);
+            this.txtNombre.TabIndex = 21;
+            // 
+            // pbxFoto
+            // 
+            this.pbxFoto.Location = new System.Drawing.Point(476, 17);
+            this.pbxFoto.Margin = new System.Windows.Forms.Padding(2);
+            this.pbxFoto.Name = "pbxFoto";
+            this.pbxFoto.Size = new System.Drawing.Size(170, 187);
+            this.pbxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxFoto.TabIndex = 20;
+            this.pbxFoto.TabStop = false;
             // 
             // dtCobro
             // 
             this.dtCobro.Location = new System.Drawing.Point(257, 98);
-            this.dtCobro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtCobro.Margin = new System.Windows.Forms.Padding(2);
             this.dtCobro.Name = "dtCobro";
             this.dtCobro.Size = new System.Drawing.Size(91, 20);
             this.dtCobro.TabIndex = 19;
-            this.dtCobro.ValueChanged += new System.EventHandler(this.dtCobro_ValueChanged);
             // 
             // gbDetalle
             // 
-            this.gbDetalle.Controls.Add(this.txtDetales);
-            this.gbDetalle.Location = new System.Drawing.Point(9, 140);
-            this.gbDetalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDetalle.Controls.Add(this.txtDetalles);
+            this.gbDetalle.Location = new System.Drawing.Point(15, 135);
+            this.gbDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.gbDetalle.Name = "gbDetalle";
-            this.gbDetalle.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDetalle.Padding = new System.Windows.Forms.Padding(2);
             this.gbDetalle.Size = new System.Drawing.Size(352, 110);
             this.gbDetalle.TabIndex = 18;
             this.gbDetalle.TabStop = false;
             this.gbDetalle.Text = "Detalle";
             // 
-            // txtDetales
+            // txtDetalles
             // 
-            this.txtDetales.Location = new System.Drawing.Point(7, 28);
-            this.txtDetales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtDetales.Multiline = true;
-            this.txtDetales.Name = "txtDetales";
-            this.txtDetales.Size = new System.Drawing.Size(327, 70);
-            this.txtDetales.TabIndex = 15;
-            this.txtDetales.TextChanged += new System.EventHandler(this.txtDetales_TextChanged);
+            this.txtDetalles.Location = new System.Drawing.Point(8, 22);
+            this.txtDetalles.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDetalles.Multiline = true;
+            this.txtDetalles.Name = "txtDetalles";
+            this.txtDetalles.Size = new System.Drawing.Size(327, 70);
+            this.txtDetalles.TabIndex = 15;
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(298, 279);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(60, 32);
             this.button2.TabIndex = 14;
             this.button2.Text = "Cobrar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // txtSaldo
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(295, 28);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 24);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "250.50";
+            this.txtSaldo.AutoSize = true;
+            this.txtSaldo.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSaldo.Location = new System.Drawing.Point(295, 28);
+            this.txtSaldo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtSaldo.Name = "txtSaldo";
+            this.txtSaldo.Size = new System.Drawing.Size(70, 24);
+            this.txtSaldo.TabIndex = 13;
+            this.txtSaldo.Text = "250.50";
             // 
             // label6
             // 
@@ -287,7 +284,7 @@
             this.gbDias.Controls.Add(this.label13);
             this.gbDias.Controls.Add(this.chbDomingo);
             this.gbDias.Controls.Add(this.label12);
-            this.gbDias.Controls.Add(this.checkBox1);
+            this.gbDias.Controls.Add(this.cbxSemana);
             this.gbDias.Controls.Add(this.chbLunes);
             this.gbDias.Controls.Add(this.chbMartes);
             this.gbDias.Controls.Add(this.chbMiercoles);
@@ -295,9 +292,9 @@
             this.gbDias.Controls.Add(this.chbViernes);
             this.gbDias.Controls.Add(this.chbSabado);
             this.gbDias.Location = new System.Drawing.Point(21, 135);
-            this.gbDias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDias.Margin = new System.Windows.Forms.Padding(2);
             this.gbDias.Name = "gbDias";
-            this.gbDias.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDias.Padding = new System.Windows.Forms.Padding(2);
             this.gbDias.Size = new System.Drawing.Size(340, 119);
             this.gbDias.TabIndex = 11;
             this.gbDias.TabStop = false;
@@ -318,12 +315,13 @@
             this.chbDomingo.AutoSize = true;
             this.chbDomingo.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chbDomingo.Location = new System.Drawing.Point(262, 57);
-            this.chbDomingo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbDomingo.Margin = new System.Windows.Forms.Padding(2);
             this.chbDomingo.Name = "chbDomingo";
             this.chbDomingo.Size = new System.Drawing.Size(68, 17);
             this.chbDomingo.TabIndex = 17;
             this.chbDomingo.Text = "Domingo";
             this.chbDomingo.UseVisualStyleBackColor = true;
+            this.chbDomingo.CheckedChanged += new System.EventHandler(this.chbDomingo_CheckedChanged);
             // 
             // label12
             // 
@@ -335,25 +333,25 @@
             this.label12.TabIndex = 15;
             this.label12.Text = "Semana #";
             // 
-            // checkBox1
+            // cbxSemana
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox1.Location = new System.Drawing.Point(4, 17);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(112, 17);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "Semana Completa";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.cbxSemana.AutoSize = true;
+            this.cbxSemana.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbxSemana.Location = new System.Drawing.Point(4, 17);
+            this.cbxSemana.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxSemana.Name = "cbxSemana";
+            this.cbxSemana.Size = new System.Drawing.Size(112, 17);
+            this.cbxSemana.TabIndex = 10;
+            this.cbxSemana.Text = "Semana Completa";
+            this.cbxSemana.UseVisualStyleBackColor = true;
+            this.cbxSemana.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // chbLunes
             // 
             this.chbLunes.AutoSize = true;
             this.chbLunes.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chbLunes.Location = new System.Drawing.Point(10, 57);
-            this.chbLunes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbLunes.Margin = new System.Windows.Forms.Padding(2);
             this.chbLunes.Name = "chbLunes";
             this.chbLunes.Size = new System.Drawing.Size(55, 17);
             this.chbLunes.TabIndex = 16;
@@ -366,7 +364,7 @@
             this.chbMartes.AutoSize = true;
             this.chbMartes.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chbMartes.Location = new System.Drawing.Point(8, 79);
-            this.chbMartes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbMartes.Margin = new System.Windows.Forms.Padding(2);
             this.chbMartes.Name = "chbMartes";
             this.chbMartes.Size = new System.Drawing.Size(58, 17);
             this.chbMartes.TabIndex = 15;
@@ -379,54 +377,58 @@
             this.chbMiercoles.AutoSize = true;
             this.chbMiercoles.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chbMiercoles.Location = new System.Drawing.Point(94, 57);
-            this.chbMiercoles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbMiercoles.Margin = new System.Windows.Forms.Padding(2);
             this.chbMiercoles.Name = "chbMiercoles";
             this.chbMiercoles.Size = new System.Drawing.Size(71, 17);
             this.chbMiercoles.TabIndex = 14;
             this.chbMiercoles.Text = "Miercoles";
             this.chbMiercoles.UseVisualStyleBackColor = true;
+            this.chbMiercoles.CheckedChanged += new System.EventHandler(this.chbMiercoles_CheckedChanged);
             // 
             // chbJueves
             // 
             this.chbJueves.AutoSize = true;
             this.chbJueves.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chbJueves.Location = new System.Drawing.Point(106, 79);
-            this.chbJueves.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbJueves.Margin = new System.Windows.Forms.Padding(2);
             this.chbJueves.Name = "chbJueves";
             this.chbJueves.Size = new System.Drawing.Size(60, 17);
             this.chbJueves.TabIndex = 13;
             this.chbJueves.Text = "Jueves";
             this.chbJueves.UseVisualStyleBackColor = true;
+            this.chbJueves.CheckedChanged += new System.EventHandler(this.chbJueves_CheckedChanged);
             // 
             // chbViernes
             // 
             this.chbViernes.AutoSize = true;
             this.chbViernes.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chbViernes.Location = new System.Drawing.Point(192, 57);
-            this.chbViernes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbViernes.Margin = new System.Windows.Forms.Padding(2);
             this.chbViernes.Name = "chbViernes";
             this.chbViernes.Size = new System.Drawing.Size(61, 17);
             this.chbViernes.TabIndex = 12;
             this.chbViernes.Text = "Viernes";
             this.chbViernes.UseVisualStyleBackColor = true;
+            this.chbViernes.CheckedChanged += new System.EventHandler(this.chbViernes_CheckedChanged);
             // 
             // chbSabado
             // 
             this.chbSabado.AutoSize = true;
             this.chbSabado.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chbSabado.Location = new System.Drawing.Point(191, 79);
-            this.chbSabado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbSabado.Margin = new System.Windows.Forms.Padding(2);
             this.chbSabado.Name = "chbSabado";
             this.chbSabado.Size = new System.Drawing.Size(63, 17);
             this.chbSabado.TabIndex = 11;
             this.chbSabado.Text = "Sabado";
             this.chbSabado.UseVisualStyleBackColor = true;
+            this.chbSabado.CheckedChanged += new System.EventHandler(this.chbSabado_CheckedChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(9, 354);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(362, 209);
@@ -446,9 +448,9 @@
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Location = new System.Drawing.Point(401, 354);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(303, 205);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
@@ -458,7 +460,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(28, 151);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(59, 39);
             this.button5.TabIndex = 10;
@@ -469,7 +471,7 @@
             // 
             this.checkBox9.AutoSize = true;
             this.checkBox9.Location = new System.Drawing.Point(209, 104);
-            this.checkBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox9.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(76, 17);
             this.checkBox9.TabIndex = 9;
@@ -480,7 +482,7 @@
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(188, 27);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(37, 21);
             this.comboBox3.TabIndex = 8;
@@ -488,7 +490,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(83, 105);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(76, 20);
             this.textBox4.TabIndex = 7;
@@ -496,7 +498,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(56, 28);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(76, 20);
             this.textBox3.TabIndex = 6;
@@ -544,7 +546,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(236, 151);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(56, 39);
             this.button4.TabIndex = 1;
@@ -554,7 +556,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(247, 17);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(56, 29);
             this.button3.TabIndex = 0;
@@ -570,13 +572,13 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cobro_de_Frecuencia";
             this.Text = "Cobro_de_Frecuencia";
             this.Load += new System.EventHandler(this.Cobro_de_Frecuencia_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).EndInit();
             this.gbDetalle.ResumeLayout(false);
             this.gbDetalle.PerformLayout();
             this.gbDias.ResumeLayout(false);
@@ -591,17 +593,16 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUnidad;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbConcepto;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbxSemana;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox gbDias;
         private System.Windows.Forms.CheckBox chbDomingo;
@@ -611,7 +612,7 @@
         private System.Windows.Forms.CheckBox chbJueves;
         private System.Windows.Forms.CheckBox chbViernes;
         private System.Windows.Forms.CheckBox chbSabado;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label txtSaldo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -625,12 +626,13 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.TextBox txtDetales;
+        private System.Windows.Forms.TextBox txtDetalles;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox gbDetalle;
         private System.Windows.Forms.DateTimePicker dtCobro;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxFoto;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }

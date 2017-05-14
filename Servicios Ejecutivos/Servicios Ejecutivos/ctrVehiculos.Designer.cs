@@ -46,10 +46,6 @@
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtEstado = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtMunicipio = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -203,38 +199,6 @@
             this.txtTelefono.Size = new System.Drawing.Size(125, 20);
             this.txtTelefono.TabIndex = 17;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(232, 340);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 13);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Estado";
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(235, 369);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(125, 20);
-            this.txtEstado.TabIndex = 19;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(232, 408);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 13);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Municipio";
-            // 
-            // txtMunicipio
-            // 
-            this.txtMunicipio.Location = new System.Drawing.Point(235, 437);
-            this.txtMunicipio.Name = "txtMunicipio";
-            this.txtMunicipio.Size = new System.Drawing.Size(125, 20);
-            this.txtMunicipio.TabIndex = 21;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(45, 484);
@@ -305,10 +269,6 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtMunicipio);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtEstado);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtDireccion);
@@ -355,10 +315,6 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtMunicipio;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnGuardar;

@@ -22,8 +22,6 @@ namespace Servicios_Ejecutivos
             txtTelefono.Enabled = false;
             txtEmpresa.Enabled = false;
             txtPuesto.Enabled = false;
-            txtEstado.Enabled = false;
-            txtMunicipio.Enabled = false;
             btnAct.Enabled = false;
             btnGuardar.Enabled = false;
         }
@@ -39,7 +37,7 @@ namespace Servicios_Ejecutivos
             {
                 if (!txtNombre.Text.Equals("") || !txtDireccion.Text.Equals("") || !txtTelefono.Text.Equals("") || !txtEmpresa.Text.Equals("") || !txtPuesto.Text.Equals(""))
                 {
-                    if (MySqlCon.NewEmp(txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtEmpresa.Text, txtPuesto.Text, txtEstado.Text, txtMunicipio.Text))
+                    if (MySqlCon.NewEmp(txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtEmpresa.Text, txtPuesto.Text,null))
                     {
                         MessageBox.Show("Empleado Guardado");
                         dtgUsers.DataSource = MySqlCon.getEmp();
@@ -48,8 +46,6 @@ namespace Servicios_Ejecutivos
                         txtTelefono.Enabled = false;
                         txtEmpresa.Enabled = false;
                         txtPuesto.Enabled = false;
-                        txtEstado.Enabled = false;
-                        txtMunicipio.Enabled = false;
                         btnAct.Enabled = false;
                         btnGuardar.Enabled = false;
                     }
@@ -63,17 +59,15 @@ namespace Servicios_Ejecutivos
             {
                 if (!txtNombre.Text.Equals("") || !txtDireccion.Text.Equals("") || !txtTelefono.Text.Equals("") || !txtEmpresa.Text.Equals("") || !txtPuesto.Text.Equals(""))
                 {
-                    if (MySqlCon.upEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()), txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtEmpresa.Text, txtPuesto.Text, txtEstado.Text, txtMunicipio.Text))
+                    if (MySqlCon.upEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()), txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtEmpresa.Text, txtPuesto.Text, null))
                     {
-                        MessageBox.Show("Empleado Guardado");
+                        MessageBox.Show("Empleado Editado");
                         dtgUsers.DataSource = MySqlCon.getEmp();
                         txtDireccion.Enabled = false;
                         txtNombre.Enabled = false;
                         txtTelefono.Enabled = false;
                         txtEmpresa.Enabled = false;
                         txtPuesto.Enabled = false;
-                        txtEstado.Enabled = false;
-                        txtMunicipio.Enabled = false;
                         btnAct.Enabled = false;
                         btnGuardar.Enabled = false;
                     }
@@ -92,16 +86,12 @@ namespace Servicios_Ejecutivos
             txtTelefono.Enabled = true;
             txtEmpresa.Enabled = true;
             txtPuesto.Enabled = true;
-            txtEstado.Enabled = true;
-            txtMunicipio.Enabled = true;
             btnGuardar.Enabled = true;
             txtNombre.Text = "";
             txtDireccion.Text = "";
             txtTelefono.Text = "";
             txtEmpresa.Text = "";
             txtPuesto.Text = "";
-            txtEstado.Text = "";
-            txtMunicipio.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -111,8 +101,6 @@ namespace Servicios_Ejecutivos
             txtTelefono.Enabled = true;
             txtEmpresa.Enabled = true;
             txtPuesto.Enabled = true;
-            txtEstado.Enabled = true;
-            txtMunicipio.Enabled = true;
             btnAct.Enabled = true;
             btnGuardar.Enabled = true;
             x = 1;
@@ -122,18 +110,16 @@ namespace Servicios_Ejecutivos
         {
             txtNombre.Text = dtgUsers.CurrentRow.Cells[1].Value.ToString();
             txtDireccion.Text = dtgUsers.CurrentRow.Cells[2].Value.ToString();
-            txtTelefono.Text = dtgUsers.CurrentRow.Cells[5].Value.ToString();
-            txtEmpresa.Text = dtgUsers.CurrentRow.Cells[6].Value.ToString();
-            txtPuesto.Text = dtgUsers.CurrentRow.Cells[7].Value.ToString();
-            txtEstado.Text = dtgUsers.CurrentRow.Cells[3].Value.ToString();
-            txtMunicipio.Text = dtgUsers.CurrentRow.Cells[4].Value.ToString();
+            txtTelefono.Text = dtgUsers.CurrentRow.Cells[3].Value.ToString();
+            txtEmpresa.Text = dtgUsers.CurrentRow.Cells[4].Value.ToString();
+            txtPuesto.Text = dtgUsers.CurrentRow.Cells[5].Value.ToString();
             
 
         }
 
         private void btnAct_Click(object sender, EventArgs e)
         {
-            if (Int32.Parse(dtgUsers.CurrentRow.Cells[8].Value.ToString())==1)
+            if (Int32.Parse(dtgUsers.CurrentRow.Cells[7].Value.ToString())==1)
             {
                 if (MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()),false))
                 {
@@ -144,8 +130,6 @@ namespace Servicios_Ejecutivos
                     txtTelefono.Enabled = false;
                     txtEmpresa.Enabled = false;
                     txtPuesto.Enabled = false;
-                    txtEstado.Enabled = false;
-                    txtMunicipio.Enabled = false;
                     btnAct.Enabled = false;
                     btnGuardar.Enabled = false;
                 }
@@ -160,8 +144,6 @@ namespace Servicios_Ejecutivos
                     txtTelefono.Enabled = false;
                     txtEmpresa.Enabled = false;
                     txtPuesto.Enabled = false;
-                    txtEstado.Enabled = false;
-                    txtMunicipio.Enabled = false;
                     btnAct.Enabled = false;
                     btnGuardar.Enabled = false;
                 }
