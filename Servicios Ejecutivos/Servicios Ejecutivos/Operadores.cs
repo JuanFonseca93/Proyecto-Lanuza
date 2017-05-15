@@ -13,7 +13,7 @@ namespace Servicios_Ejecutivos
 {
     public partial class btnFoto : Form
     {
-        int x = 0;
+        int x = 0, y = 0;
         DateTime hoy = DateTime.Today;
         String imagen;
         public btnFoto()
@@ -58,23 +58,28 @@ namespace Servicios_Ejecutivos
         }
         public void estatus()
         {
-            if(checkBox1.Checked == true){
-                if (MySqlCon.upAcOper(Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString()), false))
-                {
-                    
-                    btncolor.BackColor = Color.LightGreen;
-                    dgvOperadores.DataSource = MySqlCon.getOp();
-                    MessageBox.Show("usuario activo");
-                }
-
-
-            }else
+            if (y == 1)
             {
-                if (MySqlCon.upAcOper(Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString()), true))
+                if (checkBox1.Checked == true)
                 {
-                    btncolor.BackColor = Color.Red;
-                    dgvOperadores.DataSource = MySqlCon.getOp();
-                    MessageBox.Show("usuario inactivo");
+                    if (MySqlCon.upAcOper(Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString()), 0))
+                    {
+
+                        btncolor.BackColor = Color.LightGreen;
+                        dgvOperadores.DataSource = MySqlCon.getOp();
+                        MessageBox.Show("usuario activo");
+                    }
+
+
+                }
+                else
+                {
+                    if (MySqlCon.upAcOper(Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString()), 1))
+                    {
+                        btncolor.BackColor = Color.Red;
+                        dgvOperadores.DataSource = MySqlCon.getOp();
+                        MessageBox.Show("usuario inactivo");
+                    }
                 }
             }
             
@@ -92,11 +97,11 @@ namespace Servicios_Ejecutivos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if(!txtDireccion.Text.Equals("") && !txtNombre.Text.Equals("") && !txtSaldo.Text.Equals("") && !txtTelefono.Text.Equals("") && !txtUnidad.Text.Equals(""))
+            if(!txtDireccion.Text.Equals("") && !txtNombre.Text.Equals("") && !txtTelefono.Text.Equals("") && !txtUnidad.Text.Equals(""))
             {
                 if (x == 0)
                 {
-                    if (MySqlCon.NewOper(txtUnidad.Text, txtNombre.Text, txtDireccion.Text, txtTelefono.Text, hoy.ToString("d"),  null, "1", cbxVehiculo.SelectedIndex.ToString()))
+                    if (MySqlCon.NewOper(txtUnidad.Text, txtNombre.Text, txtDireccion.Text, txtTelefono.Text, hoy.ToString("d"),  null, "1", Int32.Parse(cbxVehiculo.SelectedIndex.ToString())+1))
                     {
                         dgvOperadores.DataSource = MySqlCon.getOp();
                         MessageBox.Show("Operador Guardado");
@@ -109,8 +114,8 @@ namespace Servicios_Ejecutivos
                     }
                 } else
                 {
-                    
-                    if (MySqlCon.UpOper(txtUnidad.Text, txtNombre.Text, txtDireccion.Text, txtTelefono.Text, hoy.ToString("d"), imagen, "1" , cbxVehiculo.SelectedIndex.ToString(), Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString())))
+
+                    if (MySqlCon.UpOper(txtUnidad.Text, txtNombre.Text, txtDireccion.Text, txtTelefono.Text, hoy.ToString("d"), imagen, "1", Int32.Parse(cbxVehiculo.SelectedIndex.ToString() + 1), Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString())))
                     {
                         dgvOperadores.DataSource = MySqlCon.getOp();
                         MessageBox.Show("Operador Actualizado");
@@ -173,20 +178,25 @@ namespace Servicios_Ejecutivos
             txtDireccion.Text = dgvOperadores.CurrentRow.Cells[3].Value.ToString();
             txtTelefono.Text = dgvOperadores.CurrentRow.Cells[4].Value.ToString();
             txtSaldo.Text = dgvOperadores.CurrentRow.Cells[5].Value.ToString();
-            if(!dgvOperadores.CurrentRow.Cells[6].Value.ToString().Equals(null) && !dgvOperadores.CurrentRow.Cells[9].Value.ToString().Equals("") && !dgvOperadores.CurrentRow.Cells[9].Value.ToString().Equals("null"))
+            if(!dgvOperadores.CurrentRow.Cells[6].Value.ToString().Equals(null) && !dgvOperadores.CurrentRow.Cells[6].Value.ToString().Equals("") && !dgvOperadores.CurrentRow.Cells[6].Value.ToString().Equals("null"))
             {
                 pbxFoto.Image = Image.FromFile("c:\\Taxi_Ejecutivo\\Fotos\\Operadores\\"+dgvOperadores.CurrentRow.Cells[6].Value.ToString());
+            }else
+            {
+                pbxFoto.Image = Image.FromFile("c:\\Taxi_Ejecutivo\\Fotos\\Default.jpg");
             }
-            cbxVehiculo.SelectedIndex = Int32.Parse(dgvOperadores.CurrentRow.Cells[9].Value.ToString());
+            cbxVehiculo.SelectedIndex = Int32.Parse(dgvOperadores.CurrentRow.Cells[9].Value.ToString())-1;
 
             if (Int32.Parse(dgvOperadores.CurrentRow.Cells[7].Value.ToString()) == 1)
             {
                 checkBox1.Checked = true;
                 btncolor.BackColor = Color.LightGreen;
+                y = 1;
             }else
             {
                 checkBox1.Checked = false;
                 btncolor.BackColor = Color.Red;
+                y = 1;
             }
 
         }

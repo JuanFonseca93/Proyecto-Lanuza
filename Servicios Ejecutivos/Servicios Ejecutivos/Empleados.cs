@@ -121,7 +121,7 @@ namespace Servicios_Ejecutivos
         {
             if (Int32.Parse(dtgUsers.CurrentRow.Cells[7].Value.ToString())==1)
             {
-                if (MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()),false))
+                if (MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()),0))
                 {
                     MessageBox.Show("Empleado Guardado");
                     dtgUsers.DataSource = MySqlCon.getEmp();
@@ -135,7 +135,7 @@ namespace Servicios_Ejecutivos
                 }
             }else
             {
-                if(MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()), true))
+                if(MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()), 1))
                 {
                     MessageBox.Show("Empleado Guardado");
                     dtgUsers.DataSource = MySqlCon.getEmp();

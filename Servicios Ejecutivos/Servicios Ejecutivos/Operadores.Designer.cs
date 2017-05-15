@@ -179,6 +179,8 @@
             // cbxVehiculo
             // 
             this.cbxVehiculo.FormattingEnabled = true;
+            this.cbxVehiculo.Items.AddRange(new object[] {
+            "Seleccione un Vehiculo"});
             this.cbxVehiculo.Location = new System.Drawing.Point(414, 125);
             this.cbxVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.cbxVehiculo.Name = "cbxVehiculo";

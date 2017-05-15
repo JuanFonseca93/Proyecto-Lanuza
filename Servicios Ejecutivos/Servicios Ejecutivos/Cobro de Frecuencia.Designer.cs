@@ -172,6 +172,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.pbxFoto);
             this.groupBox1.Controls.Add(this.dtCobro);
@@ -229,7 +230,7 @@
             // gbDetalle
             // 
             this.gbDetalle.Controls.Add(this.txtDetalles);
-            this.gbDetalle.Location = new System.Drawing.Point(15, 135);
+            this.gbDetalle.Location = new System.Drawing.Point(13, 279);
             this.gbDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.gbDetalle.Name = "gbDetalle";
             this.gbDetalle.Padding = new System.Windows.Forms.Padding(2);
@@ -237,6 +238,7 @@
             this.gbDetalle.TabIndex = 18;
             this.gbDetalle.TabStop = false;
             this.gbDetalle.Text = "Detalle";
+            this.gbDetalle.Enter += new System.EventHandler(this.gbDetalle_Enter);
             // 
             // txtDetalles
             // 
@@ -256,6 +258,7 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "Cobrar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtSaldo
             // 
@@ -567,7 +570,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Ivory;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(718, 575);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridView1);

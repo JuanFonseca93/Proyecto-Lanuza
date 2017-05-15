@@ -109,5 +109,19 @@ namespace Servicios_Ejecutivos
         {
 
         }
+
+        private void toolStripLabel7_Click(object sender, EventArgs e)
+        {
+            Empresas op = new Empresas();
+            op.MdiParent = this;
+            op.Show();
+        }
+
+        private void toolStripButton7_Click_1(object sender, EventArgs e)
+        {
+            Empresas op = new Empresas();
+            op.MdiParent = this;
+            op.Show();
+        }
     }
 }

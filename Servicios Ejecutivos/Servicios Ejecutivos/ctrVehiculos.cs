@@ -117,14 +117,14 @@ namespace Servicios_Ejecutivos
         {
             if (Int32.Parse(dgvVeh.CurrentRow.Cells[11].Value.ToString())==1)
             {
-                if (MySqlCon.upAcVeh(Int32.Parse(dgvVeh.CurrentRow.Cells[0].Value.ToString()), false))
+                if (MySqlCon.upAcVeh(Int32.Parse(dgvVeh.CurrentRow.Cells[0].Value.ToString()), 0))
                 {
                     MessageBox.Show("Vehiculo ahora incativo");
                     dgvVeh.DataSource = MySqlCon.getveh();
                 }
             }else
             {
-                if (MySqlCon.upAcVeh(Int32.Parse(dgvVeh.CurrentRow.Cells[0].Value.ToString()), true))
+                if (MySqlCon.upAcVeh(Int32.Parse(dgvVeh.CurrentRow.Cells[0].Value.ToString()), 1))
                 {
                     MessageBox.Show("Vehiculo ahora activo");
                     dgvVeh.DataSource = MySqlCon.getveh();

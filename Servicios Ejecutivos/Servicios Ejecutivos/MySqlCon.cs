@@ -175,7 +175,7 @@ namespace Servicios_Ejecutivos
                 return null;
             }
         }
-        public static bool upAcEmp(int id, bool status)
+        public static bool upAcEmp(int id, int status)
         {
             try
             {
@@ -237,7 +237,7 @@ namespace Servicios_Ejecutivos
             }
 
         }
-        public static bool upAcVeh(int id, bool status)
+        public static bool upAcVeh(int id, int status)
         {
             try
             {
@@ -283,7 +283,7 @@ namespace Servicios_Ejecutivos
             }
 
         }
-        public static bool NewOper(String Unidad, String Nombre, String Direccion, String Telefono, String fecha, String foto, String Estatus, String vehiculo)
+        public static bool NewOper(String Unidad, String Nombre, String Direccion, String Telefono, String fecha, String foto, String Estatus, int vehiculo)
         {
             try
             {
@@ -324,7 +324,7 @@ namespace Servicios_Ejecutivos
             }
         }
 
-        public static bool UpOper(String Unidad, String Nombre, String Direccion, String Telefono, String fecha, String foto, String Estatus, String vehiculo, int id)
+        public static bool UpOper(String Unidad, String Nombre, String Direccion, String Telefono, String fecha, String foto, String Estatus, int vehiculo, int id)
         {
             try
             {
@@ -338,6 +338,7 @@ namespace Servicios_Ejecutivos
                 else
                 {
                     return false;
+                    MessageBox.Show("A");
                 }
             }
             catch (Exception ex)
@@ -363,7 +364,7 @@ namespace Servicios_Ejecutivos
                 return null;
             }
         }
-        public static bool upAcOper(int id, bool status)
+        public static bool upAcOper(int id, int status)
         {
             try
             {
@@ -402,6 +403,70 @@ namespace Servicios_Ejecutivos
                 return null;
 
             }
+        }
+
+        public static DataTable getEmps()
+        {
+            try
+            {
+                String Querry = "SELECT * FROM Empresas ";
+                DataTable dt = new DataTable();
+                SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
+        public static bool NewEmpr(String Nombre, String RazonSc, String RFC, String Direccion, String Telefono, String Contacto, String TelCont, String Correo, String Estado, String Ciudad)
+        {
+            try
+            {
+                String Querry = "INSERT INTO Empresas VALUES('" + Nombre + "','" + RazonSc + "','" + RFC + "','" + Direccion + "','"+Telefono+"' ,'" + Contacto + "','" + TelCont + "', '"+Correo+"' ,'" + Estado + "','"+Ciudad+"',1)";
+                SqlCommand cmd = new SqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+
+        }
+
+        public static bool UpEmpr(String Nombre, String RazonSc, String RFC, String Direccion, String Telefono, String Contacto, String TelCont, String Correo, String Estado, String Ciudad, int id)
+        {
+            try
+            {
+                String Querry = "UPDATE Empresas SET Nombre='" + Nombre + "', Razon_Social='" + RazonSc + "', RFC='" + RFC + "', Direccion_Emp='" + Direccion + "', Telefono_Emp='" + Telefono + "', Nombre_Contacto='" + Contacto + "', Telefono_Contacto='" + TelCont + "', Correo_Emp='" + Correo + "',Estado_Emp='" + Estado + "', Ciudad_Emp='"+Ciudad+"' WHERE Id_Empresa=" + id;
+                SqlCommand cmd = new SqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+
         }
     }
 }

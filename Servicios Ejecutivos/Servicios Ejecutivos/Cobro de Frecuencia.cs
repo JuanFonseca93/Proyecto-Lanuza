@@ -45,145 +45,13 @@ namespace Servicios_Ejecutivos
                 {
                     txtDetalles.AppendText(Dias);
                 }
-            }else if (cbxSemana.Checked == false)
+            }
+            if (cbxSemana.Checked == false)
             {
                 dias1.Clear();
                 txtDetalles.Text = "";
             }
-            else if (chbLunes.Checked==true)
-            {
-                dias1.Add("Lunes");
-                txtDetalles.Text = "";
-                foreach (String Dias in dias1)
-                {
-                    txtDetalles.AppendText(Dias);
-                }
-            }
-            else if (chbLunes.Checked == false)
-            {
-                int w = dias1.BinarySearch("Lunes");
-                dias1.Remove(w);
-                txtDetalles.Text = "";
-                foreach (String Dias in dias1)
-                {
-                    txtDetalles.AppendText(Dias);
-                }
-            }
-            else if (chbLunes.Checked == true)
-            {
-                dias1.Add("Martes");
-                txtDetalles.Text = "";
-                foreach (String Dias in dias1)
-                {
-                    txtDetalles.AppendText(Dias);
-                }
-            }
-            else if (chbLunes.Checked == false)
-            {
-                int w = dias1.BinarySearch("Martes");
-                dias1.Remove(w);
-                txtDetalles.Text = "";
-                foreach (String Dias in dias1)
-                {
-                    txtDetalles.AppendText(Dias);
-                }
-            }
-            else if (chbLunes.Checked == true)
-            {
-                dias1.Add("Miercoles");
-                txtDetalles.Text = "";
-                foreach (String Dias in dias1)
-                {
-                    txtDetalles.AppendText(Dias);
-                }
-            }
-            else if (chbLunes.Checked == false)
-            {
-                int w = dias1.BinarySearch("Miercoles");
-                dias1.Remove(w);
-                txtDetalles.Text = dias1.ToString();
-                    txtDetalles.Text = "";
-                foreach (String Dias in dias1)
-                {
-                    txtDetalles.AppendText(Dias);
-                }
-            }
-            else if (chbLunes.Checked == true)
-            {
-                dias1.Add("Jueves");
-                txtDetalles.Text = "";
-                foreach (String Dias in dias1)
-                {
-                    txtDetalles.AppendText(Dias);
-                }
-            }
-            else if (chbLunes.Checked == false)
-            {
-                int w = dias1.BinarySearch("Jueves");
-                dias1.Remove(w);
-                txtDetalles.Text = "";
-                foreach (String Dias in dias1)
-                {
-                    txtDetalles.AppendText(Dias);
-                }
-            }
-            else if (chbLunes.Checked == true)
-            {
-                dias1.Add("Viernes");
-                txtDetalles.Text = "";
-                foreach (String Dias in dias1)
-                {
-                    txtDetalles.AppendText(Dias);
-                }
-            }
-            else if (chbLunes.Checked == false)
-            {
-                int w = dias1.BinarySearch("Viernes");
-                dias1.Remove(w);
-                txtDetalles.Text = "";
-                foreach (String Dias in dias1)
-                {
-                    txtDetalles.AppendText(Dias);
-                }
-            }
-            else if (chbLunes.Checked == true)
-            {
-                dias1.Add("Sabado");
-                txtDetalles.Text = "";
-                foreach (String Dias in dias1)
-                {
-                    txtDetalles.AppendText(Dias);
-                }
-            }
-            else if (chbLunes.Checked == false)
-            {
-                int w = dias1.BinarySearch("Sabado");
-                dias1.Remove(w);
-                txtDetalles.Text = "";
-                foreach (String Dias in dias1)
-                {
-                    txtDetalles.AppendText(Dias);
-                }
-            }
-            else if (chbLunes.Checked == true)
-            {
-                dias1.Add("Domingo");
-                txtDetalles.Text = "";
-                foreach (String Dias in dias1)
-                {
-                    txtDetalles.AppendText(Dias);
-                }
-            }
-            else if (chbLunes.Checked == false)
-            {
-                int w = dias1.BinarySearch("Domingo");
-                dias1.Remove(w);
-                txtDetalles.Text = "";
-                foreach (String Dias in dias1)
-                {
-                    txtDetalles.AppendText(Dias);
-                }
-            }
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -278,40 +146,177 @@ namespace Servicios_Ejecutivos
 
         private void chbLunes_CheckedChanged(object sender, EventArgs e)
         {
-            lista();
+            if (chbLunes.Checked == true)
+            {
+                dias1.Add("Lunes");
+                txtDetalles.Text = "";
+                foreach (String Dias in dias1)
+                {
+                    txtDetalles.AppendText(Dias);
+                }
+            }else
+            if (chbLunes.Checked == false)
+            {
+                int w = dias1.BinarySearch("Lunes");
+                dias1.RemoveAt(w);
+                txtDetalles.Text = "";
+                foreach (String Dias in dias1)
+                {
+                    txtDetalles.AppendText(Dias);
+                }
+            }
         }
 
         private void chbMiercoles_CheckedChanged(object sender, EventArgs e)
         {
-            lista();
+            if (chbMiercoles.Checked == true)
+            {
+                dias1.Add("Miercoles");
+                txtDetalles.Text = "";
+                foreach (String Dias in dias1)
+                {
+                    txtDetalles.AppendText(Dias);
+                }
+            }else
+            if (chbMiercoles.Checked == false)
+            {
+                int w = dias1.BinarySearch("Miercoles");
+                dias1.RemoveAt(w);
+                txtDetalles.Text = dias1.ToString();
+                txtDetalles.Text = "";
+                foreach (String Dias in dias1)
+                {
+                    txtDetalles.AppendText(Dias);
+                }
+            }
         }
 
         private void chbViernes_CheckedChanged(object sender, EventArgs e)
         {
-            lista();
+            if (chbViernes.Checked == true)
+            {
+                dias1.Add("Viernes");
+                txtDetalles.Text = "";
+                foreach (String Dias in dias1)
+                {
+                    txtDetalles.AppendText(Dias);
+                }
+            }else
+            if (chbViernes.Checked == false)
+            {
+                int w = dias1.BinarySearch("Viernes");
+                dias1.RemoveAt(w);
+                txtDetalles.Text = "";
+                foreach (String Dias in dias1)
+                {
+                    txtDetalles.AppendText(Dias);
+                }
+            }
         }
 
         private void chbDomingo_CheckedChanged(object sender, EventArgs e)
         {
-            lista();
+            if (chbDomingo.Checked == true)
+            {
+                dias1.Add("Domingo");
+                txtDetalles.Text = "";
+                foreach (String Dias in dias1)
+                {
+                    txtDetalles.AppendText(Dias);
+                }
+            }else
+            if (chbDomingo.Checked == false)
+            {
+                int w = dias1.BinarySearch("Domingo");
+                dias1.RemoveAt(w);
+                txtDetalles.Text = "";
+                foreach (String Dias in dias1)
+                {
+                    txtDetalles.AppendText(Dias);
+                }
+            }
         }
 
         private void chbMartes_CheckedChanged(object sender, EventArgs e)
         {
-            lista();
+            if (chbMartes.Checked == true)
+            {
+                dias1.Add("Martes");
+                txtDetalles.Text = "";
+                foreach (String Dias in dias1)
+                {
+                    txtDetalles.AppendText(Dias);
+                }
+            }else
+            if (chbMartes.Checked == false)
+            {
+                int w = dias1.BinarySearch("Martes");
+                dias1.RemoveAt(w);
+                txtDetalles.Text = "";
+                foreach (String Dias in dias1)
+                {
+                    txtDetalles.AppendText(Dias);
+                }
+            }
         }
 
         private void chbJueves_CheckedChanged(object sender, EventArgs e)
         {
-            lista();
+            if (chbJueves.Checked == true)
+            {
+                dias1.Add("Jueves");
+                txtDetalles.Text = "";
+                foreach (String Dias in dias1)
+                {
+                    txtDetalles.AppendText(Dias);
+                }
+            }else
+            if (chbJueves.Checked == false)
+            {
+                int w = dias1.BinarySearch("Jueves");
+                dias1.RemoveAt(w);
+                txtDetalles.Text = "";
+                foreach (String Dias in dias1)
+                {
+                    txtDetalles.AppendText(Dias);
+                }
+            }
         }
 
         private void chbSabado_CheckedChanged(object sender, EventArgs e)
         {
-            lista();
+            if (chbSabado.Checked == true)
+            {
+                dias1.Add("Sabado");
+                txtDetalles.Text = "";
+                foreach (String Dias in dias1)
+                {
+                    txtDetalles.AppendText(Dias);
+                }
+            }else
+            if (chbSabado.Checked == false)
+            {
+                int w = dias1.BinarySearch("Sabado");
+                dias1.RemoveAt(w);
+                txtDetalles.Text = "";
+                foreach (String Dias in dias1)
+                {
+                    txtDetalles.AppendText(Dias);
+                }
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbDetalle_Enter(object sender, EventArgs e)
         {
 
         }
