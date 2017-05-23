@@ -123,5 +123,20 @@ namespace Servicios_Ejecutivos
             op.MdiParent = this;
             op.Show();
         }
+
+        private void toolStripLabel8_Click(object sender, EventArgs e)
+        {
+            Entrega_de_vales op = new Entrega_de_vales();
+            op.MdiParent = this;
+            op.Show();
+        }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            Entrega_de_vales op = new Entrega_de_vales();
+            op.MdiParent = this;
+            op.Show();
+
+        }
     }
 }

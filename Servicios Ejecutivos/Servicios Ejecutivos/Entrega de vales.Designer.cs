@@ -32,13 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblempresa = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtFolioI = new System.Windows.Forms.TextBox();
+            this.txtFolioF = new System.Windows.Forms.TextBox();
+            this.cbxEmpresa = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtSerie = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -46,12 +45,13 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(388, 505);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 34);
             this.button1.TabIndex = 0;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -83,36 +83,36 @@
             this.lblempresa.TabIndex = 3;
             this.lblempresa.Text = "Empresa";
             // 
-            // textBox1
+            // txtFolioI
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 175);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(106, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtFolioI.Location = new System.Drawing.Point(109, 175);
+            this.txtFolioI.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFolioI.Name = "txtFolioI";
+            this.txtFolioI.Size = new System.Drawing.Size(106, 20);
+            this.txtFolioI.TabIndex = 4;
             // 
-            // textBox2
+            // txtFolioF
             // 
-            this.textBox2.Location = new System.Drawing.Point(109, 219);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(106, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtFolioF.Location = new System.Drawing.Point(109, 219);
+            this.txtFolioF.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFolioF.Name = "txtFolioF";
+            this.txtFolioF.Size = new System.Drawing.Size(106, 20);
+            this.txtFolioF.TabIndex = 5;
             // 
-            // comboBox1
+            // cbxEmpresa
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(109, 57);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(276, 21);
-            this.comboBox1.TabIndex = 6;
+            this.cbxEmpresa.FormattingEnabled = true;
+            this.cbxEmpresa.Location = new System.Drawing.Point(109, 57);
+            this.cbxEmpresa.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxEmpresa.Name = "cbxEmpresa";
+            this.cbxEmpresa.Size = new System.Drawing.Size(276, 21);
+            this.cbxEmpresa.TabIndex = 6;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(501, 39);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(352, 513);
@@ -128,29 +128,18 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Serie";
             // 
-            // textBox3
+            // txtSerie
             // 
-            this.textBox3.Location = new System.Drawing.Point(109, 117);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(41, 20);
-            this.textBox3.TabIndex = 9;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(411, 273);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 34);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.txtSerie.Location = new System.Drawing.Point(109, 117);
+            this.txtSerie.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSerie.Name = "txtSerie";
+            this.txtSerie.Size = new System.Drawing.Size(41, 20);
+            this.txtSerie.TabIndex = 9;
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(34, 505);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(62, 34);
             this.button3.TabIndex = 11;
@@ -163,18 +152,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(878, 580);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtSerie);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cbxEmpresa);
+            this.Controls.Add(this.txtFolioF);
+            this.Controls.Add(this.txtFolioI);
             this.Controls.Add(this.lblempresa);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Entrega_de_vales";
             this.Text = "Entrega_de_vales";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -189,13 +177,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblempresa;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtFolioI;
+        private System.Windows.Forms.TextBox txtFolioF;
+        private System.Windows.Forms.ComboBox cbxEmpresa;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtSerie;
         private System.Windows.Forms.Button button3;
     }
 }

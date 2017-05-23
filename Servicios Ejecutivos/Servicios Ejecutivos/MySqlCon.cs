@@ -468,5 +468,46 @@ namespace Servicios_Ejecutivos
             }
 
         }
+
+        public static DataTable getEmprs()
+        {
+            try
+            {
+                String Querry = "SELECT Id_Empresa, Nombre FROM Empresas ";
+                DataTable dt = new DataTable();
+                SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
+
+        public static bool NewVales(String Empresa, String Serie, int Folio, String Fecha)
+        {
+            try
+            {
+                String Querry = "INSERT INTO entrega_vales VALUES('" + Empresa + "','" + Serie + "','" + Folio + "','" + Fecha + "')";
+                SqlCommand cmd = new SqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+
+        }
     }
 }
