@@ -30,6 +30,11 @@ namespace Servicios_Ejecutivos
 
         }
 
+        private void Entrega_de_vales_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (vales())

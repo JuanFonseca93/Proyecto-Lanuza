@@ -16,7 +16,7 @@ namespace Servicios_Ejecutivos
         {
             InitializeComponent();
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            FormBorderStyle = FormBorderStyle.None;
+          //  FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
         }
 
@@ -136,6 +136,11 @@ namespace Servicios_Ejecutivos
             Entrega_de_vales op = new Entrega_de_vales();
             op.MdiParent = this;
             op.Show();
+
+        }
+
+        private void Menu_Principal_Load(object sender, EventArgs e)
+        {
 
         }
     }

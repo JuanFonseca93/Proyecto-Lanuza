@@ -85,7 +85,7 @@
             this.toolStripButton8});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(861, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1148, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -93,7 +93,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(29, 24);
+            this.toolStripLabel1.Size = new System.Drawing.Size(38, 24);
             this.toolStripLabel1.Text = "Salir";
             this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
@@ -115,7 +115,7 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(52, 24);
+            this.toolStripLabel2.Size = new System.Drawing.Size(65, 24);
             this.toolStripLabel2.Text = "Usuarios";
             this.toolStripLabel2.Click += new System.EventHandler(this.toolStripLabel2_Click);
             // 
@@ -137,7 +137,7 @@
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(65, 24);
+            this.toolStripLabel3.Size = new System.Drawing.Size(83, 24);
             this.toolStripLabel3.Text = "Empleados";
             this.toolStripLabel3.Click += new System.EventHandler(this.toolStripLabel3_Click);
             // 
@@ -159,7 +159,7 @@
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(116, 24);
+            this.toolStripLabel4.Size = new System.Drawing.Size(145, 24);
             this.toolStripLabel4.Text = "Cobro de Frecuencia";
             this.toolStripLabel4.Click += new System.EventHandler(this.toolStripLabel4_Click);
             // 
@@ -181,7 +181,7 @@
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(57, 24);
+            this.toolStripLabel5.Size = new System.Drawing.Size(71, 24);
             this.toolStripLabel5.Text = "Vehiculos";
             this.toolStripLabel5.Click += new System.EventHandler(this.toolStripLabel5_Click);
             // 
@@ -203,7 +203,7 @@
             // toolStripLabel6
             // 
             this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(68, 24);
+            this.toolStripLabel6.Size = new System.Drawing.Size(87, 24);
             this.toolStripLabel6.Text = "Operadores";
             this.toolStripLabel6.Click += new System.EventHandler(this.toolStripLabel6_Click);
             // 
@@ -225,7 +225,7 @@
             // toolStripLabel7
             // 
             this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(57, 24);
+            this.toolStripLabel7.Size = new System.Drawing.Size(72, 24);
             this.toolStripLabel7.Text = "Empresas";
             this.toolStripLabel7.Click += new System.EventHandler(this.toolStripLabel7_Click);
             // 
@@ -247,7 +247,7 @@
             // toolStripLabel8
             // 
             this.toolStripLabel8.Name = "toolStripLabel8";
-            this.toolStripLabel8.Size = new System.Drawing.Size(92, 24);
+            this.toolStripLabel8.Size = new System.Drawing.Size(119, 24);
             this.toolStripLabel8.Text = "Entrega de Vales";
             this.toolStripLabel8.Click += new System.EventHandler(this.toolStripLabel8_Click);
             // 
@@ -263,15 +263,19 @@
             // 
             // Menu_Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(861, 515);
+            this.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources._13920407_149476075489666_3307059003463366637_o;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1148, 634);
             this.Controls.Add(this.toolStrip1);
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Menu_Principal";
             this.Text = "Menu_Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Menu_Principal_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

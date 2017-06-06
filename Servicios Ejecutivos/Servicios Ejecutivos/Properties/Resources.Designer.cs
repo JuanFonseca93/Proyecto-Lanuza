@@ -63,6 +63,16 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _13920407_149476075489666_3307059003463366637_o {
+            get {
+                object obj = ResourceManager.GetObject("13920407_149476075489666_3307059003463366637_o", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _16652_200 {
             get {
                 object obj = ResourceManager.GetObject("16652-200", resourceCulture);
