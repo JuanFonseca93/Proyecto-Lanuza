@@ -58,6 +58,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.DodgerBlue;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
@@ -92,8 +93,9 @@
             // 
             // toolStripLabel1
             // 
+            this.toolStripLabel1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(38, 24);
+            this.toolStripLabel1.Size = new System.Drawing.Size(42, 24);
             this.toolStripLabel1.Text = "Salir";
             this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
@@ -114,8 +116,9 @@
             // 
             // toolStripLabel2
             // 
+            this.toolStripLabel2.Font = new System.Drawing.Font("Berlin Sans FB Demi", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(65, 24);
+            this.toolStripLabel2.Size = new System.Drawing.Size(76, 24);
             this.toolStripLabel2.Text = "Usuarios";
             this.toolStripLabel2.Click += new System.EventHandler(this.toolStripLabel2_Click);
             // 
@@ -136,8 +139,9 @@
             // 
             // toolStripLabel3
             // 
+            this.toolStripLabel3.Font = new System.Drawing.Font("Berlin Sans FB Demi", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(83, 24);
+            this.toolStripLabel3.Size = new System.Drawing.Size(96, 24);
             this.toolStripLabel3.Text = "Empleados";
             this.toolStripLabel3.Click += new System.EventHandler(this.toolStripLabel3_Click);
             // 
@@ -158,8 +162,9 @@
             // 
             // toolStripLabel4
             // 
+            this.toolStripLabel4.Font = new System.Drawing.Font("Berlin Sans FB Demi", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(145, 24);
+            this.toolStripLabel4.Size = new System.Drawing.Size(169, 24);
             this.toolStripLabel4.Text = "Cobro de Frecuencia";
             this.toolStripLabel4.Click += new System.EventHandler(this.toolStripLabel4_Click);
             // 
@@ -180,8 +185,9 @@
             // 
             // toolStripLabel5
             // 
+            this.toolStripLabel5.Font = new System.Drawing.Font("Berlin Sans FB Demi", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(71, 24);
+            this.toolStripLabel5.Size = new System.Drawing.Size(84, 24);
             this.toolStripLabel5.Text = "Vehiculos";
             this.toolStripLabel5.Click += new System.EventHandler(this.toolStripLabel5_Click);
             // 
@@ -202,8 +208,9 @@
             // 
             // toolStripLabel6
             // 
+            this.toolStripLabel6.Font = new System.Drawing.Font("Berlin Sans FB Demi", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(87, 24);
+            this.toolStripLabel6.Size = new System.Drawing.Size(101, 24);
             this.toolStripLabel6.Text = "Operadores";
             this.toolStripLabel6.Click += new System.EventHandler(this.toolStripLabel6_Click);
             // 
@@ -224,8 +231,9 @@
             // 
             // toolStripLabel7
             // 
+            this.toolStripLabel7.Font = new System.Drawing.Font("Berlin Sans FB Demi", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(72, 24);
+            this.toolStripLabel7.Size = new System.Drawing.Size(84, 24);
             this.toolStripLabel7.Text = "Empresas";
             this.toolStripLabel7.Click += new System.EventHandler(this.toolStripLabel7_Click);
             // 
@@ -246,8 +254,9 @@
             // 
             // toolStripLabel8
             // 
+            this.toolStripLabel8.Font = new System.Drawing.Font("Berlin Sans FB Demi", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel8.Name = "toolStripLabel8";
-            this.toolStripLabel8.Size = new System.Drawing.Size(119, 24);
+            this.toolStripLabel8.Size = new System.Drawing.Size(142, 24);
             this.toolStripLabel8.Text = "Entrega de Vales";
             this.toolStripLabel8.Click += new System.EventHandler(this.toolStripLabel8_Click);
             // 
@@ -271,7 +280,7 @@
             this.ClientSize = new System.Drawing.Size(1148, 634);
             this.Controls.Add(this.toolStrip1);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Menu_Principal";
             this.Text = "Menu_Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

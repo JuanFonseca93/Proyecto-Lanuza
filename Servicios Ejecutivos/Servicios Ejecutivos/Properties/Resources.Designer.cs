@@ -63,9 +63,39 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _13879459_146906795746594_7204462386315017966_n {
+            get {
+                object obj = ResourceManager.GetObject("13879459_146906795746594_7204462386315017966_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _13920407_149476075489666_3307059003463366637_o {
             get {
                 object obj = ResourceManager.GetObject("13920407_149476075489666_3307059003463366637_o", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _15284166_222697918167481_5773130300282121653_n {
+            get {
+                object obj = ResourceManager.GetObject("15284166_222697918167481_5773130300282121653_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _15284166_222697918167481_5773130300282121653_n1 {
+            get {
+                object obj = ResourceManager.GetObject("15284166_222697918167481_5773130300282121653_n1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
