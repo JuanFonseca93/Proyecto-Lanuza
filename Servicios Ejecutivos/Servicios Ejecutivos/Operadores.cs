@@ -30,6 +30,10 @@ namespace Servicios_Ejecutivos
             cbxVehiculo.Enabled = false;
             btnfoto0.Enabled = false;
             DateTime hoy = DateTime.Today;
+            if (!Directory.Exists("c:\\Taxi_Ejecutivo\\Fotos\\Operadores"))
+            {
+                Directory.CreateDirectory("c:\\Taxi_Ejecutivo\\Fotos\\Operadores\\");
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)

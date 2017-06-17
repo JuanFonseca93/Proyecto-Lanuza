@@ -30,7 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.txtUnidad = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCosto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,6 +70,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.cbxEfectivo = new System.Windows.Forms.CheckBox();
+            this.cbxSaldo = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.gbDetalle.SuspendLayout();
@@ -97,13 +99,13 @@
             this.txtUnidad.Size = new System.Drawing.Size(62, 20);
             this.txtUnidad.TabIndex = 1;
             // 
-            // textBox2
+            // txtCosto
             // 
-            this.textBox2.Location = new System.Drawing.Point(109, 284);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtCosto.Location = new System.Drawing.Point(101, 291);
+            this.txtCosto.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCosto.Name = "txtCosto";
+            this.txtCosto.Size = new System.Drawing.Size(120, 20);
+            this.txtCosto.TabIndex = 2;
             // 
             // label1
             // 
@@ -139,7 +141,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 288);
+            this.label4.Location = new System.Drawing.Point(22, 294);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
@@ -173,6 +175,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.cbxSaldo);
+            this.groupBox1.Controls.Add(this.cbxEfectivo);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.pbxFoto);
             this.groupBox1.Controls.Add(this.dtCobro);
@@ -183,7 +187,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.gbDias);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtCosto);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cbConcepto);
             this.groupBox1.Controls.Add(this.button1);
@@ -230,7 +234,7 @@
             // gbDetalle
             // 
             this.gbDetalle.Controls.Add(this.txtDetalles);
-            this.gbDetalle.Location = new System.Drawing.Point(13, 279);
+            this.gbDetalle.Location = new System.Drawing.Point(15, 139);
             this.gbDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.gbDetalle.Name = "gbDetalle";
             this.gbDetalle.Padding = new System.Windows.Forms.Padding(2);
@@ -566,6 +570,28 @@
             this.button3.Text = "Buscar";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // cbxEfectivo
+            // 
+            this.cbxEfectivo.AutoSize = true;
+            this.cbxEfectivo.Location = new System.Drawing.Point(47, 263);
+            this.cbxEfectivo.Name = "cbxEfectivo";
+            this.cbxEfectivo.Size = new System.Drawing.Size(65, 17);
+            this.cbxEfectivo.TabIndex = 22;
+            this.cbxEfectivo.Text = "Efectivo";
+            this.cbxEfectivo.UseVisualStyleBackColor = true;
+            this.cbxEfectivo.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
+            // 
+            // cbxSaldo
+            // 
+            this.cbxSaldo.AutoSize = true;
+            this.cbxSaldo.Location = new System.Drawing.Point(153, 263);
+            this.cbxSaldo.Name = "cbxSaldo";
+            this.cbxSaldo.Size = new System.Drawing.Size(53, 17);
+            this.cbxSaldo.TabIndex = 23;
+            this.cbxSaldo.Text = "Saldo";
+            this.cbxSaldo.UseVisualStyleBackColor = true;
+            this.cbxSaldo.CheckedChanged += new System.EventHandler(this.cbxSaldo_CheckedChanged);
+            // 
             // Cobro_de_Frecuencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -597,7 +623,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtUnidad;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCosto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -637,5 +663,7 @@
         private System.Windows.Forms.PictureBox pbxFoto;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.CheckBox cbxSaldo;
+        private System.Windows.Forms.CheckBox cbxEfectivo;
     }
 }

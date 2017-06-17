@@ -313,12 +313,40 @@ namespace Servicios_Ejecutivos
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if(cbxSaldo.Checked == true)
+            {
+                if(Int32.Parse(txtSaldo.ToString()) < Int32.Parse(txtCosto.ToString()))
+                {
+                    if (MessageBox.Show("¿Desea cobrar lo restante con efectivo ?", "Saldo Insuficiente...", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        if (MessageBox.Show("Se necesitan : $" + (Int32.Parse(txtSaldo.Text) - Int32.Parse(txtCosto.Text)) + " en efectivo, precione aceptar para generar el pago", "Generar pago...", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
 
+                        }
+                    }
+                }
+            }
         }
 
         private void gbDetalle_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (cbxEfectivo.Checked==true)
+            {
+                cbxSaldo.Checked = false;
+            }
+        }
+
+        private void cbxSaldo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxSaldo.Checked == true)
+            {
+                cbxEfectivo.Checked = false;
+            }
         }
     }
     }

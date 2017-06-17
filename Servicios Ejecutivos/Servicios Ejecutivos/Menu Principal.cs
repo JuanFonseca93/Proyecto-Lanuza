@@ -12,9 +12,11 @@ namespace Servicios_Ejecutivos
 {
     public partial class Menu_Principal : Form
     {
-        public Menu_Principal()
+        int ID_USER;
+        public Menu_Principal(int ID_USER)
         {
             InitializeComponent();
+            this.ID_USER = ID_USER;
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
           //  FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
@@ -126,14 +128,14 @@ namespace Servicios_Ejecutivos
 
         private void toolStripLabel8_Click(object sender, EventArgs e)
         {
-            Entrega_de_vales op = new Entrega_de_vales();
+            Entrega_de_vales op = new Entrega_de_vales(ID_USER);
             op.MdiParent = this;
             op.Show();
         }
 
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
-            Entrega_de_vales op = new Entrega_de_vales();
+            Entrega_de_vales op = new Entrega_de_vales(ID_USER);
             op.MdiParent = this;
             op.Show();
 
