@@ -15,11 +15,12 @@ namespace Servicios_Ejecutivos
 {
     public partial class Entrega_de_vales : Form
     {
-        int FolioI=0, FolioF=0, FolioR = 0;
+        int FolioI=0, FolioF=0, FolioR = 0,ID_USER;
         DateTime hoy = DateTime.Today;
-        public Entrega_de_vales()
+        public Entrega_de_vales(int ID_USER)
         {
             InitializeComponent();
+            this.ID_USER = ID_USER;
             cbxEmpresa.DataSource = MySqlCon.getEmprs();
             cbxEmpresa.DisplayMember = "Nombre";
             cbxEmpresa.ValueMember = "Nombre";
@@ -86,7 +87,7 @@ namespace Servicios_Ejecutivos
                 FolioR = (FolioF - FolioI) + 1;
                 while(FolioI<=FolioF)
                 {
-                    if(MySqlCon.NewVales(cbxEmpresa.SelectedValue.ToString(),txtSerie.Text,FolioI, hoy.ToString("d")))
+                    if(MySqlCon.NewVales(Int32.Parse(cbxEmpresa.SelectedIndex.ToString())+1,txtSerie.Text,FolioI, hoy.ToString("d"),ID_USER))
                     {
                         FolioI++;
                     }

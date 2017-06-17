@@ -80,19 +80,20 @@ namespace Servicios_Ejecutivos
 
         public void iniciar_sesion()
         {
-            if (MySqlCon.checkUser(txtUser.Text, txtPass.Text))
+            try
             {
-                MessageBox.Show("Bienvenido");
-                Menu_Principal open = new Menu_Principal();
-                open.Visible = true;
-                this.Visible = false;
-            }
-            else
+                DataTable dt = MySqlCon.checkUser(txtUser.Text, txtPass.Text);
+                DataRow rw = dt.Rows[0];
+                if (rw["Alias"].ToString().Equals(txtUser.Text) && rw["Pass"].ToString().Equals(txtPass.Text))
+                {
+                    Menu_Principal OP = new Menu_Principal(Int32.Parse(rw["Id_Usuario"].ToString()));
+                    OP.Show();
+                    this.Hide();
+                }
+            }catch(Exception ex)
             {
                 MessageBox.Show("Credenciales Incorrectas");
             }
-
-
         }
 
         private void txtPass_KeyDown(object sender, KeyEventArgs e)

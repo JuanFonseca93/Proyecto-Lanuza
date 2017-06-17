@@ -14,7 +14,7 @@ namespace Servicios_Ejecutivos
     {
         private static SqlConnection connect()
         {
-            SqlConnection conectar = new SqlConnection("Data Source= CORTANA\\SQLEXPRESS;Initial Catalog=TaxiEjecutivo1;Integrated Security=True");
+            SqlConnection conectar = new SqlConnection("Data Source= DESKTOP-9OJN2F8\\SQLEXPRESS;Initial Catalog=TaxiEjecutivo1;Integrated Security=True");
 
             try
             {
@@ -29,26 +29,20 @@ namespace Servicios_Ejecutivos
             }
         }
 
-        public static bool checkUser(String User, String Pass)
+        public static DataTable checkUser(String User, String Pass)
         {
             try
             {
                 String Querry = "SELECT * FROM Usuarios where Alias ='" + User + "' and Pass ='" + Pass + "'";
-                SqlCommand cmd = new SqlCommand(Querry, connect());
-                SqlDataReader R = cmd.ExecuteReader();
-                if (R.Read())
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                DataTable dt = new DataTable();
+                SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-                return false;
+                return null;
             }
 
         }
@@ -486,11 +480,11 @@ namespace Servicios_Ejecutivos
             }
         }
 
-        public static bool NewVales(String Empresa, String Serie, int Folio, String Fecha)
+        public static bool NewVales(int Empresa, String Serie, int Folio, String Fecha, int Usuario)
         {
             try
             {
-                String Querry = "INSERT INTO entrega_vales VALUES('" + Empresa + "','" + Serie + "','" + Folio + "','" + Fecha + "')";
+                String Querry = "INSERT INTO Vales VALUES('"+Serie+"-"+Folio+"',null,null,null,null,null,'" + Fecha + "',null,null,null,null," + Usuario + "," + Empresa + ",1)";
                 SqlCommand cmd = new SqlCommand(Querry, connect());
                 int R = cmd.ExecuteNonQuery();
                 if (R != 0)
