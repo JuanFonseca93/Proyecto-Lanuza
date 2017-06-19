@@ -60,7 +60,7 @@
             this.dtgUsers.Location = new System.Drawing.Point(546, 88);
             this.dtgUsers.Margin = new System.Windows.Forms.Padding(4);
             this.dtgUsers.Name = "dtgUsers";
-            this.dtgUsers.Size = new System.Drawing.Size(695, 337);
+            this.dtgUsers.Size = new System.Drawing.Size(699, 337);
             this.dtgUsers.TabIndex = 0;
             this.dtgUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsers_CellClick);
             // 
@@ -285,7 +285,7 @@
             this.AutoSize = true;
             this.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources._15284166_222697918167481_5773130300282121653_n1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1363, 639);
+            this.ClientSize = new System.Drawing.Size(1367, 639);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnGuardar);

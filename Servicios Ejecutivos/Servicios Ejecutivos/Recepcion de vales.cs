@@ -16,5 +16,25 @@ namespace Servicios_Ejecutivos
         {
             InitializeComponent();
         }
+
+        private void Recepcion_de_vales_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

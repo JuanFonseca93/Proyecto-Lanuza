@@ -182,5 +182,10 @@ namespace Servicios_Ejecutivos
                 }
             }
         }
+
+        private void ctrVehiculos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
