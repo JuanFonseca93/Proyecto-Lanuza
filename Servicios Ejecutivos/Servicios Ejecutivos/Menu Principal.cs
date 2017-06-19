@@ -43,7 +43,7 @@ namespace Servicios_Ejecutivos
 
         private void toolStripLabel4_Click(object sender, EventArgs e)
         {
-            Cobro_de_Frecuencia open = new Cobro_de_Frecuencia();
+            Cobro_de_Frecuencia open = new Cobro_de_Frecuencia(ID_USER);
             open.MdiParent = this;
             open.Show();
         }
@@ -57,7 +57,7 @@ namespace Servicios_Ejecutivos
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            Cobro_de_Frecuencia open = new Cobro_de_Frecuencia();
+            Cobro_de_Frecuencia open = new Cobro_de_Frecuencia(ID_USER);
             open.MdiParent = this;
             open.Show();
         }

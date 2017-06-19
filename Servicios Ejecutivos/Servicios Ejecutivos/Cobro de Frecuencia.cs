@@ -16,10 +16,16 @@ namespace Servicios_Ejecutivos
     {
         DataTable datos = new DataTable();
         ArrayList dias1 = new ArrayList();
+        DateTime hoy = DateTime.Today;
 
-        public Cobro_de_Frecuencia()
+        int ID_USER;
+
+        public Cobro_de_Frecuencia(int ID_USER)
         {
             InitializeComponent();
+            dgvCobros.DataSource = MySqlCon.getCobros(hoy.ToString("d"));
+            cbxEfectivo.Checked = true;
+            this.ID_USER = ID_USER;
             
         }
         
@@ -33,6 +39,13 @@ namespace Servicios_Ejecutivos
         {
             if(cbxSemana.Checked == true)
             {
+                chbLunes.Checked = false;
+                chbMartes.Checked = false;
+                chbMiercoles.Checked = false;
+                chbJueves.Checked = false;
+                chbViernes.Checked = false;
+                chbSabado.Checked = false;
+                chbDomingo.Checked = false;
                 dias1.Add("Lunes");
                 dias1.Add("Martes");
                 dias1.Add("Miercoles");
@@ -48,7 +61,14 @@ namespace Servicios_Ejecutivos
             }
             if (cbxSemana.Checked == false)
             {
-                dias1.Clear();
+                chbLunes.Checked = false;
+                chbMartes.Checked = false;
+                chbMiercoles.Checked = false;
+                chbJueves.Checked = false;
+                chbViernes.Checked = false;
+                chbSabado.Checked = false;
+                chbDomingo.Checked = false;
+                dias1 = new ArrayList();
                 txtDetalles.Text = "";
             }
             
@@ -122,6 +142,12 @@ namespace Servicios_Ejecutivos
         */
         private void button1_Click(object sender, EventArgs e)
         {
+
+            cobro();
+        }
+
+        public void cobro()
+        {
             try
             {
                 datos = MySqlCon.CobFrec(txtUnidad.Text);
@@ -137,11 +163,10 @@ namespace Servicios_Ejecutivos
                 }
                 txtSaldo.Text = row["Saldo"].ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Unidad no encontrada");
             }
-
         }
 
         private void chbLunes_CheckedChanged(object sender, EventArgs e)
@@ -315,14 +340,49 @@ namespace Servicios_Ejecutivos
         {
             if(cbxSaldo.Checked == true)
             {
-                if(Int32.Parse(txtSaldo.ToString()) < Int32.Parse(txtCosto.ToString()))
+                if(Int32.Parse(txtSaldo.Text) < Int32.Parse(txtCosto.Text))
                 {
-                    if (MessageBox.Show("¿Desea cobrar lo restante con efectivo ?", "Saldo Insuficiente...", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("¿Desea cobrar lo restante con efectivo?" , "Saldo Insuficiente...", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        if (MessageBox.Show("Se necesitan : $" + (Int32.Parse(txtSaldo.Text) - Int32.Parse(txtCosto.Text)) + " en efectivo, precione aceptar para generar el pago", "Generar pago...", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        if (MessageBox.Show("Se necesitan : $" + (Int32.Parse(txtCosto.Text)- Int32.Parse(txtSaldo.Text)) + " en efectivo, precione aceptar para generar el pago", "Generar pago...", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
-
+                            datos = MySqlCon.CobFrec(txtUnidad.Text);
+                            DataRow row = datos.Rows[0];
+                            if (MySqlCon.NewFrec(cbConcepto.SelectedItem.ToString(),Int32.Parse(txtCosto.Text),txtDetalles.Text,hoy.ToString("d"),0,Int32.Parse(row["Id_Operador"].ToString()),ID_USER))
+                            {
+                                if (MySqlCon.UPSALDO(Int32.Parse(row["Id_Operador"].ToString()), 0))
+                                {
+                                    cobro();
+                                    MessageBox.Show("El cobro se realizo con exito");
+                                    
+                                }
+                                
+                            }
                         }
+                    }
+                }else
+                {
+                    datos = MySqlCon.CobFrec(txtUnidad.Text);
+                    DataRow row = datos.Rows[0];
+                    if (MySqlCon.NewFrec(cbConcepto.SelectedItem.ToString(), Int32.Parse(txtCosto.Text), txtDetalles.Text, hoy.ToString("d"), 0, Int32.Parse(row["Id_Operador"].ToString()), ID_USER))
+                    {
+                        if (MySqlCon.UPSALDO(Int32.Parse(row["Id_Operador"].ToString()), (Int32.Parse(txtSaldo.Text)- Int32.Parse(txtCosto.Text))))
+                        {
+                            cobro();
+                            MessageBox.Show("El cobro se realizo con exito");
+                            
+                        }
+                    }
+                }
+            }else
+            {
+                if (MessageBox.Show("El cobro se realizara en efectivo", "Cobro...", MessageBoxButtons.OK) == DialogResult.OK)
+                {
+                    datos = MySqlCon.CobFrec(txtUnidad.Text);
+                    DataRow row = datos.Rows[0];
+                    if (MySqlCon.NewFrec(cbConcepto.SelectedItem.ToString(), Int32.Parse(txtCosto.Text), txtDetalles.Text, hoy.ToString("d"), 0, Int32.Parse(row["Id_Operador"].ToString()), ID_USER))
+                    {
+                        MessageBox.Show("El cobro se realizo con exito");
                     }
                 }
             }

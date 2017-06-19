@@ -38,6 +38,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbConcepto = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxSaldo = new System.Windows.Forms.CheckBox();
+            this.cbxEfectivo = new System.Windows.Forms.CheckBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.pbxFoto = new System.Windows.Forms.PictureBox();
             this.dtCobro = new System.Windows.Forms.DateTimePicker();
@@ -57,7 +59,7 @@
             this.chbJueves = new System.Windows.Forms.CheckBox();
             this.chbViernes = new System.Windows.Forms.CheckBox();
             this.chbSabado = new System.Windows.Forms.CheckBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCobros = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
@@ -70,13 +72,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.cbxEfectivo = new System.Windows.Forms.CheckBox();
-            this.cbxSaldo = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.gbDetalle.SuspendLayout();
             this.gbDias.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCobros)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -205,6 +205,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cobro de Frecuencia";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cbxSaldo
+            // 
+            this.cbxSaldo.AutoSize = true;
+            this.cbxSaldo.Location = new System.Drawing.Point(153, 263);
+            this.cbxSaldo.Name = "cbxSaldo";
+            this.cbxSaldo.Size = new System.Drawing.Size(53, 17);
+            this.cbxSaldo.TabIndex = 23;
+            this.cbxSaldo.Text = "Saldo";
+            this.cbxSaldo.UseVisualStyleBackColor = true;
+            this.cbxSaldo.CheckedChanged += new System.EventHandler(this.cbxSaldo_CheckedChanged);
+            // 
+            // cbxEfectivo
+            // 
+            this.cbxEfectivo.AutoSize = true;
+            this.cbxEfectivo.Location = new System.Drawing.Point(47, 263);
+            this.cbxEfectivo.Name = "cbxEfectivo";
+            this.cbxEfectivo.Size = new System.Drawing.Size(65, 17);
+            this.cbxEfectivo.TabIndex = 22;
+            this.cbxEfectivo.Text = "Efectivo";
+            this.cbxEfectivo.UseVisualStyleBackColor = true;
+            this.cbxEfectivo.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
             // txtNombre
             // 
@@ -431,15 +453,15 @@
             this.chbSabado.UseVisualStyleBackColor = true;
             this.chbSabado.CheckedChanged += new System.EventHandler(this.chbSabado_CheckedChanged);
             // 
-            // dataGridView1
+            // dgvCobros
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 354);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(362, 209);
-            this.dataGridView1.TabIndex = 11;
+            this.dgvCobros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCobros.Location = new System.Drawing.Point(9, 354);
+            this.dgvCobros.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCobros.Name = "dgvCobros";
+            this.dgvCobros.RowTemplate.Height = 24;
+            this.dgvCobros.Size = new System.Drawing.Size(698, 209);
+            this.dgvCobros.TabIndex = 11;
             // 
             // groupBox3
             // 
@@ -570,36 +592,14 @@
             this.button3.Text = "Buscar";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // cbxEfectivo
-            // 
-            this.cbxEfectivo.AutoSize = true;
-            this.cbxEfectivo.Location = new System.Drawing.Point(47, 263);
-            this.cbxEfectivo.Name = "cbxEfectivo";
-            this.cbxEfectivo.Size = new System.Drawing.Size(65, 17);
-            this.cbxEfectivo.TabIndex = 22;
-            this.cbxEfectivo.Text = "Efectivo";
-            this.cbxEfectivo.UseVisualStyleBackColor = true;
-            this.cbxEfectivo.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
-            // 
-            // cbxSaldo
-            // 
-            this.cbxSaldo.AutoSize = true;
-            this.cbxSaldo.Location = new System.Drawing.Point(153, 263);
-            this.cbxSaldo.Name = "cbxSaldo";
-            this.cbxSaldo.Size = new System.Drawing.Size(53, 17);
-            this.cbxSaldo.TabIndex = 23;
-            this.cbxSaldo.Text = "Saldo";
-            this.cbxSaldo.UseVisualStyleBackColor = true;
-            this.cbxSaldo.CheckedChanged += new System.EventHandler(this.cbxSaldo_CheckedChanged);
-            // 
             // Cobro_de_Frecuencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(718, 575);
+            this.Controls.Add(this.dgvCobros);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cobro_de_Frecuencia";
@@ -612,7 +612,7 @@
             this.gbDetalle.PerformLayout();
             this.gbDias.ResumeLayout(false);
             this.gbDias.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCobros)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -632,7 +632,7 @@
         private System.Windows.Forms.ComboBox cbConcepto;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox cbxSemana;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCobros;
         private System.Windows.Forms.GroupBox gbDias;
         private System.Windows.Forms.CheckBox chbDomingo;
         private System.Windows.Forms.CheckBox chbLunes;

@@ -24,6 +24,10 @@ namespace Servicios_Ejecutivos
             cbxEmpresa.DataSource = MySqlCon.getEmprs();
             cbxEmpresa.DisplayMember = "Nombre";
             cbxEmpresa.ValueMember = "Nombre";
+            if (!Directory.Exists("c:\\Taxi_Ejecutivo\\Docs"))
+            {
+                Directory.CreateDirectory("c:\\Taxi_Ejecutivo\\Docs");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -503,5 +503,70 @@ namespace Servicios_Ejecutivos
             }
 
         }
+
+        public static bool NewFrec(String Concepto, int costo, string detalles, string Fecha, int semana,int Id_Operador, int Usuario)
+        {
+            try
+            {
+                String Querry = "INSERT INTO Cooperacion VALUES('"+Concepto+"',"+costo+",'"+detalles+"','"+Fecha+"',0,"+Id_Operador+","+Usuario+")";
+                SqlCommand cmd = new SqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+
+        }
+
+        public static bool UPSALDO(int Id_Operador, int saldo)
+        {
+            try
+            {
+                String Querry = "UPDATE Operadores SET SALDO="+saldo;
+                SqlCommand cmd = new SqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+
+        }
+
+        public static DataTable getCobros(string fecha)
+        {
+            try
+            {
+                String Querry = "SELECT * from Cooperacion where Fecha_CF = "+ fecha;
+                DataTable dt = new DataTable();
+                SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
     }
 }
