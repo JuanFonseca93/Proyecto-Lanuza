@@ -145,5 +145,19 @@ namespace Servicios_Ejecutivos
         {
 
         }
+
+        private void toolStripLabel9_Click(object sender, EventArgs e)
+        {
+            Recepcion_de_vales op = new Recepcion_de_vales();
+            op.MdiParent = this;
+            op.Show();
+        }
+
+        private void toolStripButton9_Click(object sender, EventArgs e)
+        {
+            Recepcion_de_vales op = new Recepcion_de_vales();
+            op.MdiParent = this;
+            op.Show();
+        }
     }
 }

@@ -175,6 +175,11 @@ namespace Servicios_Ejecutivos
             }
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void dgvOperadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtUnidad.Text = dgvOperadores.CurrentRow.Cells[1].Value.ToString();

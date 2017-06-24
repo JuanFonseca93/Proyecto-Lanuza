@@ -528,11 +528,11 @@ namespace Servicios_Ejecutivos
 
         }
 
-        public static bool UPSALDO(int Id_Operador, int saldo)
+        public static bool UPSALDO(int Id_Operador, double saldo)
         {
             try
             {
-                String Querry = "UPDATE Operadores SET SALDO="+saldo;
+                String Querry = "UPDATE Operadores SET SALDO="+saldo + " where Id_Operador =" + Id_Operador;
                 SqlCommand cmd = new SqlCommand(Querry, connect());
                 int R = cmd.ExecuteNonQuery();
                 if (R != 0)
@@ -567,6 +567,98 @@ namespace Servicios_Ejecutivos
                 MessageBox.Show(ex.ToString());
                 return null;
             }
+        }
+
+        public static DataTable getvales(string folio)
+        {
+            try
+            {
+                String Querry = "SELECT * from vales where vale = '"+folio+"'";
+                DataTable dt = new DataTable();
+                SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
+        public static DataTable getEmpresaNom(int id)
+        {
+            try
+            {
+                String Querry = "SELECT Nombre from Empresas where Id_Empresa =" + id;
+                DataTable dt = new DataTable();
+                SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+               MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
+
+        public static DataTable getOpdata(String Unidad)
+        {
+            try
+            {
+                String Querry = "SELECT * FROM Operadores where unidad = '"+Unidad + "'";
+                DataTable dt = new DataTable();
+                SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
+
+        public static DataTable getuni()
+        {
+            try
+            {
+                String Querry = "SELECT Unidad FROM Operadores";
+                DataTable dt = new DataTable();
+                SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+
+            }
+        }
+
+        public static bool UPVale(String NombreP, String Destino, String Costo, String Ganancia, String Fecha, String TipoS, String TipoT, int Operador, String Vale, String Estado)
+        {
+            try
+            {
+                String Querry = "UPDATE Vales SET Nombre_Pasaje='" + NombreP + "', Destino='"+Destino+"', Costo_V='" + Costo + "', Ganancia_V='"+Ganancia+"', Fecha_Recepcion = '" + Fecha + "', Tipo_Servicio = '" + TipoS + "', Tipo_Trayecto='" + TipoT + "',Estado_Vale ='"+Estado+"', Id_Operador=" + Operador + " where Vale = '" + Vale + "'";
+                SqlCommand cmd = new SqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+
         }
     }
 }
