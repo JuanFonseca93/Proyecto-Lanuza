@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Collections;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace Servicios_Ejecutivos
 {
@@ -26,7 +29,11 @@ namespace Servicios_Ejecutivos
             dgvCobros.DataSource = MySqlCon.getCobros(hoy.ToString("d"));
             cbxEfectivo.Checked = true;
             this.ID_USER = ID_USER;
-            
+            if (!Directory.Exists("c:\\Taxi_Ejecutivo\\Recibo_Cobro"))
+            {
+                Directory.CreateDirectory("c:\\Taxi_Ejecutivo\\Recibo_Cobro");
+            }
+
         }
         
 
@@ -155,13 +162,14 @@ namespace Servicios_Ejecutivos
                 txtNombre.Text = row["Nombre_U"].ToString();
                 if (row["Foto_O"].ToString().Equals(null) && row["Foto_O"].ToString().Equals("") && row["Foto_O"].ToString().Equals("null"))
                 {
-                    pbxFoto.Image = Image.FromFile("c:\\Taxi_Ejecutivo\\Fotos\\Default.jpg");
+                    pbxFoto.Image = System.Drawing.Image.FromFile("c:\\Taxi_Ejecutivo\\Fotos\\Default.jpg");
                 }
                 else
                 {
-                    pbxFoto.Image = Image.FromFile("c:\\Taxi_Ejecutivo\\Fotos\\Operadores\\" + row["Foto_O"].ToString());
+                    pbxFoto.Image = System.Drawing.Image.FromFile("c:\\Taxi_Ejecutivo\\Fotos\\Operadores\\" + row["Foto_O"].ToString());
                 }
                 txtSaldo.Text = row["Saldo"].ToString();
+                dgvCobros.DataSource = MySqlCon.getCobros(hoy.ToString("d"));
             }
             catch (Exception ex)
             {
@@ -335,7 +343,77 @@ namespace Servicios_Ejecutivos
         {
 
         }
+        public void Recibo()
+        {
+            DateTime hoy = DateTime.Today;
+            DataTable dt = MySqlCon.getidcob();
+            DataRow rw = dt.Rows[0];
+            Document doc = new Document(PageSize.A5);
+            PdfWriter w = PdfWriter.GetInstance(doc, new FileStream(@"C:\Taxi_Ejecutivo\Recibo_Cobro\" + txtUnidad.Text + "-ID" + rw["Id_Cobro"].ToString() + "-" + hoy.ToString("D") + ".pdf", FileMode.Create));
+            doc.AddAuthor("Taxi Ejecutivo");
+            iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(@"C:\Taxi_Ejecutivo\Fotos\logoA5.png");
+            logo.Alignment = iTextSharp.text.Image.ALIGN_CENTER;
+            Chunk ch00 = new Chunk("IMPRESIÓN DE RECIBO DE COBRO", FontFactory.GetFont("ARIAL", 12, iTextSharp.text.Font.NORMAL));
+            Chunk ch = new Chunk("ID Cobro: " + rw["Id_Cobro"].ToString() + "             Fecha: " + hoy.ToString("d") + "\n", FontFactory.GetFont("ARIAL", 12, iTextSharp.text.Font.NORMAL));
+            Chunk ch0 = new Chunk("Unidad: " +txtUnidad.Text + "           Cliente: " + txtNombre.Text + "\n", FontFactory.GetFont("ARIAL", 12, iTextSharp.text.Font.NORMAL));
+            Chunk ch1 = new Chunk("Concepto: " + cbConcepto.SelectedItem.ToString() + "                    Importe: $" + txtCosto.Text + "\n", FontFactory.GetFont("ARIAL", 12, iTextSharp.text.Font.NORMAL));
+            Chunk ch2 = new Chunk("Observaciones: " + txtDetalles.Text + "\n", FontFactory.GetFont("ARIAL", 12, iTextSharp.text.Font.NORMAL));
+            Chunk ch3 = new Chunk("Total: $" + txtCosto.Text + "\n\n", FontFactory.GetFont("ARIAL", 12, iTextSharp.text.Font.NORMAL));
+            Chunk ch4 = new Chunk("___________________________________" , FontFactory.GetFont("ARIAL", 12, iTextSharp.text.Font.NORMAL));
+            Chunk ch5 = new Chunk("Recibe" + "\n", FontFactory.GetFont("ARIAL", 12, iTextSharp.text.Font.NORMAL));
+            Chunk ch6 = new Chunk(hoy.ToString("d") + "\nOriginal\n", FontFactory.GetFont("ARIAL", 12, iTextSharp.text.Font.NORMAL));
+            Chunk ch7 = new Chunk(hoy.ToString("d")+ "\nCopia", FontFactory.GetFont("ARIAL", 12, iTextSharp.text.Font.NORMAL));
 
+            doc.AddTitle(txtUnidad.Text + "-ID: " + rw["Id_Cobro"].ToString() +"-"+ hoy.ToString("D") + ".pdf");
+            doc.Open();
+            Paragraph p00 = new Paragraph(ch00);
+            p00.Alignment = Element.ALIGN_CENTER;
+            Paragraph p = new Paragraph(ch);
+            p.Alignment = Element.ALIGN_CENTER;
+            Paragraph p0 = new Paragraph(ch0);
+            p0.Alignment = Element.ALIGN_CENTER;
+            Paragraph p1 = new Paragraph(ch1);
+            p1.Alignment = Element.ALIGN_CENTER;
+            Paragraph p2 = new Paragraph(ch2);
+            p2.Alignment = Element.ALIGN_CENTER;
+            Paragraph p3 = new Paragraph(ch3);
+            p3.Alignment = Element.ALIGN_CENTER;
+            Paragraph p4 = new Paragraph(ch4);
+            p4.Alignment = Element.ALIGN_CENTER;
+            Paragraph p5 = new Paragraph(ch5);
+            p5.Alignment = Element.ALIGN_CENTER;
+            Paragraph p6 = new Paragraph(ch6);
+            p6.Alignment = Element.ALIGN_CENTER;
+            Paragraph p7 = new Paragraph(ch7);
+            p7.Alignment = Element.ALIGN_CENTER;
+
+            doc.Add(new Paragraph(p00));
+            doc.Add(logo);
+            doc.Add(new Paragraph(p));
+            doc.Add(new Paragraph(p0));
+            doc.Add(new Paragraph(p1));
+            doc.Add(new Paragraph(p2));
+            doc.Add(new Paragraph(p3));
+            doc.Add(new Paragraph(p4));
+            doc.Add(new Paragraph(p5));
+            doc.Add(new Paragraph(p6));
+
+            doc.Add(logo);
+            doc.Add(new Paragraph(p));
+            doc.Add(new Paragraph(p0));
+            doc.Add(new Paragraph(p1));
+            doc.Add(new Paragraph(p2));
+            doc.Add(new Paragraph(p3));
+            doc.Add(new Paragraph(p4));
+            doc.Add(new Paragraph(p5));
+            doc.Add(new Paragraph(p7));
+            doc.Close();
+
+            System.Diagnostics.Process proc = new System.Diagnostics.Process();
+            proc.StartInfo.FileName = @"C:\Taxi_Ejecutivo\Recibo_Cobro\" + txtUnidad.Text + "-ID" + rw["Id_Cobro"].ToString() + "-" + hoy.ToString("D") + ".pdf";
+            proc.Start();
+            proc.Close();
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             if(cbxSaldo.Checked == true)
@@ -354,7 +432,7 @@ namespace Servicios_Ejecutivos
                                 {
                                     cobro();
                                     MessageBox.Show("El cobro se realizo con exito");
-                                    
+                                    Recibo();
                                 }
                                 
                             }
@@ -370,7 +448,7 @@ namespace Servicios_Ejecutivos
                         {
                             cobro();
                             MessageBox.Show("El cobro se realizo con exito");
-                            
+                            Recibo();
                         }
                     }
                 }
@@ -382,7 +460,9 @@ namespace Servicios_Ejecutivos
                     DataRow row = datos.Rows[0];
                     if (MySqlCon.NewFrec(cbConcepto.SelectedItem.ToString(), Int32.Parse(txtCosto.Text), txtDetalles.Text, hoy.ToString("d"), 0, Int32.Parse(row["Id_Operador"].ToString()), ID_USER))
                     {
+                        cobro();
                         MessageBox.Show("El cobro se realizo con exito");
+                        Recibo();
                     }
                 }
             }

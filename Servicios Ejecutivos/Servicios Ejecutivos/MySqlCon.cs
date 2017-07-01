@@ -556,7 +556,7 @@ namespace Servicios_Ejecutivos
         {
             try
             {
-                String Querry = "SELECT * from Cooperacion where Fecha_CF = "+ fecha;
+                String Querry = "SELECT * from Cooperacion where Fecha_CF = '"+ fecha + "'";
                 DataTable dt = new DataTable();
                 SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
                 data.Fill(dt);
@@ -659,6 +659,24 @@ namespace Servicios_Ejecutivos
                 return false;
             }
 
+        }
+
+        public static DataTable getidcob()
+        {
+            try
+            {
+                String Querry = "select Id_Cobro from Cooperacion order by Id_Cobro desc";
+                DataTable dt = new DataTable();
+                SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+
+            }
         }
     }
 }

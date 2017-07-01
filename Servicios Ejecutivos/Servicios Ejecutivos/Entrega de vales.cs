@@ -54,7 +54,8 @@ namespace Servicios_Ejecutivos
                 Chunk ch1 = new Chunk(cbxEmpresa.SelectedValue.ToString() + "\n\n\n", FontFactory.GetFont("ARIAL", 20, iTextSharp.text.Font.BOLD));
                 Chunk ch2 = new Chunk("Del Folio "+txtFolioI.Text+" al "+txtFolioF.Text+"\n\n\n", FontFactory.GetFont("ARIAL", 12, iTextSharp.text.Font.NORMAL));
                 Chunk ch3= new Chunk("Total de Vales "+FolioR, FontFactory.GetFont("ARIAL", 15, iTextSharp.text.Font.NORMAL));
-                Chunk ch4 = new Chunk("Salamanca Guanajuato al " + hoy.ToString("D"), FontFactory.GetFont("ARIAL", 15, iTextSharp.text.Font.NORMAL));
+                Chunk ch4 = new Chunk("Salamanca Guanajuato al " + hoy.ToString("D") + "\n\n\n\n\n\n\n\n\n\n\n", FontFactory.GetFont("ARIAL", 15, iTextSharp.text.Font.NORMAL));
+                iTextSharp.text.Image logo2 = iTextSharp.text.Image.GetInstance(@"C:\Taxi_Ejecutivo\Fotos\pie.png");
                 doc.AddTitle(cbxEmpresa.SelectedValue.ToString() + "-" + hoy.ToString("D") + ".pdf");
                 doc.Open();
                 Paragraph p1 = new Paragraph(ch);
@@ -73,6 +74,7 @@ namespace Servicios_Ejecutivos
                 doc.Add(new Paragraph(p3));
                 doc.Add(new Paragraph(p4));
                 doc.Add(new Paragraph(p5));
+                doc.Add(logo2);
                 doc.Close();
                 MessageBox.Show("Vales Registrados");
                 System.Diagnostics.Process proc = new System.Diagnostics.Process();
