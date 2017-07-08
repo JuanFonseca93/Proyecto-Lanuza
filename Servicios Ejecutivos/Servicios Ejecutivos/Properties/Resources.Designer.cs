@@ -103,6 +103,16 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1600__1___Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("1600 (1) (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _16652_200 {
             get {
                 object obj = ResourceManager.GetObject("16652-200", resourceCulture);
@@ -143,6 +153,16 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buy_gain_income_money_pay_payment_icon__19__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("buy-gain-income-money-pay-payment-icon--19 (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel_1174809_960_720 {
             get {
                 object obj = ResourceManager.GetObject("cancel-1174809_960_720", resourceCulture);
@@ -156,6 +176,16 @@ namespace Servicios_Ejecutivos.Properties {
         internal static System.Drawing.Bitmap cancel_1174809_960_720__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("cancel-1174809_960_720 (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cancel_icon_icons_com_54824__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Cancel_icon-icons.com_54824 (Custom)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,6 +233,26 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap internet_marketing_circle__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("internet-marketing-circle (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loupe_78956__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("loupe_78956 (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lucchetto__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("lucchetto (Custom)", resourceCulture);
@@ -226,6 +276,16 @@ namespace Servicios_Ejecutivos.Properties {
         internal static System.Drawing.Bitmap Save_Icon_icon_icons_com_69139__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("Save_Icon_icon-icons.com_69139 (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_icon_icons_com_73702__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Save_icon-icons.com_73702 (Custom)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
