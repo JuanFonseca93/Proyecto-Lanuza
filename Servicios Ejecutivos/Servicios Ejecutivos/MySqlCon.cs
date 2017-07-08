@@ -678,5 +678,21 @@ namespace Servicios_Ejecutivos
 
             }
         }
+        public static DataTable getUserdt( int ID)
+        {
+            try
+            {
+                String Querry = "SELECT * FROM Usuarios WHERE Id_Usuario = " + ID;
+                DataTable dt = new DataTable();
+                SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
+                data.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
     }
 }
