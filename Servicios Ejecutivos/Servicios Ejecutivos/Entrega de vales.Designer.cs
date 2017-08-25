@@ -75,7 +75,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(70, 380);
+            this.label2.Location = new System.Drawing.Point(70, 377);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 21);
             this.label2.TabIndex = 2;
@@ -95,7 +95,7 @@
             // 
             // txtFolioI
             // 
-            this.txtFolioI.Location = new System.Drawing.Point(186, 321);
+            this.txtFolioI.Location = new System.Drawing.Point(209, 320);
             this.txtFolioI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFolioI.Name = "txtFolioI";
             this.txtFolioI.Size = new System.Drawing.Size(140, 22);
@@ -103,7 +103,7 @@
             // 
             // txtFolioF
             // 
-            this.txtFolioF.Location = new System.Drawing.Point(186, 376);
+            this.txtFolioF.Location = new System.Drawing.Point(209, 376);
             this.txtFolioF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFolioF.Name = "txtFolioF";
             this.txtFolioF.Size = new System.Drawing.Size(140, 22);
@@ -112,7 +112,7 @@
             // cbxEmpresa
             // 
             this.cbxEmpresa.FormattingEnabled = true;
-            this.cbxEmpresa.Location = new System.Drawing.Point(186, 176);
+            this.cbxEmpresa.Location = new System.Drawing.Point(209, 176);
             this.cbxEmpresa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxEmpresa.Name = "cbxEmpresa";
             this.cbxEmpresa.Size = new System.Drawing.Size(367, 24);
@@ -124,7 +124,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(87, 249);
+            this.label3.Location = new System.Drawing.Point(70, 250);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 21);
             this.label3.TabIndex = 8;
@@ -132,7 +132,7 @@
             // 
             // txtSerie
             // 
-            this.txtSerie.Location = new System.Drawing.Point(186, 250);
+            this.txtSerie.Location = new System.Drawing.Point(209, 250);
             this.txtSerie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(53, 22);

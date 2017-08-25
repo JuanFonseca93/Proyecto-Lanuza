@@ -57,7 +57,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgUsers.BackgroundColor = System.Drawing.Color.White;
             this.dtgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgUsers.Location = new System.Drawing.Point(546, 88);
+            this.dtgUsers.Location = new System.Drawing.Point(554, 61);
             this.dtgUsers.Margin = new System.Windows.Forms.Padding(4);
             this.dtgUsers.Name = "dtgUsers";
             this.dtgUsers.Size = new System.Drawing.Size(699, 337);
@@ -187,7 +187,7 @@
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources.cancel_1174809_960_720;
+            this.button3.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources.Cancel_icon_icons_com_54824__Custom_;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
@@ -209,7 +209,7 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.Image = global::Servicios_Ejecutivos.Properties.Resources.Save_converted;
+            this.btnGuardar.Image = global::Servicios_Ejecutivos.Properties.Resources._1600__2___Custom_;
             this.btnGuardar.Location = new System.Drawing.Point(360, 507);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
@@ -272,7 +272,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtUser);
             this.groupBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Location = new System.Drawing.Point(118, 73);
+            this.groupBox1.Location = new System.Drawing.Point(89, 61);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(421, 417);
             this.groupBox1.TabIndex = 24;

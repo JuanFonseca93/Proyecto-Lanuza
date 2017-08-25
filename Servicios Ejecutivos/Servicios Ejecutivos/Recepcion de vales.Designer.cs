@@ -55,11 +55,13 @@
             this.txtSaldoO = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -83,7 +85,7 @@
             this.btxAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btxAgregar.FlatAppearance.BorderSize = 0;
             this.btxAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btxAgregar.Location = new System.Drawing.Point(48, 627);
+            this.btxAgregar.Location = new System.Drawing.Point(25, 20);
             this.btxAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btxAgregar.Name = "btxAgregar";
             this.btxAgregar.Size = new System.Drawing.Size(75, 73);
@@ -97,7 +99,7 @@
             this.btnPagar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPagar.FlatAppearance.BorderSize = 0;
             this.btnPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPagar.Location = new System.Drawing.Point(178, 625);
+            this.btnPagar.Location = new System.Drawing.Point(155, 18);
             this.btnPagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPagar.Name = "btnPagar";
             this.btnPagar.Size = new System.Drawing.Size(73, 73);
@@ -362,7 +364,7 @@
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(309, 627);
+            this.btnCancelar.Location = new System.Drawing.Point(286, 20);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 71);
@@ -398,6 +400,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresar vales";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(109, 484);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(83, 22);
+            this.textBox1.TabIndex = 33;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(24, 489);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 17);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Total";
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
@@ -419,24 +440,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Empresa";
             // 
-            // label2
+            // groupBox3
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(24, 489);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 17);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Total";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(109, 484);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(83, 22);
-            this.textBox1.TabIndex = 33;
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox3.Controls.Add(this.btxAgregar);
+            this.groupBox3.Controls.Add(this.btnPagar);
+            this.groupBox3.Controls.Add(this.btnCancelar);
+            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.Location = new System.Drawing.Point(47, 608);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(374, 119);
+            this.groupBox3.TabIndex = 37;
+            this.groupBox3.TabStop = false;
             // 
             // Recepcion_de_vales
             // 
@@ -446,11 +462,9 @@
             this.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources._13879459_146906795746594_7204462386315017966_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(920, 736);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnPagar);
-            this.Controls.Add(this.btxAgregar);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Recepcion_de_vales";
             this.Text = "Recepcion_de_vales";
@@ -459,6 +473,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -495,5 +510,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

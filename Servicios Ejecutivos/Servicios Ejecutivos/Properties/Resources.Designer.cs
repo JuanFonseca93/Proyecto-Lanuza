@@ -113,9 +113,49 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1600__2___Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("1600 (2) (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1600__4___Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("1600 (4) (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _16652_200 {
             get {
                 object obj = ResourceManager.GetObject("16652-200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _300px_Button_Icon_Blue_svg__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("300px-Button_Icon_Blue.svg (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Actions_user_group_new_icon__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Actions-user-group-new-icon (Custom)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +233,36 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Car_Repair_icon2__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Car-Repair-icon2 (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circle_edit_article_icon_icons_com_66938__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("circle-edit-article_icon-icons.com_66938 (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap d41c9b11_facf_4aa9_9e26_d84356e60dfe__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("d41c9b11-facf-4aa9-9e26-d84356e60dfe (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit_male_user_48 {
             get {
                 object obj = ResourceManager.GetObject("edit_male_user_48", resourceCulture);
@@ -216,6 +286,26 @@ namespace Servicios_Ejecutivos.Properties {
         internal static System.Drawing.Bitmap fondo_lineas {
             get {
                 object obj = ResourceManager.GetObject("fondo-lineas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icono03Uandes__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("icono03Uandes (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconorequisito__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("iconorequisito (Custom)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
