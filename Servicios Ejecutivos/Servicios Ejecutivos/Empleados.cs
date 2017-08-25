@@ -22,13 +22,13 @@ namespace Servicios_Ejecutivos
             txtTelefono.Enabled = false;
             txtEmpresa.Enabled = false;
             txtPuesto.Enabled = false;
-          //  btnAct.Enabled = false;
+         
             btnGuardar.Enabled = false;
         }
 
         private void Empleados_Load(object sender, EventArgs e)
         {
-          //  btnAct.Visible = false;
+        
          
             btnGuardar.Visible = false;
             btnEditar.Enabled = false;
@@ -50,7 +50,7 @@ namespace Servicios_Ejecutivos
                         txtTelefono.Enabled = false;
                         txtEmpresa.Enabled = false;
                         txtPuesto.Enabled = false;
-                       // btnAct.Enabled = false;
+                       
                         btnGuardar.Enabled = false;
                     }
                 }
@@ -72,7 +72,7 @@ namespace Servicios_Ejecutivos
                         txtTelefono.Enabled = false;
                         txtEmpresa.Enabled = false;
                         txtPuesto.Enabled = false;
-                     //   btnAct.Enabled = false;
+                     
                         btnGuardar.Enabled = false;
                     }
                 }
@@ -109,7 +109,7 @@ namespace Servicios_Ejecutivos
             txtTelefono.Enabled = true;
             txtEmpresa.Enabled = true;
             txtPuesto.Enabled = true;
-            // btnAct.Enabled = true;
+            
             btnGuardar.Visible = true;
             btnAgregar.Visible = false;
             btnGuardar.Enabled = true;
