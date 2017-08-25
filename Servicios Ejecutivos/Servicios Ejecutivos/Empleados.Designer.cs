@@ -31,7 +31,7 @@
             this.txtPuesto = new System.Windows.Forms.TextBox();
             this.txtEmpresa = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,14 +42,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dtgUsers = new System.Windows.Forms.DataGridView();
-            this.btnAct = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbEstatus = new System.Windows.Forms.RadioButton();
+            this.gbEmpleados = new System.Windows.Forms.GroupBox();
+            this.cbEstatus = new System.Windows.Forms.CheckBox();
             this.btnfoto0 = new System.Windows.Forms.Button();
             this.pbxFoto = new System.Windows.Forms.PictureBox();
-            this.cbEstatus = new System.Windows.Forms.CheckBox();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.gbEmpleados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,20 +83,20 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button2
+            // btnAgregar
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources.Actions_user_group_new_icon__Custom_;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(38, 588);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 53);
-            this.button2.TabIndex = 35;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources.Actions_user_group_new_icon__Custom_;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Location = new System.Drawing.Point(38, 588);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(66, 53);
+            this.btnAgregar.TabIndex = 35;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnEditar
             // 
@@ -208,58 +207,38 @@
             this.dtgUsers.TabIndex = 23;
             this.dtgUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsers_CellClick);
             // 
-            // btnAct
+            // gbEmpleados
             // 
-            this.btnAct.BackColor = System.Drawing.Color.Transparent;
-            this.btnAct.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources._300px_Button_Icon_Blue_svg__Custom_;
-            this.btnAct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAct.FlatAppearance.BorderSize = 0;
-            this.btnAct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAct.Location = new System.Drawing.Point(398, 588);
-            this.btnAct.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAct.Name = "btnAct";
-            this.btnAct.Size = new System.Drawing.Size(55, 50);
-            this.btnAct.TabIndex = 45;
-            this.btnAct.UseVisualStyleBackColor = false;
-            this.btnAct.Click += new System.EventHandler(this.btnAct_Click);
+            this.gbEmpleados.BackColor = System.Drawing.Color.Transparent;
+            this.gbEmpleados.Controls.Add(this.cbEstatus);
+            this.gbEmpleados.Controls.Add(this.btnfoto0);
+            this.gbEmpleados.Controls.Add(this.pbxFoto);
+            this.gbEmpleados.Controls.Add(this.label1);
+            this.gbEmpleados.Controls.Add(this.txtNombre);
+            this.gbEmpleados.Controls.Add(this.txtPuesto);
+            this.gbEmpleados.Controls.Add(this.label2);
+            this.gbEmpleados.Controls.Add(this.txtEmpresa);
+            this.gbEmpleados.Controls.Add(this.txtDireccion);
+            this.gbEmpleados.Controls.Add(this.label3);
+            this.gbEmpleados.Controls.Add(this.txtTelefono);
+            this.gbEmpleados.Controls.Add(this.label4);
+            this.gbEmpleados.Controls.Add(this.label5);
+            this.gbEmpleados.Location = new System.Drawing.Point(12, 12);
+            this.gbEmpleados.Name = "gbEmpleados";
+            this.gbEmpleados.Size = new System.Drawing.Size(701, 506);
+            this.gbEmpleados.TabIndex = 46;
+            this.gbEmpleados.TabStop = false;
             // 
-            // groupBox1
+            // cbEstatus
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.cbEstatus);
-            this.groupBox1.Controls.Add(this.rbEstatus);
-            this.groupBox1.Controls.Add(this.btnfoto0);
-            this.groupBox1.Controls.Add(this.pbxFoto);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.txtPuesto);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtEmpresa);
-            this.groupBox1.Controls.Add(this.txtDireccion);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtTelefono);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(701, 506);
-            this.groupBox1.TabIndex = 46;
-            this.groupBox1.TabStop = false;
-            // 
-            // rbEstatus
-            // 
-            this.rbEstatus.AutoSize = true;
-            this.rbEstatus.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rbEstatus.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEstatus.ForeColor = System.Drawing.Color.White;
-            this.rbEstatus.Location = new System.Drawing.Point(413, 404);
-            this.rbEstatus.Name = "rbEstatus";
-            this.rbEstatus.Size = new System.Drawing.Size(85, 24);
-            this.rbEstatus.TabIndex = 44;
-            this.rbEstatus.TabStop = true;
-            this.rbEstatus.Text = "Estatus";
-            this.rbEstatus.UseVisualStyleBackColor = true;
-            this.rbEstatus.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.cbEstatus.AutoSize = true;
+            this.cbEstatus.Location = new System.Drawing.Point(417, 422);
+            this.cbEstatus.Name = "cbEstatus";
+            this.cbEstatus.Size = new System.Drawing.Size(68, 21);
+            this.cbEstatus.TabIndex = 45;
+            this.cbEstatus.Text = "Activo";
+            this.cbEstatus.UseVisualStyleBackColor = true;
+            this.cbEstatus.CheckedChanged += new System.EventHandler(this.cbEstatus_CheckedChanged);
             // 
             // btnfoto0
             // 
@@ -282,16 +261,24 @@
             this.pbxFoto.TabIndex = 41;
             this.pbxFoto.TabStop = false;
             // 
-            // cbEstatus
+            // button3
             // 
-            this.cbEstatus.AutoSize = true;
-            this.cbEstatus.Location = new System.Drawing.Point(413, 377);
-            this.cbEstatus.Name = "cbEstatus";
-            this.cbEstatus.Size = new System.Drawing.Size(68, 21);
-            this.cbEstatus.TabIndex = 45;
-            this.cbEstatus.Text = "Activo";
-            this.cbEstatus.UseVisualStyleBackColor = true;
-            this.cbEstatus.CheckedChanged += new System.EventHandler(this.cbEstatus_CheckedChanged);
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources.Cancel_icon_icons_com_54824__Custom_;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
+            this.button3.Location = new System.Drawing.Point(610, 572);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(77, 69);
+            this.button3.TabIndex = 47;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Empleados
             // 
@@ -300,10 +287,10 @@
             this.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources._13879459_146906795746594_7204462386315017966_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1716, 684);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnAct);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.gbEmpleados);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dtgUsers);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -311,8 +298,8 @@
             this.Text = "Empleados";
             this.Load += new System.EventHandler(this.Empleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbEmpleados.ResumeLayout(false);
+            this.gbEmpleados.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).EndInit();
             this.ResumeLayout(false);
 
@@ -322,7 +309,7 @@
         private System.Windows.Forms.TextBox txtPuesto;
         private System.Windows.Forms.TextBox txtEmpresa;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -333,11 +320,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DataGridView dtgUsers;
-        private System.Windows.Forms.Button btnAct;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbEmpleados;
         private System.Windows.Forms.PictureBox pbxFoto;
         private System.Windows.Forms.Button btnfoto0;
-        private System.Windows.Forms.RadioButton rbEstatus;
         private System.Windows.Forms.CheckBox cbEstatus;
+        private System.Windows.Forms.Button button3;
     }
 }
