@@ -484,5 +484,20 @@ namespace Servicios_Ejecutivos
                 cbxEfectivo.Checked = false;
             }
         }
+
+        private void dgvCobros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cobro();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }

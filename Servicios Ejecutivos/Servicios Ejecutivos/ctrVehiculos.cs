@@ -74,7 +74,7 @@ namespace Servicios_Ejecutivos
         {
             if (x == 0)
             {
-                if (MySqlCon.NewVeh(txtTipo.Text,txtConcesion.Text,txtConcesinario.Text,txtLinea.Text,txtDireccion.Text,txtTelefono.Text,txtMarca.Text,txtModelo.Text,txtano.Text))
+                if (MySqlCon.NewVeh(txtTipo.Text,txtConcesion.Text,txtConcesinario.Text,cbLinea.Text,txtDireccion.Text,txtTelefono.Text,txtMarca.Text,txtModelo.Text,txtano.Text))
                 {
                     MessageBox.Show("Vehiculo Guardado");
                     txtTipo.Enabled = false;
@@ -185,6 +185,21 @@ namespace Servicios_Ejecutivos
 
         private void ctrVehiculos_Load(object sender, EventArgs e)
         {
+            ToolTip n = new ToolTip();
+            ToolTip n1 = new ToolTip();
+            ToolTip n2 = new ToolTip();
+            ToolTip n3 = new ToolTip();
+            ToolTip n4 = new ToolTip();
+            ToolTip n5 = new ToolTip();
+
+            n.SetToolTip(btnNuevo, "Registrar Vehiculo");
+            n1.SetToolTip(btnEditar, "Editar Vehiculo");
+            n2.SetToolTip(btnGuardar, "Guardar Tarjeta");
+            n3.SetToolTip(btnPDF, "Guardar Tarjeta");
+            n4.SetToolTip(btnAc, "Activar - Desactivar Vehiculo");
+            n5.SetToolTip(btnCancelar, "Cancelar");
+            
+
 
         }
     }

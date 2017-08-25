@@ -119,7 +119,7 @@ namespace Servicios_Ejecutivos
 
         private void btnAct_Click(object sender, EventArgs e)
         {
-            if (Int32.Parse(dtgUsers.CurrentRow.Cells[7].Value.ToString())==1)
+          /*  if (Int32.Parse(dtgUsers.CurrentRow.Cells[7].Value.ToString())==1)
             {
                 if (MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()),0))
                 {
@@ -147,7 +147,27 @@ namespace Servicios_Ejecutivos
                     btnAct.Enabled = false;
                     btnGuardar.Enabled = false;
                 }
+            }*/
+
+        }
+
+        private void btnfoto0_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbEstatus.Checked)
+            {
+                MessageBox.Show("activo");
             }
+
+        }
+
+        private void cbEstatus_CheckedChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }

@@ -150,6 +150,11 @@ namespace Servicios_Ejecutivos
             }
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void cbxIdaV_CheckedChanged(object sender, EventArgs e)
         {
             if (cbxIdaV.Checked == true)

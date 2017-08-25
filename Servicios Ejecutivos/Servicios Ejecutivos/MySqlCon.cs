@@ -14,7 +14,7 @@ namespace Servicios_Ejecutivos
     {
         private static SqlConnection connect()
         {
-            SqlConnection conectar = new SqlConnection("Data Source= DESKTOP-9OJN2F8\\SQLEXPRESS;Initial Catalog=TaxiEjecutivo1;Integrated Security=True");
+            SqlConnection conectar = new SqlConnection("Data Source= CORTANA\\SQLEXPRESS;Initial Catalog=TaxiEjecutivo1;Integrated Security=True");
 
             try
             {

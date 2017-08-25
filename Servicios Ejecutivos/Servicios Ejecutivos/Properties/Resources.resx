@@ -118,20 +118,68 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Taxi Ejecutivo Logo Final-01 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Taxi Ejecutivo Logo Final-01 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BOTON_INICIARSESION (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BOTON_INICIARSESION (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="16652-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\16652-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="d41c9b11-facf-4aa9-9e26-d84356e60dfe (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d41c9b11-facf-4aa9-9e26-d84356e60dfe (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cancel_icon-icons.com_54824 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cancel_icon-icons.com_54824 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Actions-user-group-new-icon (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Actions-user-group-new-icon (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user-male-icon_34332 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-male-icon_34332 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo-lineas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo-lineas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add_male_user_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_male_user_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BOTON_INICIARSESION (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BOTON_INICIARSESION (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancel-1174809_960_720 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel-1174809_960_720 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="13920407_149476075489666_3307059003463366637_o" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\13920407_149476075489666_3307059003463366637_o.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Save_icon-icons.com_73702 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save_icon-icons.com_73702 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="300px-Button_Icon_Blue.svg (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\300px-Button_Icon_Blue.svg (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1600 (4) (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1600 (4) (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icono03Uandes (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono03Uandes (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loupe_78956 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loupe_78956 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1600 (2) (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1600 (2) (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BOTON_INICIARSESION (Custom) (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BOTON_INICIARSESION (Custom) (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buy-gain-income-money-pay-payment-icon--19 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buy-gain-income-money-pay-payment-icon--19 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1600 (1) (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1600 (1) (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="15284166_222697918167481_5773130300282121653_n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15284166_222697918167481_5773130300282121653_n1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconorequisito (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconorequisito (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SERVICIO-DE-TRANSPORTE-EJECUTIVO-Y-CORPORATIVO_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SERVICIO-DE-TRANSPORTE-EJECUTIVO-Y-CORPORATIVO_7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,46 +187,43 @@
   <data name="sesion2 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sesion2 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="13879459_146906795746594_7204462386315017966_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\13879459_146906795746594_7204462386315017966_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="inicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel-1174809_960_720 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel-1174809_960_720 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="edit_male_user_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit_male_user_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo-lineas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo-lineas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user-male-icon_34332 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-male-icon_34332 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="lucchetto (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lucchetto (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Save_Icon_icon-icons.com_69139 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save_Icon_icon-icons.com_69139 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="edit_male_user_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_male_user_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Car-Repair-icon2 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Car-Repair-icon2 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cancel-1174809_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel-1174809_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BOTON_INICIARSESION (Custom) (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BOTON_INICIARSESION (Custom) (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="16652-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16652-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="internet-marketing-circle (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\internet-marketing-circle (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="13920407_149476075489666_3307059003463366637_o" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\13920407_149476075489666_3307059003463366637_o.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="13879459_146906795746594_7204462386315017966_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\13879459_146906795746594_7204462386315017966_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Save_converted" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save_converted.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Taxi Ejecutivo Logo Final-01 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Taxi Ejecutivo Logo Final-01 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="15284166_222697918167481_5773130300282121653_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\15284166_222697918167481_5773130300282121653_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="15284166_222697918167481_5773130300282121653_n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\15284166_222697918167481_5773130300282121653_n1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="circle-edit-article_icon-icons.com_66938 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circle-edit-article_icon-icons.com_66938 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -33,7 +33,7 @@ namespace Servicios_Ejecutivos
             txtRFC.Enabled = status;
             txtTelCont.Enabled = status;
             txtTelefono.Enabled = status;
-            btnG.Enabled = status;
+            btnGuardar.Enabled = status;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -80,6 +80,43 @@ namespace Servicios_Ejecutivos
         {
             deshabilitar(true);
             x = 1;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvEmpresas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCiudad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Empresas_Load(object sender, EventArgs e)
+        {
+            ToolTip n = new ToolTip();
+            n.SetToolTip(btnBuscar,"Buscar empresa");
+            ToolTip n1 = new ToolTip();
+            n.SetToolTip(btnEditar, "Editar empresa");
+            ToolTip n2 = new ToolTip();
+            n.SetToolTip(btnGuardar, "Guardar empresa");
+            ToolTip n3 = new ToolTip();
+            n.SetToolTip(btnNueva, "Nueva empresa");
         }
     }
 }
