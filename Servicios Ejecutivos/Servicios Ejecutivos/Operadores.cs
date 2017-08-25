@@ -46,10 +46,7 @@ namespace Servicios_Ejecutivos
 
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            estatus();
-        }
+        
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -60,34 +57,7 @@ namespace Servicios_Ejecutivos
         {
 
         }
-        public void estatus()
-        {
-            if (y == 1)
-            {
-                if (checkBox1.Checked == true)
-                {
-                    if (MySqlCon.upAcOper(Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString()), 0))
-                    {
-
-                        btncolor.BackColor = Color.LightGreen;
-                        dgvOperadores.DataSource = MySqlCon.getOp();
-                        MessageBox.Show("usuario activo");
-                    }
-
-
-                }
-                else
-                {
-                    if (MySqlCon.upAcOper(Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString()), 1))
-                    {
-                        btncolor.BackColor = Color.Red;
-                        dgvOperadores.DataSource = MySqlCon.getOp();
-                        MessageBox.Show("usuario inactivo");
-                    }
-                }
-            }
-            
-        }
+        
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -180,6 +150,31 @@ namespace Servicios_Ejecutivos
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Int32.Parse(dgvOperadores.CurrentRow.Cells[7].Value.ToString()) == 1)
+            {
+                if (MySqlCon.upAcOper(Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString()), 0))
+                {
+
+                    btncolor.BackColor = Color.LightGreen;
+                    dgvOperadores.DataSource = MySqlCon.getOp();
+                    MessageBox.Show("usuario inactivo");
+                }
+
+
+            }
+            else
+            {
+                if (MySqlCon.upAcOper(Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString()), 1))
+                {
+                    btncolor.BackColor = Color.Red;
+                    dgvOperadores.DataSource = MySqlCon.getOp();
+                    MessageBox.Show("usuario activo");
+                }
+            }
+        }
+
         private void dgvOperadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtUnidad.Text = dgvOperadores.CurrentRow.Cells[1].Value.ToString();
@@ -198,14 +193,10 @@ namespace Servicios_Ejecutivos
 
             if (Int32.Parse(dgvOperadores.CurrentRow.Cells[7].Value.ToString()) == 1)
             {
-                checkBox1.Checked = true;
                 btncolor.BackColor = Color.LightGreen;
-                y = 1;
             }else
             {
-                checkBox1.Checked = false;
                 btncolor.BackColor = Color.Red;
-                y = 1;
             }
 
         }

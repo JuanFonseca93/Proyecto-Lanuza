@@ -130,35 +130,35 @@ namespace Servicios_Ejecutivos
 
         private void btnAct_Click(object sender, EventArgs e)
         {
-          /*  if (Int32.Parse(dtgUsers.CurrentRow.Cells[7].Value.ToString())==1)
-            {
-                if (MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()),0))
-                {
-                    MessageBox.Show("Empleado Guardado");
-                    dtgUsers.DataSource = MySqlCon.getEmp();
-                    txtDireccion.Enabled = false;
-                    txtNombre.Enabled = false;
-                    txtTelefono.Enabled = false;
-                    txtEmpresa.Enabled = false;
-                    txtPuesto.Enabled = false;
-                    btnAct.Enabled = false;
-                    btnGuardar.Enabled = false;
-                }
-            }else
-            {
-                if(MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()), 1))
-                {
-                    MessageBox.Show("Empleado Guardado");
-                    dtgUsers.DataSource = MySqlCon.getEmp();
-                    txtDireccion.Enabled = false;
-                    txtNombre.Enabled = false;
-                    txtTelefono.Enabled = false;
-                    txtEmpresa.Enabled = false;
-                    txtPuesto.Enabled = false;
-                    btnAct.Enabled = false;
-                    btnGuardar.Enabled = false;
-                }
-            }*/
+            /*  if (Int32.Parse(dtgUsers.CurrentRow.Cells[7].Value.ToString())==1)
+              {
+                  if (MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()),0))
+                  {
+                      MessageBox.Show("Empleado Guardado");
+                      dtgUsers.DataSource = MySqlCon.getEmp();
+                      txtDireccion.Enabled = false;
+                      txtNombre.Enabled = false;
+                      txtTelefono.Enabled = false;
+                      txtEmpresa.Enabled = false;
+                      txtPuesto.Enabled = false;
+                      btnAct.Enabled = false;
+                      btnGuardar.Enabled = false;
+                  }
+              }else
+              {
+                  if(MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()), 1))
+                  {
+                      MessageBox.Show("Empleado Guardado");
+                      dtgUsers.DataSource = MySqlCon.getEmp();
+                      txtDireccion.Enabled = false;
+                      txtNombre.Enabled = false;
+                      txtTelefono.Enabled = false;
+                      txtEmpresa.Enabled = false;
+                      txtPuesto.Enabled = false;
+                      btnAct.Enabled = false;
+                      btnGuardar.Enabled = false;
+                  }
+              }*/
 
         }
 
