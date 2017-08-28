@@ -1,8 +1,10 @@
-﻿using System;
+﻿using iTextSharp.text;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +24,9 @@ namespace Servicios_Ejecutivos
             txtTelefono.Enabled = false;
             txtEmpresa.Enabled = false;
             txtPuesto.Enabled = false;
-         
+            btnColor.Enabled = false;
             btnGuardar.Enabled = false;
+            btnfoto0.Enabled = false;
         }
 
         private void Empleados_Load(object sender, EventArgs e)
@@ -50,13 +53,12 @@ namespace Servicios_Ejecutivos
                         txtTelefono.Enabled = false;
                         txtEmpresa.Enabled = false;
                         txtPuesto.Enabled = false;
-                       
                         btnGuardar.Enabled = false;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Seleccione un Rango y llene los campos antes de continuar");
+                    MessageBox.Show("Asegurece de llenar los campos antes de continuar");
                 }
             }
             else
@@ -72,13 +74,12 @@ namespace Servicios_Ejecutivos
                         txtTelefono.Enabled = false;
                         txtEmpresa.Enabled = false;
                         txtPuesto.Enabled = false;
-                     
                         btnGuardar.Enabled = false;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Seleccione un Rango y llene los campos antes de continuar");
+                    MessageBox.Show("Asegurece de llenar los campos antes de continuar");
                 }
             }
         }
@@ -109,7 +110,6 @@ namespace Servicios_Ejecutivos
             txtTelefono.Enabled = true;
             txtEmpresa.Enabled = true;
             txtPuesto.Enabled = true;
-            
             btnGuardar.Visible = true;
             btnAgregar.Visible = false;
             btnGuardar.Enabled = true;
@@ -124,47 +124,48 @@ namespace Servicios_Ejecutivos
             txtTelefono.Text = dtgUsers.CurrentRow.Cells[3].Value.ToString();
             txtEmpresa.Text = dtgUsers.CurrentRow.Cells[4].Value.ToString();
             txtPuesto.Text = dtgUsers.CurrentRow.Cells[5].Value.ToString();
-            
+            btnAct1.Enabled = true;
+            if (Int32.Parse(dtgUsers.CurrentRow.Cells[7].Value.ToString()) ==1 )
+            {
+                btnColor.BackColor = Color.Green;
+                btnColor.Text = "A";
+            }else
+            {
+                btnColor.BackColor = Color.Red;
+                btnColor.Text = "I";
+            }
+            if (!dtgUsers.CurrentRow.Cells[6].Value.ToString().Equals(null) && !dtgUsers.CurrentRow.Cells[6].Value.ToString().Equals("") && !dtgUsers.CurrentRow.Cells[6].Value.ToString().Equals("null"))
+            {
+                pbxFoto.Image = System.Drawing.Image.FromFile("c:\\Taxi_Ejecutivo\\Fotos\\Operadores\\" + dtgUsers.CurrentRow.Cells[6].Value.ToString());
+            }
+            else
+            {
+                pbxFoto.Image = System.Drawing.Image.FromFile("c:\\Taxi_Ejecutivo\\Fotos\\Default.jpg");
+            }
 
         }
 
-        private void btnAct_Click(object sender, EventArgs e)
-        {
-            /*  if (Int32.Parse(dtgUsers.CurrentRow.Cells[7].Value.ToString())==1)
-              {
-                  if (MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()),0))
-                  {
-                      MessageBox.Show("Empleado Guardado");
-                      dtgUsers.DataSource = MySqlCon.getEmp();
-                      txtDireccion.Enabled = false;
-                      txtNombre.Enabled = false;
-                      txtTelefono.Enabled = false;
-                      txtEmpresa.Enabled = false;
-                      txtPuesto.Enabled = false;
-                      btnAct.Enabled = false;
-                      btnGuardar.Enabled = false;
-                  }
-              }else
-              {
-                  if(MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()), 1))
-                  {
-                      MessageBox.Show("Empleado Guardado");
-                      dtgUsers.DataSource = MySqlCon.getEmp();
-                      txtDireccion.Enabled = false;
-                      txtNombre.Enabled = false;
-                      txtTelefono.Enabled = false;
-                      txtEmpresa.Enabled = false;
-                      txtPuesto.Enabled = false;
-                      btnAct.Enabled = false;
-                      btnGuardar.Enabled = false;
-                  }
-              }*/
-
-        }
-
+        
         private void btnfoto0_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                String imagen = openFileDialog1.FileName;
+                pbxFoto.Image = System.Drawing.Image.FromFile(imagen);
 
+                if (!Directory.Exists("c:\\Taxi_Ejecutivo\\Fotos\\Empleados"))
+                {
+                    Directory.CreateDirectory("c:\\Taxi_Ejecutivo\\Fotos\\Empleados\\");
+                    File.Copy(imagen, "c:\\Taxi_Ejecutivo\\Fotos\\Empleados\\" + txtNombre.Text + ".jpg", true);
+                    imagen = Path.GetFileName("c:\\Taxi_Ejecutivo\\Fotos\\Empleados\\" + txtNombre.Text + ".jpg");
+                }
+                else
+                {
+                    File.Copy(imagen, "c:\\Taxi_Ejecutivo\\Fotos\\Empleados\\" + txtNombre.Text + ".jpg", true);
+                    imagen = Path.GetFileName("c:\\Taxi_Ejecutivo\\Fotos\\Empleados\\" + txtNombre.Text + ".jpg");
+                }
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -192,6 +193,39 @@ namespace Servicios_Ejecutivos
             btnGuardar.Visible = false;
 
             
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+              if (Int32.Parse(dtgUsers.CurrentRow.Cells[7].Value.ToString())==1)
+             {
+                 if (MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()),0))
+                 {
+                     MessageBox.Show("Empleado Inactivo");
+                     dtgUsers.DataSource = MySqlCon.getEmp();
+                     txtDireccion.Enabled = false;
+                     txtNombre.Enabled = false;
+                     txtTelefono.Enabled = false;
+                     txtEmpresa.Enabled = false;
+                     txtPuesto.Enabled = false;
+                     btnAct1.Enabled = false;
+                     btnGuardar.Enabled = false;
+                 }
+             }else
+             {
+                 if(MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()), 1))
+                 {
+                     MessageBox.Show("Empleado Inactivo");
+                     dtgUsers.DataSource = MySqlCon.getEmp();
+                     txtDireccion.Enabled = false;
+                     txtNombre.Enabled = false;
+                     txtTelefono.Enabled = false;
+                     txtEmpresa.Enabled = false;
+                     txtPuesto.Enabled = false;
+                     btnAct1.Enabled = false;
+                     btnGuardar.Enabled = false;
+                 }
+             }
         }
     }
 }
