@@ -9,16 +9,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Servicios_Ejecutivos
 {
     public partial class Empleados : Form
     {
+        public SqlConnection conexionConBD;
+        public SqlCommand comando;
+        public DataTable dt;
+        public SqlDataAdapter adaptador;
+        public SqlDataReader dr;
+
+
         int x = 0;
         public Empleados()
         {
+
+           
+
+
             InitializeComponent();
-            dtgUsers.DataSource = MySqlCon.getEmp();
+            dtgEmpleados.DataSource = MySqlCon.getEmp();
             txtDireccion.Enabled = false;
             txtNombre.Enabled = false;
             txtTelefono.Enabled = false;
@@ -31,10 +43,28 @@ namespace Servicios_Ejecutivos
 
         private void Empleados_Load(object sender, EventArgs e)
         {
-        
-         
+           
+            alternarcolor(dtgEmpleados);
+            this.dtgEmpleados.Columns[0].Visible = false;
+            this.dtgEmpleados.Columns[6].Visible = false;
+            this.dtgEmpleados.Columns[7].Visible = false;
+            ToolTip n = new ToolTip();
+            ToolTip n2 = new ToolTip();
+            ToolTip n3 = new ToolTip();
+            ToolTip n4 = new ToolTip();
+            ToolTip n5 = new ToolTip();
+            ToolTip n6 = new ToolTip();
+
+            n.SetToolTip(btnAgregar, "Agregar nuevo empleado");
+            n2.SetToolTip(btnEditar, "Editar datos");
+            n3.SetToolTip(btnfoto0, "Agregar foto");
+            n4.SetToolTip(btnGuardar, "Guardar");
+            n5.SetToolTip(btnAct1, "Activar/Desactivar empleado");
+            n6.SetToolTip(btnCancelar, "Cancelar");
+
             btnGuardar.Visible = false;
             btnEditar.Enabled = false;
+            
 
         }
 
@@ -47,7 +77,7 @@ namespace Servicios_Ejecutivos
                     if (MySqlCon.NewEmp(txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtEmpresa.Text, txtPuesto.Text,null))
                     {
                         MessageBox.Show("Empleado Guardado");
-                        dtgUsers.DataSource = MySqlCon.getEmp();
+                        dtgEmpleados.DataSource = MySqlCon.getEmp();
                         txtDireccion.Enabled = false;
                         txtNombre.Enabled = false;
                         txtTelefono.Enabled = false;
@@ -65,10 +95,10 @@ namespace Servicios_Ejecutivos
             {
                 if (!txtNombre.Text.Equals("") || !txtDireccion.Text.Equals("") || !txtTelefono.Text.Equals("") || !txtEmpresa.Text.Equals("") || !txtPuesto.Text.Equals(""))
                 {
-                    if (MySqlCon.upEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()), txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtEmpresa.Text, txtPuesto.Text, null))
+                    if (MySqlCon.upEmp(Int32.Parse(dtgEmpleados.CurrentRow.Cells[0].Value.ToString()), txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtEmpresa.Text, txtPuesto.Text, null))
                     {
                         MessageBox.Show("Empleado Editado");
-                        dtgUsers.DataSource = MySqlCon.getEmp();
+                        dtgEmpleados.DataSource = MySqlCon.getEmp();
                         txtDireccion.Enabled = false;
                         txtNombre.Enabled = false;
                         txtTelefono.Enabled = false;
@@ -113,19 +143,21 @@ namespace Servicios_Ejecutivos
             btnGuardar.Visible = true;
             btnAgregar.Visible = false;
             btnGuardar.Enabled = true;
+            btnfoto0.Enabled = true;
             x = 1;
         }
 
         private void dtgUsers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             btnEditar.Enabled = true;
-            txtNombre.Text = dtgUsers.CurrentRow.Cells[1].Value.ToString();
-            txtDireccion.Text = dtgUsers.CurrentRow.Cells[2].Value.ToString();
-            txtTelefono.Text = dtgUsers.CurrentRow.Cells[3].Value.ToString();
-            txtEmpresa.Text = dtgUsers.CurrentRow.Cells[4].Value.ToString();
-            txtPuesto.Text = dtgUsers.CurrentRow.Cells[5].Value.ToString();
+            txtNombre.Text = dtgEmpleados.CurrentRow.Cells[1].Value.ToString();
+            txtDireccion.Text = dtgEmpleados.CurrentRow.Cells[2].Value.ToString();
+            txtTelefono.Text = dtgEmpleados.CurrentRow.Cells[3].Value.ToString();
+            txtEmpresa.Text = dtgEmpleados.CurrentRow.Cells[4].Value.ToString();
+            txtPuesto.Text = dtgEmpleados.CurrentRow.Cells[5].Value.ToString();
             btnAct1.Enabled = true;
-            if (Int32.Parse(dtgUsers.CurrentRow.Cells[7].Value.ToString()) ==1 )
+            if (Int32.Parse(dtgEmpleados.CurrentRow.Cells[7].Value.ToString()) ==1 )
             {
                 btnColor.BackColor = Color.Green;
                 btnColor.Text = "A";
@@ -134,9 +166,9 @@ namespace Servicios_Ejecutivos
                 btnColor.BackColor = Color.Red;
                 btnColor.Text = "I";
             }
-            if (!dtgUsers.CurrentRow.Cells[6].Value.ToString().Equals(null) && !dtgUsers.CurrentRow.Cells[6].Value.ToString().Equals("") && !dtgUsers.CurrentRow.Cells[6].Value.ToString().Equals("null"))
+            if (!dtgEmpleados.CurrentRow.Cells[6].Value.ToString().Equals(null) && !dtgEmpleados.CurrentRow.Cells[6].Value.ToString().Equals("") && !dtgEmpleados.CurrentRow.Cells[6].Value.ToString().Equals("null"))
             {
-                pbxFoto.Image = System.Drawing.Image.FromFile("c:\\Taxi_Ejecutivo\\Fotos\\Operadores\\" + dtgUsers.CurrentRow.Cells[6].Value.ToString());
+                pbxFoto.Image = System.Drawing.Image.FromFile("c:\\Taxi_Ejecutivo\\Fotos\\Operadores\\" + dtgEmpleados.CurrentRow.Cells[6].Value.ToString());
             }
             else
             {
@@ -191,18 +223,19 @@ namespace Servicios_Ejecutivos
             btnAgregar.Visible = true;
             btnEditar.Enabled = false;
             btnGuardar.Visible = false;
+            btnEditar.Visible = true;
 
             
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-              if (Int32.Parse(dtgUsers.CurrentRow.Cells[7].Value.ToString())==1)
+              if (Int32.Parse(dtgEmpleados.CurrentRow.Cells[7].Value.ToString())==1)
              {
-                 if (MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()),0))
+                 if (MySqlCon.upAcEmp(Int32.Parse(dtgEmpleados.CurrentRow.Cells[0].Value.ToString()),0))
                  {
                      MessageBox.Show("Empleado Inactivo");
-                     dtgUsers.DataSource = MySqlCon.getEmp();
+                     dtgEmpleados.DataSource = MySqlCon.getEmp();
                      txtDireccion.Enabled = false;
                      txtNombre.Enabled = false;
                      txtTelefono.Enabled = false;
@@ -213,10 +246,10 @@ namespace Servicios_Ejecutivos
                  }
              }else
              {
-                 if(MySqlCon.upAcEmp(Int32.Parse(dtgUsers.CurrentRow.Cells[0].Value.ToString()), 1))
+                 if(MySqlCon.upAcEmp(Int32.Parse(dtgEmpleados.CurrentRow.Cells[0].Value.ToString()), 1))
                  {
                      MessageBox.Show("Empleado Inactivo");
-                     dtgUsers.DataSource = MySqlCon.getEmp();
+                     dtgEmpleados.DataSource = MySqlCon.getEmp();
                      txtDireccion.Enabled = false;
                      txtNombre.Enabled = false;
                      txtTelefono.Enabled = false;
@@ -226,6 +259,46 @@ namespace Servicios_Ejecutivos
                      btnGuardar.Enabled = false;
                  }
              }
+        }
+
+        private void gbEmpleados_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        public void alternarcolor(DataGridView dgv)
+        {
+
+            dgv.RowsDefaultCellStyle.BackColor = Color.LightBlue;
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+
+
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))//Si es número
+            {
+                e.Handled = false;
+            }
+            else if (e.KeyChar == (char)Keys.Back)//si es tecla borrar
+            {
+                e.Handled = false;
+            }
+            else //Si es otra tecla cancelamos
+            {
+                e.Handled = true;
+            }
         }
     }
 }

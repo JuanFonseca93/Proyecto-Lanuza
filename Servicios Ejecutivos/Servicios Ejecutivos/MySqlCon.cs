@@ -12,9 +12,15 @@ namespace Servicios_Ejecutivos
 
     class MySqlCon
     {
+      //  public SqlConnection conexionConBD;
+        public SqlCommand comando;
+        public DataTable dt;
+        public SqlDataAdapter adaptador;
+        public SqlDataReader dr;
+
         private static SqlConnection connect()
         {
-            SqlConnection conectar = new SqlConnection("Data Source= DESKTOP-9OJN2F8\\SQLEXPRESS;Initial Catalog=TaxiEjecutivo1;Integrated Security=True");
+            SqlConnection conectar = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=TaxiEjecutivo1;Integrated Security=True");
 
             try
             {
@@ -157,7 +163,7 @@ namespace Servicios_Ejecutivos
         {
             try
             {
-                String Querry = "SELECT * FROM Empleados";
+                String Querry = "SELECT Id_Empleado,Nombre_E as'Empleado', Direccion_E as'Direccion', Telefono_E as'Telefono', Empresa, Puesto,Foto_E, Estatus_E FROM Empleados";
                 DataTable dt = new DataTable();
                 SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
                 data.Fill(dt);
@@ -693,6 +699,32 @@ namespace Servicios_Ejecutivos
                 MessageBox.Show(ex.ToString());
                 return null;
             }
+        }
+
+        public void autocomplet1(TextBox ct)
+        {
+            
+
+            try
+            {
+            
+                String Querry ="select Empresa from Empleados";
+                dr = comando.ExecuteReader();
+                while (dr.Read())
+                {
+                    ct.AutoCompleteCustomSource.Add(dr["Empleados"].ToString());
+                }
+                dr.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("eroo" + ex);
+
+            }
+            
+
         }
     }
 }

@@ -124,8 +124,8 @@
   <data name="d41c9b11-facf-4aa9-9e26-d84356e60dfe (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d41c9b11-facf-4aa9-9e26-d84356e60dfe (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="15284166_222697918167481_5773130300282121653_n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15284166_222697918167481_5773130300282121653_n1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="inicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\inicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,8 +133,8 @@
   <data name="Cancel_icon-icons.com_54824 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cancel_icon-icons.com_54824 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Actions-user-group-new-icon (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Actions-user-group-new-icon (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="circle-edit-article_icon-icons.com_66938 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circle-edit-article_icon-icons.com_66938 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user-male-icon_34332 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-male-icon_34332 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,8 +142,8 @@
   <data name="fondo-lineas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo-lineas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add_male_user_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_male_user_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icono03Uandes (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono03Uandes (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cancel-1174809_960_720 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel-1174809_960_720 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,14 +151,17 @@
   <data name="Save_icon-icons.com_73702 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save_icon-icons.com_73702 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="add_male_user_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_male_user_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="300px-Button_Icon_Blue.svg (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\300px-Button_Icon_Blue.svg (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="boton azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boton azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1600 (4) (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1600 (4) (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icono03Uandes (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icono03Uandes (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loupe_78956 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loupe_78956 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,8 +178,8 @@
   <data name="1600 (1) (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1600 (1) (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="15284166_222697918167481_5773130300282121653_n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\15284166_222697918167481_5773130300282121653_n1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Actions-user-group-new-icon (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Actions-user-group-new-icon (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconorequisito (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconorequisito (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,6 +217,9 @@
   <data name="13879459_146906795746594_7204462386315017966_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\13879459_146906795746594_7204462386315017966_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Save_converted" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save_converted.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,7 +229,7 @@
   <data name="15284166_222697918167481_5773130300282121653_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\15284166_222697918167481_5773130300282121653_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="circle-edit-article_icon-icons.com_66938 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circle-edit-article_icon-icons.com_66938 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iphoto (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iphoto (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -173,6 +173,16 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boton_azul {
+            get {
+                object obj = ResourceManager.GetObject("boton azul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BOTON_INICIARSESION__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("BOTON_INICIARSESION (Custom)", resourceCulture);
@@ -326,6 +336,16 @@ namespace Servicios_Ejecutivos.Properties {
         internal static System.Drawing.Bitmap internet_marketing_circle__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("internet-marketing-circle (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iphoto__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("iphoto (Custom)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
