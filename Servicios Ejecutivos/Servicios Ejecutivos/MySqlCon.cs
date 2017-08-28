@@ -98,11 +98,37 @@ namespace Servicios_Ejecutivos
                 return false;
             }
         }
+
+        public static bool delclient(int id)
+        {
+            try
+            {
+                String Querry = "Delete Usuarios where Id_Usuario=" + id;
+                SqlCommand cmd = new SqlCommand(Querry, connect());
+                int R = cmd.ExecuteNonQuery();
+                if (R != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+        }
+
+
+
         public static DataTable getUser()
         {
             try
             {
-                String Querry = "SELECT * FROM Usuarios";
+                String Querry = "SELECT Id_Usuario,Alias as 'Usuario',Pass as 'Contraseña',Nombre_Usurio as 'Nombre', Direccion_Usuario as 'Direccion', Telefono, Nivel FROM Usuarios";
                 DataTable dt = new DataTable();
                 SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
                 data.Fill(dt);

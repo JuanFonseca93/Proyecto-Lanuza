@@ -69,13 +69,45 @@ namespace Servicios_Ejecutivos
         {
           
             txtPass.ForeColor = Color.Black;
-            
+            if (Char.IsNumber(e.KeyChar))//Si es número
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsLetter(e.KeyChar))//Si es número
+            {
+                e.Handled = false;
+            }
+            else if (e.KeyChar == (char)Keys.Back)//si es tecla borrar
+            {
+                e.Handled = false;
+            }
+            else //Si es otra tecla cancelamos
+            {
+                e.Handled = true;
+            }
+
             //txtPass.UseSystemPasswordChar = true;
         }
 
         private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
         {
             txtUser.ForeColor = Color.Black;
+            if (Char.IsNumber(e.KeyChar))//Si es número
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsLetter(e.KeyChar))//Si es número
+            {
+                e.Handled = false;
+            }
+            else if (e.KeyChar == (char)Keys.Back)//si es tecla borrar
+            {
+                e.Handled = false;
+            }
+            else //Si es otra tecla cancelamos
+            {
+                e.Handled = true;
+            }
         }
 
         public void iniciar_sesion()

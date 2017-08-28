@@ -317,7 +317,7 @@
             this.AutoSize = true;
             this.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources._13879459_146906795746594_7204462386315017966_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1182, 597);
+            this.ClientSize = new System.Drawing.Size(1182, 663);
             this.Controls.Add(this.btnAct1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.gbEmpleados);

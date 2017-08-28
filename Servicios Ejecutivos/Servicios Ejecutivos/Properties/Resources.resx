@@ -124,6 +124,9 @@
   <data name="d41c9b11-facf-4aa9-9e26-d84356e60dfe (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d41c9b11-facf-4aa9-9e26-d84356e60dfe (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="eliminar (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eliminar (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="15284166_222697918167481_5773130300282121653_n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\15284166_222697918167481_5773130300282121653_n1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,6 +156,9 @@
   </data>
   <data name="add_male_user_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_male_user_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iphoto (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iphoto (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="300px-Button_Icon_Blue.svg (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\300px-Button_Icon_Blue.svg (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,7 +235,7 @@
   <data name="15284166_222697918167481_5773130300282121653_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\15284166_222697918167481_5773130300282121653_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iphoto (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iphoto (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
