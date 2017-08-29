@@ -228,7 +228,7 @@ namespace Servicios_Ejecutivos
         {
             try
             {
-                String Querry = "SELECT * FROM Vehiculos";
+                String Querry = "SELECT Id_Vehiculo, Tipo_V as 'Tipo', Concesion,Concesionario, Linea, Direccion_V as 'Direccion', Telefono_V as 'Telefono',Marca,Modelo,Anno,Tarjeta,Estatus FROM Vehiculos";
                 DataTable dt = new DataTable();
                 SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
                 data.Fill(dt);

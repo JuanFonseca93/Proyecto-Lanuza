@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtConcesinario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtLinea = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,9 +52,12 @@
             this.btnAc = new System.Windows.Forms.Button();
             this.dgvVeh = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnActividad = new System.Windows.Forms.Button();
             this.cbLinea = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeh)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -100,6 +102,7 @@
             this.txtConcesion.Name = "txtConcesion";
             this.txtConcesion.Size = new System.Drawing.Size(159, 22);
             this.txtConcesion.TabIndex = 3;
+            this.txtConcesion.TextChanged += new System.EventHandler(this.txtConcesion_TextChanged);
             // 
             // label3
             // 
@@ -132,14 +135,6 @@
             this.label4.Size = new System.Drawing.Size(44, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Linea";
-            // 
-            // txtLinea
-            // 
-            this.txtLinea.Location = new System.Drawing.Point(380, 376);
-            this.txtLinea.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLinea.Name = "txtLinea";
-            this.txtLinea.Size = new System.Drawing.Size(159, 22);
-            this.txtLinea.TabIndex = 7;
             // 
             // label5
             // 
@@ -301,7 +296,7 @@
             // 
             // btnAc
             // 
-            this.btnAc.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources._300px_Button_Icon_Blue_svg__Custom_;
+            this.btnAc.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources.boton_azul;
             this.btnAc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAc.FlatAppearance.BorderSize = 0;
             this.btnAc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -315,21 +310,26 @@
             // 
             // dgvVeh
             // 
+            this.dgvVeh.AllowUserToAddRows = false;
             this.dgvVeh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvVeh.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvVeh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVeh.BackgroundColor = System.Drawing.Color.White;
+            this.dgvVeh.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvVeh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVeh.Location = new System.Drawing.Point(729, 50);
             this.dgvVeh.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVeh.Name = "dgvVeh";
-            this.dgvVeh.Size = new System.Drawing.Size(706, 451);
+            this.dgvVeh.RowHeadersVisible = false;
+            this.dgvVeh.Size = new System.Drawing.Size(706, 465);
             this.dgvVeh.TabIndex = 27;
             this.dgvVeh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVeh_CellClick);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnActividad);
             this.groupBox1.Controls.Add(this.cbLinea);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -339,7 +339,6 @@
             this.groupBox1.Controls.Add(this.txtConcesinario);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtTelefono);
-            this.groupBox1.Controls.Add(this.txtLinea);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtDireccion);
@@ -354,6 +353,17 @@
             this.groupBox1.Size = new System.Drawing.Size(666, 489);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
+            // 
+            // btnActividad
+            // 
+            this.btnActividad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnActividad.FlatAppearance.BorderSize = 0;
+            this.btnActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActividad.Location = new System.Drawing.Point(357, 317);
+            this.btnActividad.Name = "btnActividad";
+            this.btnActividad.Size = new System.Drawing.Size(83, 81);
+            this.btnActividad.TabIndex = 19;
+            this.btnActividad.UseVisualStyleBackColor = true;
             // 
             // cbLinea
             // 
@@ -384,10 +394,10 @@
             this.groupBox2.Controls.Add(this.btnGuardar);
             this.groupBox2.Controls.Add(this.btnPDF);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Location = new System.Drawing.Point(28, 511);
+            this.groupBox2.Location = new System.Drawing.Point(28, 579);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(805, 119);
+            this.groupBox2.Size = new System.Drawing.Size(815, 119);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             // 
@@ -404,6 +414,29 @@
             this.btnCancelar.Size = new System.Drawing.Size(83, 69);
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources.internet_marketing_circle__Custom_;
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Location = new System.Drawing.Point(445, 504);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 62);
+            this.btnBuscar.TabIndex = 30;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(58, 524);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(313, 22);
+            this.textBox1.TabIndex = 31;
             // 
             // ctrVehiculos
             // 
@@ -413,7 +446,9 @@
             this.AutoSize = true;
             this.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources._13879459_146906795746594_7204462386315017966_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1515, 639);
+            this.ClientSize = new System.Drawing.Size(1515, 707);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvVeh);
@@ -428,6 +463,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -440,7 +476,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtConcesinario;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtLinea;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label6;
@@ -461,5 +496,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cbLinea;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnActividad;
     }
 }

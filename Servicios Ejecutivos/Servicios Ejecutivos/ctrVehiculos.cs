@@ -14,6 +14,7 @@ namespace Servicios_Ejecutivos
     public partial class ctrVehiculos : Form
     {
         int x = 0;
+        string y = "0";
         public ctrVehiculos()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace Servicios_Ejecutivos
             txtTipo.Enabled = false;
             txtConcesion.Enabled = false;
             txtConcesinario.Enabled = false;
-            txtLinea.Enabled = false;
+            cbLinea.Enabled = false;
             txtMarca.Enabled = false;
             txtModelo.Enabled = false;
             txtano.Enabled = false;
@@ -35,10 +36,11 @@ namespace Servicios_Ejecutivos
 
         private void button1_Click(object sender, EventArgs e)
         {
+            groupBox1.Enabled = true;
             txtTipo.Enabled = true;
             txtConcesion.Enabled = true;
             txtConcesinario.Enabled = true;
-            txtLinea.Enabled = true;
+            cbLinea.Enabled = false;
             txtMarca.Enabled = true;
             txtModelo.Enabled = true;
             txtano.Enabled = true;
@@ -48,7 +50,7 @@ namespace Servicios_Ejecutivos
             txtTipo.Text = "";
             txtConcesion.Text = "";
             txtConcesinario.Text = "";
-            txtLinea.Text = "";
+          //  txtLinea.Text = "";
             txtMarca.Text = "";
             txtModelo.Text = "";
             txtano.Text = "";
@@ -58,15 +60,36 @@ namespace Servicios_Ejecutivos
 
         private void dgvVeh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
+
+         
+
+
             txtTipo.Text = dgvVeh.CurrentRow.Cells[1].Value.ToString();
             txtConcesion.Text = dgvVeh.CurrentRow.Cells[2].Value.ToString();
             txtConcesinario.Text = dgvVeh.CurrentRow.Cells[3].Value.ToString();
-            txtLinea.Text = dgvVeh.CurrentRow.Cells[4].Value.ToString();
+            cbLinea.Text = dgvVeh.CurrentRow.Cells[4].Value.ToString();
             txtDireccion.Text = dgvVeh.CurrentRow.Cells[5].Value.ToString();
             txtTelefono.Text = dgvVeh.CurrentRow.Cells[6].Value.ToString();
             txtMarca.Text = dgvVeh.CurrentRow.Cells[7].Value.ToString();
             txtModelo.Text = dgvVeh.CurrentRow.Cells[8].Value.ToString();
             txtano.Text = dgvVeh.CurrentRow.Cells[9].Value.ToString();
+            y = dgvVeh.CurrentRow.Cells[11].Value.ToString();
+
+            if (y.Equals("1"))
+            {
+
+
+              //  btnActividad.BackColor = Color.DeepSkyBlue;
+                btnActividad.BackgroundImage = Image.FromFile(@"C:\Users\Cortana\Documents\Visual Studio 2015\Projects\Proyecto-Lanuza\Servicios Ejecutivos\Servicios Ejecutivos\Resources\Bullet-red (Custom).png");
+            }
+            else if(y.Equals("0"))
+            {
+                //btnActividad.BackColor = Color.Lavender;
+
+                btnActividad.BackgroundImage = Image.FromFile(@"C:\Users\Cortana\Documents\Visual Studio 2015\Projects\Proyecto-Lanuza\Servicios Ejecutivos\Servicios Ejecutivos\Resources\Bullet-green (Custom).png");
+
+            }
 
         }
 
@@ -80,7 +103,7 @@ namespace Servicios_Ejecutivos
                     txtTipo.Enabled = false;
                     txtConcesion.Enabled = false;
                     txtConcesinario.Enabled = false;
-                    txtLinea.Enabled = false;
+                    cbLinea.Enabled = false;
                     txtMarca.Enabled = false;
                     txtModelo.Enabled = false;
                     txtano.Enabled = false;
@@ -93,13 +116,13 @@ namespace Servicios_Ejecutivos
                 }
             }else
             {
-                if (MySqlCon.UpVeh(txtTipo.Text, txtConcesion.Text, txtConcesinario.Text, txtLinea.Text, txtDireccion.Text, txtTelefono.Text, txtMarca.Text, txtModelo.Text, txtano.Text, Int32.Parse(dgvVeh.CurrentRow.Cells[0].Value.ToString())))
+                if (MySqlCon.UpVeh(txtTipo.Text, txtConcesion.Text, txtConcesinario.Text, cbLinea.Text, txtDireccion.Text, txtTelefono.Text, txtMarca.Text, txtModelo.Text, txtano.Text, Int32.Parse(dgvVeh.CurrentRow.Cells[0].Value.ToString())))
                 {
                     MessageBox.Show("Vehiculo Guardado");
                     txtTipo.Enabled = false;
                     txtConcesion.Enabled = false;
                     txtConcesinario.Enabled = false;
-                    txtLinea.Enabled = false;
+                    cbLinea.Enabled = false;
                     txtMarca.Enabled = false;
                     txtModelo.Enabled = false;
                     txtano.Enabled = false;
@@ -134,11 +157,12 @@ namespace Servicios_Ejecutivos
 
         private void button2_Click(object sender, EventArgs e)
         {
+            groupBox1.Enabled = true;
             x = 1;
             txtTipo.Enabled = true;
             txtConcesion.Enabled = true;
             txtConcesinario.Enabled = true;
-            txtLinea.Enabled = true;
+            cbLinea.Enabled = true;
             txtMarca.Enabled = true;
             txtModelo.Enabled = true;
             txtano.Enabled = true;
@@ -185,12 +209,25 @@ namespace Servicios_Ejecutivos
 
         private void ctrVehiculos_Load(object sender, EventArgs e)
         {
+
+
+            this.dgvVeh.Columns[0].Visible = false;
+            this.dgvVeh.Columns[1].Visible = false;
+            this.dgvVeh.Columns[5].Visible = false;
+            this.dgvVeh.Columns[6].Visible = false;
+            this.dgvVeh.Columns[7].Visible = false;
+            this.dgvVeh.Columns[10].Visible = false;
+            this.dgvVeh.Columns[11].Visible = false;
+            
+            alternarcolor(dgvVeh);
             ToolTip n = new ToolTip();
             ToolTip n1 = new ToolTip();
             ToolTip n2 = new ToolTip();
             ToolTip n3 = new ToolTip();
             ToolTip n4 = new ToolTip();
             ToolTip n5 = new ToolTip();
+            ToolTip n6 = new ToolTip();
+
 
             n.SetToolTip(btnNuevo, "Registrar Vehiculo");
             n1.SetToolTip(btnEditar, "Editar Vehiculo");
@@ -198,9 +235,43 @@ namespace Servicios_Ejecutivos
             n3.SetToolTip(btnPDF, "Guardar Tarjeta");
             n4.SetToolTip(btnAc, "Activar - Desactivar Vehiculo");
             n5.SetToolTip(btnCancelar, "Cancelar");
+            n6.SetToolTip(txtConcesion, "SA-0000");
+
+
+
+        }
+
+        private void txtConcesion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        public void alternarcolor(DataGridView dgv)
+        {
+
+            dgv.RowsDefaultCellStyle.BackColor = Color.LightBlue;
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = false;
+            btnGuardar.Enabled = false;
+            btnPDF.Enabled = false;
+            btnAc.Enabled = false;
+            txtano.ResetText();
+            txtConcesinario.ResetText();
+            txtConcesion.ResetText();
+            txtDireccion.ResetText();
+            txtMarca.ResetText();
+            txtModelo.ResetText();
+            txtTelefono.ResetText();
+            txtTipo.ResetText();
             
-
-
         }
     }
 }

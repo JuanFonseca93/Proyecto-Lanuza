@@ -203,6 +203,26 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bullet_green__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Bullet-green (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bullet_red__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("Bullet-red (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buy_gain_income_money_pay_payment_icon__19__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("buy-gain-income-money-pay-payment-icon--19 (Custom)", resourceCulture);
