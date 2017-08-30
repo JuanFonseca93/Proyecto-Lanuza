@@ -71,41 +71,7 @@ namespace Servicios_Ejecutivos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if(!txtDireccion.Text.Equals("") && !txtNombre.Text.Equals("") && !txtTelefono.Text.Equals("") && !txtUnidad.Text.Equals(""))
-            {
-                if (x == 0)
-                {
-                    if (MySqlCon.NewOper(txtUnidad.Text, txtNombre.Text, txtDireccion.Text, txtTelefono.Text, hoy.ToString("d"),  null, "1", Int32.Parse(cbxVehiculo.SelectedIndex.ToString())+1))
-                    {
-                        dgvOperadores.DataSource = MySqlCon.getOp();
-                        MessageBox.Show("Operador Guardado");
-                        txtNombre.Enabled = false;
-                        txtTelefono.Enabled = false;
-                        txtUnidad.Enabled = false;
-                        btnGuardar.Enabled = false;
-                        cbxVehiculo.Enabled = false;
-                        btnfoto0.Enabled = false;
-                    }
-                } else
-                {
-
-                    if (MySqlCon.UpOper(txtUnidad.Text, txtNombre.Text, txtDireccion.Text, txtTelefono.Text, hoy.ToString("d"), imagen, "1", Int32.Parse(cbxVehiculo.SelectedIndex.ToString() + 1), Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString())))
-                    {
-                        dgvOperadores.DataSource = MySqlCon.getOp();
-                        MessageBox.Show("Operador Actualizado");
-                        txtDireccion.Enabled = false;
-                        txtNombre.Enabled = false;
-                        txtTelefono.Enabled = false;
-                        txtUnidad.Enabled = false;
-                        btnGuardar.Enabled = false;
-                        cbxVehiculo.Enabled = false;
-                        btnfoto0.Enabled = false;
-                    }
-                }
-            }else
-            {
-                MessageBox.Show("llene todos los campos");
-            }
+          
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -152,12 +118,96 @@ namespace Servicios_Ejecutivos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Int32.Parse(dgvOperadores.CurrentRow.Cells[7].Value.ToString()) == 1)
+           
+        }
+
+        private void btnFoto_Load(object sender, EventArgs e)
+        {
+            btncolor.Visible = false;
+            this.dgvOperadores.Columns[0].Visible = false;
+            this.dgvOperadores.Columns[7].Visible = false;
+            this.dgvOperadores.Columns[8].Visible = false;
+            this.dgvOperadores.Columns[10].Visible = false;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            txtDireccion.Enabled = true;
+            txtNombre.Enabled = true;
+            txtTelefono.Enabled = true;
+            txtUnidad.Enabled = true;
+            btnGuardar.Enabled = true;
+            cbxVehiculo.Enabled = true;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            txtDireccion.Enabled = true;
+
+            txtNombre.Enabled = true;
+            txtTelefono.Enabled = true;
+            txtUnidad.Enabled = true;
+            btnGuardar.Enabled = true;
+            cbxVehiculo.Enabled = true;
+            btnfoto0.Enabled = true;
+            x = 1;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (!txtDireccion.Text.Equals("") && !txtNombre.Text.Equals("") && !txtTelefono.Text.Equals("") && !txtUnidad.Text.Equals(""))
+            {
+                if (x == 0)
+                {
+                    if (MySqlCon.NewOper(txtUnidad.Text, txtNombre.Text, txtDireccion.Text, txtTelefono.Text, hoy.ToString("d"), null, "1", Int32.Parse(cbxVehiculo.SelectedIndex.ToString()) + 1))
+                    {
+                        dgvOperadores.DataSource = MySqlCon.getOp();
+                        MessageBox.Show("Operador Guardado");
+                        txtNombre.Enabled = false;
+                        txtTelefono.Enabled = false;
+                        txtUnidad.Enabled = false;
+                        btnGuardar.Enabled = false;
+                        cbxVehiculo.Enabled = false;
+                        btnfoto0.Enabled = false;
+                    }
+                }
+                else
+                {
+
+                    if (MySqlCon.UpOper(txtUnidad.Text, txtNombre.Text, txtDireccion.Text, txtTelefono.Text, hoy.ToString("d"), imagen, "1", Int32.Parse(cbxVehiculo.SelectedIndex.ToString() + 1), Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString())))
+                    {
+                        dgvOperadores.DataSource = MySqlCon.getOp();
+                        MessageBox.Show("Operador Actualizado");
+                        txtDireccion.Enabled = false;
+                        txtNombre.Enabled = false;
+                        txtTelefono.Enabled = false;
+                        txtUnidad.Enabled = false;
+                        btnGuardar.Enabled = false;
+                        cbxVehiculo.Enabled = false;
+                        btnfoto0.Enabled = false;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("llene todos los campos");
+            }
+        }
+
+        private void btnAc_Click(object sender, EventArgs e)
+        {
+            if (Int32.Parse(dgvOperadores.CurrentRow.Cells[8].Value.ToString()) == 1)
             {
                 if (MySqlCon.upAcOper(Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString()), 0))
                 {
 
-                    btncolor.BackColor = Color.LightGreen;
+                    btnActividad.BackgroundImage = Image.FromFile(@"C:\Users\Cortana\Documents\Visual Studio 2015\Projects\Proyecto-Lanuza\Servicios Ejecutivos\Servicios Ejecutivos\Resources\Bullet-green (Custom).png");
+
                     dgvOperadores.DataSource = MySqlCon.getOp();
                     MessageBox.Show("usuario inactivo");
                 }
@@ -168,7 +218,10 @@ namespace Servicios_Ejecutivos
             {
                 if (MySqlCon.upAcOper(Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString()), 1))
                 {
-                    btncolor.BackColor = Color.Red;
+
+
+                    btnActividad.BackgroundImage = Image.FromFile(@"C:\Users\Cortana\Documents\Visual Studio 2015\Projects\Proyecto-Lanuza\Servicios Ejecutivos\Servicios Ejecutivos\Resources\Bullet-red (Custom).png");
+
                     dgvOperadores.DataSource = MySqlCon.getOp();
                     MessageBox.Show("usuario activo");
                 }
@@ -178,25 +231,30 @@ namespace Servicios_Ejecutivos
         private void dgvOperadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtUnidad.Text = dgvOperadores.CurrentRow.Cells[1].Value.ToString();
-            txtNombre.Text = dgvOperadores.CurrentRow.Cells[2].Value.ToString();
-            txtDireccion.Text = dgvOperadores.CurrentRow.Cells[3].Value.ToString();
-            txtTelefono.Text = dgvOperadores.CurrentRow.Cells[4].Value.ToString();
-            txtSaldo.Text = dgvOperadores.CurrentRow.Cells[5].Value.ToString();
-            if(!dgvOperadores.CurrentRow.Cells[6].Value.ToString().Equals(null) && !dgvOperadores.CurrentRow.Cells[6].Value.ToString().Equals("") && !dgvOperadores.CurrentRow.Cells[6].Value.ToString().Equals("null"))
+            txtNombre.Text = dgvOperadores.CurrentRow.Cells[3].Value.ToString();
+            txtDireccion.Text = dgvOperadores.CurrentRow.Cells[4].Value.ToString();
+            txtTelefono.Text = dgvOperadores.CurrentRow.Cells[5].Value.ToString();
+            txtSaldo.Text = dgvOperadores.CurrentRow.Cells[6].Value.ToString();
+            if(!dgvOperadores.CurrentRow.Cells[7].Value.ToString().Equals(null) && !dgvOperadores.CurrentRow.Cells[7].Value.ToString().Equals("") && !dgvOperadores.CurrentRow.Cells[7].Value.ToString().Equals("null"))
             {
-                pbxFoto.Image = Image.FromFile("c:\\Taxi_Ejecutivo\\Fotos\\Operadores\\"+dgvOperadores.CurrentRow.Cells[6].Value.ToString());
+                pbxFoto.Image = Image.FromFile("c:\\Taxi_Ejecutivo\\Fotos\\Operadores\\"+dgvOperadores.CurrentRow.Cells[7].Value.ToString());
             }else
             {
                 pbxFoto.Image = Image.FromFile("c:\\Taxi_Ejecutivo\\Fotos\\Default.jpg");
             }
-            cbxVehiculo.SelectedIndex = Int32.Parse(dgvOperadores.CurrentRow.Cells[9].Value.ToString())-1;
+            cbxVehiculo.SelectedIndex = Int32.Parse(dgvOperadores.CurrentRow.Cells[10].Value.ToString())-1;
 
-            if (Int32.Parse(dgvOperadores.CurrentRow.Cells[7].Value.ToString()) == 1)
+            if (Int32.Parse(dgvOperadores.CurrentRow.Cells[8].Value.ToString()) == 1)
             {
                 btncolor.BackColor = Color.LightGreen;
-            }else
+                btnActividad.BackgroundImage = Image.FromFile(@"C:\Users\Cortana\Documents\Visual Studio 2015\Projects\Proyecto-Lanuza\Servicios Ejecutivos\Servicios Ejecutivos\Resources\Bullet-green (Custom).png");
+
+            }
+            else
             {
                 btncolor.BackColor = Color.Red;
+                btnActividad.BackgroundImage = Image.FromFile(@"C:\Users\Cortana\Documents\Visual Studio 2015\Projects\Proyecto-Lanuza\Servicios Ejecutivos\Servicios Ejecutivos\Resources\Bullet-red (Custom).png");
+
             }
 
         }

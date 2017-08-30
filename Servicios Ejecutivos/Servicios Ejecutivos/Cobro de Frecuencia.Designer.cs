@@ -37,6 +37,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbConcepto = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.cbxSaldo = new System.Windows.Forms.CheckBox();
             this.cbxEfectivo = new System.Windows.Forms.CheckBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -71,7 +72,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.gbDetalle.SuspendLayout();
@@ -192,11 +192,26 @@
             this.groupBox1.Text = "Cobro de Frecuencia";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources.internet_marketing_circle__Custom_;
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Location = new System.Drawing.Point(219, 20);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 62);
+            this.btnBuscar.TabIndex = 24;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.button6_Click);
+            // 
             // cbxSaldo
             // 
             this.cbxSaldo.AutoSize = true;
             this.cbxSaldo.Location = new System.Drawing.Point(204, 324);
-            this.cbxSaldo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxSaldo.Margin = new System.Windows.Forms.Padding(4);
             this.cbxSaldo.Name = "cbxSaldo";
             this.cbxSaldo.Size = new System.Drawing.Size(73, 24);
             this.cbxSaldo.TabIndex = 23;
@@ -208,7 +223,7 @@
             // 
             this.cbxEfectivo.AutoSize = true;
             this.cbxEfectivo.Location = new System.Drawing.Point(63, 324);
-            this.cbxEfectivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxEfectivo.Margin = new System.Windows.Forms.Padding(4);
             this.cbxEfectivo.Name = "cbxEfectivo";
             this.cbxEfectivo.Size = new System.Drawing.Size(91, 24);
             this.cbxEfectivo.TabIndex = 22;
@@ -219,7 +234,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(101, 82);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(283, 25);
             this.txtNombre.TabIndex = 21;
@@ -239,7 +254,7 @@
             this.dtCobro.Location = new System.Drawing.Point(343, 121);
             this.dtCobro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtCobro.Name = "dtCobro";
-            this.dtCobro.Size = new System.Drawing.Size(120, 25);
+            this.dtCobro.Size = new System.Drawing.Size(146, 25);
             this.dtCobro.TabIndex = 19;
             // 
             // gbDetalle
@@ -577,21 +592,6 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "Buscar";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.BackgroundImage = global::Servicios_Ejecutivos.Properties.Resources.internet_marketing_circle__Custom_;
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Location = new System.Drawing.Point(219, 20);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 62);
-            this.btnBuscar.TabIndex = 24;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.button6_Click);
             // 
             // Cobro_de_Frecuencia
             // 

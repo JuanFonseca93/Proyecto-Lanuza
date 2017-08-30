@@ -337,7 +337,7 @@ namespace Servicios_Ejecutivos
         {
             try
             {
-                String Querry = "SELECT * FROM Operadores";
+                String Querry = "SELECT Id_Operador,Unidad,Vehiculos.Concesion as 'Numero economico',Nombre_U as 'Nombre', Direccion_U as 'Direccion', Telefono_U as 'Telefono', Saldo, Foto_O, Estatus_O, Detalle_O as 'Observaciones', Operadores.Id_Vehiculo FROM Operadores inner join Vehiculos on Vehiculos.Id_Vehiculo= Operadores.Id_Vehiculo";
                 DataTable dt = new DataTable();
                 SqlDataAdapter data = new SqlDataAdapter(Querry, connect());
                 data.Fill(dt);
