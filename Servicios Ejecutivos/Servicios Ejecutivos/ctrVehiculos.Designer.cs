@@ -81,7 +81,7 @@
             this.txtTipo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(159, 22);
-            this.txtTipo.TabIndex = 1;
+            this.txtTipo.TabIndex = 3;
             // 
             // label2
             // 
@@ -101,7 +101,7 @@
             this.txtConcesion.Margin = new System.Windows.Forms.Padding(4);
             this.txtConcesion.Name = "txtConcesion";
             this.txtConcesion.Size = new System.Drawing.Size(159, 22);
-            this.txtConcesion.TabIndex = 3;
+            this.txtConcesion.TabIndex = 1;
             this.txtConcesion.TextChanged += new System.EventHandler(this.txtConcesion_TextChanged);
             // 
             // label3
@@ -122,7 +122,7 @@
             this.txtConcesinario.Margin = new System.Windows.Forms.Padding(4);
             this.txtConcesinario.Name = "txtConcesinario";
             this.txtConcesinario.Size = new System.Drawing.Size(327, 22);
-            this.txtConcesinario.TabIndex = 5;
+            this.txtConcesinario.TabIndex = 7;
             // 
             // label4
             // 
@@ -154,7 +154,7 @@
             this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(159, 22);
-            this.txtMarca.TabIndex = 9;
+            this.txtMarca.TabIndex = 4;
             // 
             // label6
             // 
@@ -174,7 +174,7 @@
             this.txtModelo.Margin = new System.Windows.Forms.Padding(4);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(165, 22);
-            this.txtModelo.TabIndex = 11;
+            this.txtModelo.TabIndex = 5;
             // 
             // label7
             // 
@@ -194,7 +194,7 @@
             this.txtano.Margin = new System.Windows.Forms.Padding(4);
             this.txtano.Name = "txtano";
             this.txtano.Size = new System.Drawing.Size(165, 22);
-            this.txtano.TabIndex = 13;
+            this.txtano.TabIndex = 6;
             // 
             // label8
             // 
@@ -214,7 +214,7 @@
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(327, 22);
-            this.txtDireccion.TabIndex = 15;
+            this.txtDireccion.TabIndex = 8;
             // 
             // label9
             // 
@@ -234,7 +234,7 @@
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(215, 22);
-            this.txtTelefono.TabIndex = 17;
+            this.txtTelefono.TabIndex = 9;
             // 
             // btnNuevo
             // 
@@ -247,7 +247,7 @@
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(82, 74);
-            this.btnNuevo.TabIndex = 22;
+            this.btnNuevo.TabIndex = 11;
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -262,7 +262,7 @@
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(73, 51);
-            this.btnEditar.TabIndex = 23;
+            this.btnEditar.TabIndex = 12;
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -276,7 +276,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(78, 51);
-            this.btnGuardar.TabIndex = 24;
+            this.btnGuardar.TabIndex = 13;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -290,7 +290,7 @@
             this.btnPDF.Margin = new System.Windows.Forms.Padding(4);
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(70, 51);
-            this.btnPDF.TabIndex = 25;
+            this.btnPDF.TabIndex = 14;
             this.btnPDF.UseVisualStyleBackColor = true;
             this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
@@ -304,7 +304,7 @@
             this.btnAc.Margin = new System.Windows.Forms.Padding(4);
             this.btnAc.Name = "btnAc";
             this.btnAc.Size = new System.Drawing.Size(59, 53);
-            this.btnAc.TabIndex = 26;
+            this.btnAc.TabIndex = 15;
             this.btnAc.UseVisualStyleBackColor = true;
             this.btnAc.Click += new System.EventHandler(this.btnAc_Click);
             // 
@@ -380,7 +380,7 @@
             this.cbLinea.Location = new System.Drawing.Point(30, 146);
             this.cbLinea.Name = "cbLinea";
             this.cbLinea.Size = new System.Drawing.Size(159, 24);
-            this.cbLinea.TabIndex = 18;
+            this.cbLinea.TabIndex = 2;
             // 
             // groupBox2
             // 
@@ -412,7 +412,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(83, 69);
-            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.TabIndex = 16;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -436,7 +436,7 @@
             this.textBox1.Location = new System.Drawing.Point(58, 524);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(313, 22);
-            this.textBox1.TabIndex = 31;
+            this.textBox1.TabIndex = 10;
             // 
             // ctrVehiculos
             // 

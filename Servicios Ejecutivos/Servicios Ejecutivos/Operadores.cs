@@ -123,6 +123,27 @@ namespace Servicios_Ejecutivos
 
         private void btnFoto_Load(object sender, EventArgs e)
         {
+            ToolTip n = new ToolTip();
+            ToolTip n1 = new ToolTip();
+            ToolTip n2 = new ToolTip();
+            ToolTip n3 = new ToolTip();
+            ToolTip n4 = new ToolTip();
+            ToolTip n5 = new ToolTip();
+            ToolTip n6 = new ToolTip();
+            ToolTip n7 = new ToolTip();
+            ToolTip n8 = new ToolTip();
+
+            n.SetToolTip(btnGuardar, "Guardar");
+            n1.SetToolTip(btnfoto0, "Agregar foto");
+            n2.SetToolTip(btnEdit, "Editar Operador");
+            n3.SetToolTip(btnAc, "Activar/Desactivar");
+            n4.SetToolTip(btnBuscar, "Buscar Operador");
+            n5.SetToolTip(txtUnidad, "U-000/R-000");
+            n6.SetToolTip(btnAgregar, "Agregar Operador");
+            n7.SetToolTip(btnCancelar, "Cancelar todo");
+//n8.SetToolTip(txtUnidad, "U-000/R-000");
+
+
             btncolor.Visible = false;
             this.dgvOperadores.Columns[0].Visible = false;
             this.dgvOperadores.Columns[7].Visible = false;
@@ -164,7 +185,7 @@ namespace Servicios_Ejecutivos
             {
                 if (x == 0)
                 {
-                    if (MySqlCon.NewOper(txtUnidad.Text, txtNombre.Text, txtDireccion.Text, txtTelefono.Text, hoy.ToString("d"), null, "1", Int32.Parse(cbxVehiculo.SelectedIndex.ToString()) + 1))
+                    if (MySqlCon.NewOper(txtUnidad.Text, txtNombre.Text, txtDireccion.Text, txtTelefono.Text, hoy.ToString("d"),null, txtOb.Text, "1", Int32.Parse(cbxVehiculo.SelectedIndex.ToString()) + 1))
                     {
                         dgvOperadores.DataSource = MySqlCon.getOp();
                         MessageBox.Show("Operador Guardado");
@@ -179,7 +200,7 @@ namespace Servicios_Ejecutivos
                 else
                 {
 
-                    if (MySqlCon.UpOper(txtUnidad.Text, txtNombre.Text, txtDireccion.Text, txtTelefono.Text, hoy.ToString("d"), imagen, "1", Int32.Parse(cbxVehiculo.SelectedIndex.ToString() + 1), Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString())))
+                    if (MySqlCon.UpOper(txtUnidad.Text, txtNombre.Text, txtDireccion.Text, txtTelefono.Text, hoy.ToString("d"), imagen, "1",txtOb.Text, Int32.Parse(cbxVehiculo.SelectedIndex.ToString() + 1), Int32.Parse(dgvOperadores.CurrentRow.Cells[0].Value.ToString())))
                     {
                         dgvOperadores.DataSource = MySqlCon.getOp();
                         MessageBox.Show("Operador Actualizado");
@@ -226,6 +247,44 @@ namespace Servicios_Ejecutivos
                     MessageBox.Show("usuario activo");
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtBuscar.ResetText();
+            txtDireccion.ResetText();
+            txtNombre.ResetText();
+            txtSaldo.ResetText();
+            txtTelefono.ResetText();
+            txtUnidad.ResetText();
+            btnGuardar.Visible = false;
+
+            
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUnidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUnidad_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void txtUnidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
         }
 
         private void dgvOperadores_CellClick(object sender, DataGridViewCellEventArgs e)

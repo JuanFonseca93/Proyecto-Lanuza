@@ -83,6 +83,16 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1486564172_finance_loan_money_81492 {
+            get {
+                object obj = ResourceManager.GetObject("1486564172-finance-loan-money_81492", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _15284166_222697918167481_5773130300282121653_n {
             get {
                 object obj = ResourceManager.GetObject("15284166_222697918167481_5773130300282121653_n", resourceCulture);
@@ -146,6 +156,26 @@ namespace Servicios_Ejecutivos.Properties {
         internal static System.Drawing.Bitmap _300px_Button_Icon_Blue_svg__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("300px-Button_Icon_Blue.svg (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7255943 {
+            get {
+                object obj = ResourceManager.GetObject("7255943", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _78948 {
+            get {
+                object obj = ResourceManager.GetObject("78948", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +293,16 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap car_13260 {
+            get {
+                object obj = ResourceManager.GetObject("car_13260", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Car_Repair_icon2__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("Car-Repair-icon2 (Custom)", resourceCulture);
@@ -273,9 +313,29 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cash_receive_13371 {
+            get {
+                object obj = ResourceManager.GetObject("cash_receive_13371", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap circle_edit_article_icon_icons_com_66938__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("circle-edit-article_icon-icons.com_66938 (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap consultar {
+            get {
+                object obj = ResourceManager.GetObject("consultar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,6 +383,16 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Empleados {
+            get {
+                object obj = ResourceManager.GetObject("Empleados", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fg {
             get {
                 object obj = ResourceManager.GetObject("fg", resourceCulture);
@@ -343,6 +413,26 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_contenido1 {
+            get {
+                object obj = ResourceManager.GetObject("icon_contenido1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icono_Diseño_Institucional_1 {
+            get {
+                object obj = ResourceManager.GetObject("Icono_Diseño_Institucional_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icono03Uandes__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("icono03Uandes (Custom)", resourceCulture);
@@ -356,6 +446,16 @@ namespace Servicios_Ejecutivos.Properties {
         internal static System.Drawing.Bitmap iconorequisito__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("iconorequisito (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap informe {
+            get {
+                object obj = ResourceManager.GetObject("informe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -413,6 +513,16 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap payroll {
+            get {
+                object obj = ResourceManager.GetObject("payroll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Save_converted {
             get {
                 object obj = ResourceManager.GetObject("Save_converted", resourceCulture);
@@ -443,6 +553,16 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seguro {
+            get {
+                object obj = ResourceManager.GetObject("seguro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SERVICIO_DE_TRANSPORTE_EJECUTIVO_Y_CORPORATIVO_7 {
             get {
                 object obj = ResourceManager.GetObject("SERVICIO-DE-TRANSPORTE-EJECUTIVO-Y-CORPORATIVO_7", resourceCulture);
@@ -463,6 +583,16 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tarjeta_pago_seguro_crismoda {
+            get {
+                object obj = ResourceManager.GetObject("tarjeta-pago-seguro-crismoda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Taxi_Ejecutivo_Logo_Final_01__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("Taxi Ejecutivo Logo Final-01 (Custom)", resourceCulture);
@@ -473,9 +603,39 @@ namespace Servicios_Ejecutivos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ticket1600 {
+            get {
+                object obj = ResourceManager.GetObject("ticket1600", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_male_icon_34332__Custom_ {
             get {
                 object obj = ResourceManager.GetObject("user-male-icon_34332 (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap v_3 {
+            get {
+                object obj = ResourceManager.GetObject("v-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap windows50 {
+            get {
+                object obj = ResourceManager.GetObject("windows50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

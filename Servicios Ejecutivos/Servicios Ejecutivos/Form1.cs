@@ -118,7 +118,7 @@ namespace Servicios_Ejecutivos
                 DataRow rw = dt.Rows[0];
                 if (rw["Alias"].ToString().Equals(txtUser.Text) && rw["Pass"].ToString().Equals(txtPass.Text))
                 {
-                    Menu_Principal OP = new Menu_Principal(Int32.Parse(rw["Id_Usuario"].ToString()));
+                    Menu OP = new Menu(Int32.Parse(rw["Id_Usuario"].ToString()));
                     OP.Show();
                     this.Hide();
                 }

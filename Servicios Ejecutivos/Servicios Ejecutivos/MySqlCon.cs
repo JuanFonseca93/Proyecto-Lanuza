@@ -309,11 +309,11 @@ namespace Servicios_Ejecutivos
             }
 
         }
-        public static bool NewOper(String Unidad, String Nombre, String Direccion, String Telefono, String fecha, String foto, String Estatus, int vehiculo)
+        public static bool NewOper(String Unidad, String Nombre, String Direccion, String Telefono, String fecha, String foto, String Estatus,String Observ, int vehiculo)
         {
             try
             {
-                String Querry = "INSERT INTO Operadores VALUES('" + Unidad + "','" + Nombre + "','" + Direccion + "','" + Telefono + "',0 ,'" + foto + "','" + Estatus + "', null ," + vehiculo + ")";
+                String Querry = "INSERT INTO Operadores VALUES('" + Unidad + "','" + Nombre + "','" + Direccion + "','" + Telefono + "',0 ,'" + foto + "','" + Estatus + "','"+Observ+ "','" + vehiculo + ")";
                 SqlCommand cmd = new SqlCommand(Querry, connect());
                 int R = cmd.ExecuteNonQuery();
                 if (R != 0)
@@ -350,7 +350,7 @@ namespace Servicios_Ejecutivos
             }
         }
 
-        public static bool UpOper(String Unidad, String Nombre, String Direccion, String Telefono, String fecha, String foto, String Estatus, int vehiculo, int id)
+        public static bool UpOper(String Unidad, String Nombre, String Direccion, String Telefono, String fecha, String foto, String Estatus,String Observ, int vehiculo, int id)
         {
             try
             {

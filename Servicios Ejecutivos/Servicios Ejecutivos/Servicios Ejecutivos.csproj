@@ -291,6 +291,54 @@
   <ItemGroup>
     <None Include="Resources\eliminar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empleados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7255943.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car_13260.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\78948.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486564172-finance-loan-money_81492.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjeta-pago-seguro-crismoda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_contenido1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seguro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono_Diseño_Institucional_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_receive_13371.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket1600.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
